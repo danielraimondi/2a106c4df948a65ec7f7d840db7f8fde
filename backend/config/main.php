@@ -14,7 +14,7 @@ return [
     'modules' => [
          'user' => [
                 'class' => 'dektrium\user\Module',
-                'admins' => ['sandinosaso']
+                'admins' => ['admin']
             ],
     ],
     'components' => [
@@ -37,7 +37,7 @@ return [
         'assetManager' => [
             'bundles' => [
                 'dmstr\web\AdminLteAsset' => [
-                    'skin' => 'skin-green',
+                    'skin' => 'skin-purple',
                 ],
             ],
         ],

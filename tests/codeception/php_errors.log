@@ -1,0 +1,54 @@
+[14-Sep-2015 23:03:49 UTC] PHP Fatal error:  Cannot redeclare composerRequirea2579f3622280ce4a032dba4added3df() (previously declared in /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/composer/autoload_real.php:52) in /home/ubuntu/workspace/git/yii-gii-lte-generator/vendor/composer/autoload_real.php on line 55
+[14-Sep-2015 23:03:49 UTC] PHP Stack trace:
+[14-Sep-2015 23:03:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/codecept:0
+[14-Sep-2015 23:03:49 UTC] PHP   2. Symfony\Component\Console\Application->run() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/codecept:27
+[14-Sep-2015 23:03:49 UTC] PHP   3. Symfony\Component\Console\Application->doRun() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:126
+[14-Sep-2015 23:03:49 UTC] PHP   4. Symfony\Component\Console\Application->doRunCommand() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:195
+[14-Sep-2015 23:03:49 UTC] PHP   5. Symfony\Component\Console\Command\Command->run() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:878
+[14-Sep-2015 23:03:49 UTC] PHP   6. Codeception\Command\Build->execute() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Command/Command.php:259
+[14-Sep-2015 23:03:49 UTC] PHP   7. Codeception\Command\Build->buildActorsForConfig() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Build.php:46
+[14-Sep-2015 23:03:49 UTC] PHP   8. Codeception\Command\Build->getGlobalConfig() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Build.php:51
+[14-Sep-2015 23:03:49 UTC] PHP   9. Codeception\Configuration::config() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Shared/Config.php:15
+[14-Sep-2015 23:03:49 UTC] PHP  10. Codeception\Configuration::loadBootstrap() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Configuration.php:155
+[14-Sep-2015 23:03:49 UTC] PHP  11. include_once() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Configuration.php:169
+[14-Sep-2015 23:03:49 UTC] PHP  12. require_once() /home/ubuntu/workspace/git/yii-gii-lte-generator/tests/codeception/frontend/_bootstrap.php:10
+[14-Sep-2015 23:13:16 UTC] PHP Fatal error:  Cannot redeclare composerRequirea2579f3622280ce4a032dba4added3df() (previously declared in /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/composer/autoload_real.php:52) in /home/ubuntu/workspace/git/yii-gii-lte-generator/vendor/composer/autoload_real.php on line 55
+[14-Sep-2015 23:13:16 UTC] PHP Stack trace:
+[14-Sep-2015 23:13:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/codecept:0
+[14-Sep-2015 23:13:16 UTC] PHP   2. Symfony\Component\Console\Application->run() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/codecept:27
+[14-Sep-2015 23:13:16 UTC] PHP   3. Symfony\Component\Console\Application->doRun() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:126
+[14-Sep-2015 23:13:16 UTC] PHP   4. Symfony\Component\Console\Application->doRunCommand() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:195
+[14-Sep-2015 23:13:16 UTC] PHP   5. Symfony\Component\Console\Command\Command->run() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:878
+[14-Sep-2015 23:13:16 UTC] PHP   6. Codeception\Command\Build->execute() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Command/Command.php:259
+[14-Sep-2015 23:13:16 UTC] PHP   7. Codeception\Command\Build->buildActorsForConfig() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Build.php:46
+[14-Sep-2015 23:13:16 UTC] PHP   8. Codeception\Command\Build->getGlobalConfig() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Build.php:51
+[14-Sep-2015 23:13:16 UTC] PHP   9. Codeception\Configuration::config() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Shared/Config.php:15
+[14-Sep-2015 23:13:16 UTC] PHP  10. Codeception\Configuration::loadBootstrap() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Configuration.php:155
+[14-Sep-2015 23:13:16 UTC] PHP  11. include_once() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Configuration.php:169
+[14-Sep-2015 23:13:16 UTC] PHP  12. require_once() /home/ubuntu/workspace/git/yii-gii-lte-generator/tests/codeception/frontend/_bootstrap.php:10
+[14-Sep-2015 23:13:28 UTC] PHP Fatal error:  Cannot redeclare composerRequirea2579f3622280ce4a032dba4added3df() (previously declared in /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/composer/autoload_real.php:52) in /home/ubuntu/workspace/git/yii-gii-lte-generator/vendor/composer/autoload_real.php on line 55
+[14-Sep-2015 23:13:28 UTC] PHP Stack trace:
+[14-Sep-2015 23:13:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/codecept:0
+[14-Sep-2015 23:13:28 UTC] PHP   2. Symfony\Component\Console\Application->run() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/codecept:27
+[14-Sep-2015 23:13:28 UTC] PHP   3. Symfony\Component\Console\Application->doRun() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:126
+[14-Sep-2015 23:13:28 UTC] PHP   4. Symfony\Component\Console\Application->doRunCommand() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:195
+[14-Sep-2015 23:13:28 UTC] PHP   5. Symfony\Component\Console\Command\Command->run() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:878
+[14-Sep-2015 23:13:28 UTC] PHP   6. Codeception\Command\Run->execute() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Command/Command.php:259
+[14-Sep-2015 23:13:28 UTC] PHP   7. Codeception\Configuration::config() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Run.php:131
+[14-Sep-2015 23:13:28 UTC] PHP   8. Codeception\Configuration::loadBootstrap() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Configuration.php:155
+[14-Sep-2015 23:13:28 UTC] PHP   9. include_once() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Configuration.php:169
+[14-Sep-2015 23:13:28 UTC] PHP  10. require_once() /home/ubuntu/workspace/git/yii-gii-lte-generator/tests/codeception/frontend/_bootstrap.php:10
+[14-Sep-2015 23:14:08 UTC] PHP Fatal error:  Cannot redeclare composerRequirea2579f3622280ce4a032dba4added3df() (previously declared in /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/composer/autoload_real.php:52) in /home/ubuntu/workspace/git/yii-gii-lte-generator/vendor/composer/autoload_real.php on line 55
+[14-Sep-2015 23:14:08 UTC] PHP Stack trace:
+[14-Sep-2015 23:14:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/codecept:0
+[14-Sep-2015 23:14:08 UTC] PHP   2. Symfony\Component\Console\Application->run() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/codecept:27
+[14-Sep-2015 23:14:08 UTC] PHP   3. Symfony\Component\Console\Application->doRun() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:126
+[14-Sep-2015 23:14:08 UTC] PHP   4. Symfony\Component\Console\Application->doRunCommand() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:195
+[14-Sep-2015 23:14:08 UTC] PHP   5. Symfony\Component\Console\Command\Command->run() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Application.php:878
+[14-Sep-2015 23:14:08 UTC] PHP   6. Codeception\Command\Build->execute() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/symfony/console/Command/Command.php:259
+[14-Sep-2015 23:14:08 UTC] PHP   7. Codeception\Command\Build->buildActorsForConfig() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Build.php:46
+[14-Sep-2015 23:14:08 UTC] PHP   8. Codeception\Command\Build->getGlobalConfig() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Build.php:51
+[14-Sep-2015 23:14:08 UTC] PHP   9. Codeception\Configuration::config() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Command/Shared/Config.php:15
+[14-Sep-2015 23:14:08 UTC] PHP  10. Codeception\Configuration::loadBootstrap() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Configuration.php:155
+[14-Sep-2015 23:14:08 UTC] PHP  11. include_once() /home/ubuntu/workspace/git.1/yii-gii-lte-generator/vendor/codeception/codeception/src/Codeception/Configuration.php:169
+[14-Sep-2015 23:14:08 UTC] PHP  12. require_once() /home/ubuntu/workspace/git/yii-gii-lte-generator/tests/codeception/frontend/_bootstrap.php:10

@@ -35,7 +35,7 @@ After creating and setting up the advanced application, follow these steps to pr
    webserver. In the root directory where `common`, `frontend` etc. are execute the following:
 
    ```
-   php -S localhost:8080
+   php -S localhost:8081
    ```
 
 5. Now you can run the tests with the following commands, assuming you are in the `tests/codeception` directory:

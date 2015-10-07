@@ -1,0 +1,3 @@
+[07-Oct-2015 12:55:12 UTC] PHP Fatal error:  Class 'yii\rest\ActiveController' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/PedidosController.php on line 15
+[07-Oct-2015 12:55:12 UTC] PHP Stack trace:
+[07-Oct-2015 12:55:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/PedidosController.php:0

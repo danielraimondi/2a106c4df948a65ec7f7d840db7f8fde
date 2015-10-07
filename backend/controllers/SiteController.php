@@ -39,13 +39,20 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'logout'],
                         'allow' => true,
                     ],
                     [
                         'actions' => ['logout', 'index'],
+                        //'actions' => ['index'],
                         'allow' => true,
                         'roles' => ['@'],
+                        // 'matchCallback' => function ($rule, $action) {
+                        //     return Yii::$app->user->identity->isAdmin;
+                        // },
+                        // 'denyCallback' => function ($rule, $action) {
+                        //      return 1;
+                        // },
                     ],
                 ],
             ],
@@ -81,7 +88,13 @@ class SiteController extends Controller
 
         $this->view->params['profile'] = $profile;
 
-        return $this->render('index');
+        if (Yii::$app->user->identity->isAdmin)
+            return $this->render('index');
+            
+        else{
+            Yii::$app->user->logout();
+            return $this->goHome();
+        }
     }
 
     public function actionLogin()

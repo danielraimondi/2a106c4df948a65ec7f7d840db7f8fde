@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace frontend\assets;
+namespace backend\assets;
 
 use yii\web\AssetBundle;
 
@@ -27,6 +27,7 @@ use yii\web\AssetBundle;
         'yii\bootstrap\BootstrapAsset',
     ];
 }*/
+
 
 class AppAsset extends AssetBundle
 {

@@ -1,0 +1,9 @@
+[06-Oct-2015 15:04:26 UTC] PHP Fatal error:  Class 'Codeception\AbstractGuy' not found in /home/ubuntu/workspace/relevando/api/tests/api/ApiGuy.php on line 29
+[06-Oct-2015 15:04:26 UTC] PHP Stack trace:
+[06-Oct-2015 15:04:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/tests/api/ApiGuy.php:0
+[06-Oct-2015 15:04:28 UTC] PHP Fatal error:  Class 'ApiGuy' not found in /home/ubuntu/workspace/relevando/api/tests/api/PushCept.php on line 13
+[06-Oct-2015 15:04:28 UTC] PHP Stack trace:
+[06-Oct-2015 15:04:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/tests/api/PushCept.php:0
+[06-Oct-2015 15:04:30 UTC] PHP Fatal error:  Class 'yii\helpers\ArrayHelper' not found in /home/ubuntu/workspace/relevando/api/tests/api/_config.php on line 3
+[06-Oct-2015 15:04:30 UTC] PHP Stack trace:
+[06-Oct-2015 15:04:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/tests/api/_config.php:0

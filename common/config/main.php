@@ -1,6 +1,7 @@
 <?php
 return [
     'language' => 'en-US',//'es-UY',//
+    'name' => 'Relevando.com',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'cache' => [
@@ -17,10 +18,14 @@ return [
         ],
 
     ],
-    /*'modules' => [
-    	'gii' => [
-		    'class' => 'yii\gii\Module',
-		    'allowedIPs' => ['127.0.0.1', '::1', '192.168.0.*', '192.168.178.20'] // adjust this to your needs
-		],
-    ]*/
+    
+    
+    'modules' => [
+            'datecontrol' =>  [
+                'class' => '\kartik\datecontrol\Module'
+                    ]
+        ]
+    
+    
+    
 ];
