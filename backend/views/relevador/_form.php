@@ -4,27 +4,21 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Client */
+/* @var $model backend\models\Relevador */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="client-form">
+<div class="relevador-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'client_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'priority')->textInput() ?>
+    <?= $form->field($model, 'user_lat')->textInput() ?>
 
-    <?= $form->field($model, 'open_time')->textInput() ?>
-    
-    <?= $form->field($model, 'close_time')->textInput() ?>
-    
-    <?= $form->field($model, 'client_address')->textInput() ?>
-    
-    <?= $form->field($model, 'client_lat')->hiddenInput()->label(false) ?>
+    <?= $form->field($model, 'user_lng')->textInput() ?>
 
-    <?= $form->field($model, 'client_long')->hiddenInput()->label(false) ?>
+    <?= $form->field($model, 'user_radius')->textInput() ?>
     
     <div id="map" style="height:300px; width:100%;"> </div> 
     <br>
@@ -50,8 +44,8 @@ use yii\widgets\ActiveForm;
   function initMap() {
     
     var center = {lat: -34.893753, lng: -56.165217},
-        latInput = document.getElementById("client-client_lat"),
-        lngInput = document.getElementById("client-client_long");
+        latInput = document.getElementById("relevador-user_lat"),
+        lngInput = document.getElementById("relevador-user_lng");
     
     if (latInput.value && lngInput.value)
       center = {lat: parseFloat(latInput.value), lng: parseFloat(lngInput.value)}

@@ -1,7 +1,10 @@
 <?php
 /* @var $this yii\web\View */
+use yii\helpers\Html;
 
 $this->title = 'Backend';
+
+
 ?>
 <!--<div class="site-index">-->
 
@@ -50,3 +53,4 @@ $this->title = 'Backend';
 
 <!--    </div>-->
 <!--</div>-->
+
