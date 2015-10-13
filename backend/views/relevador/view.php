@@ -50,23 +50,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </div>
 
-<div id= 'latitud' style= 'display: none'>
-    <?php
-        echo ($model->user_lat);
-    ?>
-</div>
-
-<div id= 'longitud' style= 'display: none' >
-    <?php
-        echo ($model->user_lng);
-    ?>
-</div>
-
-<div id= 'radius' style= 'display: none' >
-    <?php
-        echo ($model->user_radius);
-    ?>
-</div>
 
 <script>
 
@@ -75,12 +58,12 @@ $this->params['breadcrumbs'][] = $this->title;
   // The user can then click an option to hide, show or delete the markers.
   var map;
   var markers = [];
-  var lat = document.getElementById('latitud'),
-      lng = document.getElementById('longitud');
-      radius = document.getElementById('radius');
+  var lat = <?= $model->user_lat ?>,
+      lng = <?= $model->user_lng ?>,
+      radius = <?= $model->user_radius ?>;
  
   function initMap() {
-    var center = {lat: parseFloat(lat.innerHTML), lng: parseFloat(lng.innerHTML)};
+    var center = {lat: parseFloat(lat), lng: parseFloat(lng)};
   
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
@@ -94,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
     //addMarker(haightAshbury);
   
       
-      addMarker({lat: parseFloat(lat.innerHTML), lng: parseFloat(lng.innerHTML)});
+      addMarker({lat: parseFloat(lat), lng: parseFloat(lng)});
       drawRadius()
   }
   
@@ -138,8 +121,8 @@ $this->params['breadcrumbs'][] = $this->title;
       fillColor: '#3366FF',
       fillOpacity: 0.1,
       map: map,
-      center: {lat: parseFloat(lat.innerHTML), lng: parseFloat(lng.innerHTML)},
-      radius: parseFloat(radius.innerHTML)
+      center: {lat: parseFloat(lat), lng: parseFloat(lng)},
+      radius: parseFloat(radius)
     });
   }
 

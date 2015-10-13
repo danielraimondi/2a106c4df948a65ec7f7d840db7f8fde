@@ -43,6 +43,13 @@ return [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                 [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'v1/product'  
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>'
+                    ]
+                ]
                     'HEAD <apiv:v\d+>/<controller:\w+>'              => '<apiv>/<controller>/index',
                     'GET <apiv:v\d+>/<controller:\w+>'               => '<apiv>/<controller>/index',
                     'HEAD <apiv:v\d+>/<controller:\w+>/<id:(.)+>'    => '<apiv>/<controller>/view',

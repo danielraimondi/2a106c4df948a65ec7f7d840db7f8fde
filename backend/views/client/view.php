@@ -41,22 +41,9 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
     
     <div id="map" style="height:300px; width:100%;"></div>
-    
-
 
 </div>
 
-<div id= 'latitud' style= 'display: none'>
-    <?php
-        echo ($model->client_lat);
-    ?>
-</div>
-
-<div id= 'longitud' style= 'display: none' >
-    <?php
-        echo ($model->client_long);
-    ?>
-</div>
 
 <script>
 
@@ -65,11 +52,12 @@ $this->params['breadcrumbs'][] = $this->title;
   // The user can then click an option to hide, show or delete the markers.
   var map;
   var markers = [];
-  var lat = document.getElementById('latitud'),
-      lng = document.getElementById('longitud');
- 
+      
+  var lat = <?= $model->client_lat ?>,
+      lng = <?= $model->client_long ?>;
+  
   function initMap() {
-    var center = {lat: parseFloat(lat.innerHTML), lng: parseFloat(lng.innerHTML)};
+    var center = {lat: parseFloat(lat), lng: parseFloat(lng)};
   
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
@@ -83,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
     //addMarker(haightAshbury);
   
       
-      addMarker({lat: parseFloat(lat.innerHTML), lng: parseFloat(lng.innerHTML)});
+      addMarker({lat: parseFloat(lat), lng: parseFloat(lng)});
   }
   
   // Adds a marker to the map and push to the array.
