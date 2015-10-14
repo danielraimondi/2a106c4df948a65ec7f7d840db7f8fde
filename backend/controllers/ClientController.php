@@ -52,6 +52,17 @@ class ClientController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+    
+    public function actionMap()
+     {
+        $searchModel = new ClientSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('map', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
 
     /**
      * Creates a new Client model.
