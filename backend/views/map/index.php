@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use backend\models\Client;
+use backend\models\Relevador;
+
 
 
 /* @var $this yii\web\View */
@@ -14,11 +16,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="client-map">
 
     <?php
-        $models = $dataProvider->getModels();
-        $locations = array();
-        foreach ($models as $model) {
-            $locations[] = array('id'=>$model->client_id, 'name'=>$model->client_name, 'lat'=>$model->client_lat, 'lng'=>$model->client_long);
-        }
+        
+        $clients = \backend\models\Client::find()->asArray()->all();
+        $relevators = \backend\models\Relevador::find()->asArray()->all();
+        
     ?>
     
     
@@ -34,7 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
   var map;
   var markers = [];
       
-  var locations = <?php echo json_encode($locations) ?> ;
+  var clients = <?php echo json_encode($clients) ?> ;
+  var relevators = <?php echo json_encode($relevators) ?> ;
   
   function initMap() {
     var center = {lat: -34.893753, lng: -56.165217};
@@ -44,26 +46,68 @@ $this->params['breadcrumbs'][] = $this->title;
     center: center,
     mapTypeId: google.maps.MapTypeId.TERRAIN
     });
-          
-    for (l in locations){
+    
+    prev_infowindow = false;
+    
+    
+    // MARKERS COMERCIOS
+    for (c in clients){
         var marker = new google.maps.Marker({
-            position: {lat: locations[l].lat, lng: locations[l].lng},
+            position: {lat: parseFloat(clients[c].client_lat), lng: parseFloat(clients[c].client_long)},
             map: map
         });
         markers.push(marker);
         
-        var content = 'ID: '+locations[l].id+'<br>Name: '+locations[l].name;     
+        var content = 'ID: '+clients[c].client_id+'<br>Name: '+clients[c].client_name;     
 
         var infowindow = new google.maps.InfoWindow();
 
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
             return function() {
+                if (prev_infowindow) 
+                    prev_infowindow.close();
                 infowindow.setContent(content);
                 infowindow.open(map,marker);
+                prev_infowindow = infowindow;
             };
         })(marker,content,infowindow)); 
         
     }
+    
+    // MARKERS RELEVADORES
+    for (r in relevators){
+        
+        if (relevators[r].user_lat != null && relevators[r].user_lng != null){
+            var marker = new google.maps.Marker({
+                position: {lat: parseFloat(relevators[r].user_lat), lng: parseFloat(relevators[r].user_lng)},
+                map: map
+            });
+        
+            markers.push(marker);
+                
+            var content = 'ID: '+relevators[r].id+'<br>Name: '+relevators[r].username;     
+        
+            var infowindow = new google.maps.InfoWindow();
+        
+            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+                return function() {
+                    if (prev_infowindow) 
+                        prev_infowindow.close();
+                    infowindow.setContent(content);
+                    infowindow.open(map,marker);
+                    prev_infowindow = infowindow;
+                };
+            })(marker,content,infowindow));
+        
+        }
+        
+    }
+    
+    // CERRAR INFOWINDOW
+    map.addListener('click', function(event) {
+      if (prev_infowindow)
+        prev_infowindow.close();
+    });
     
  }
   

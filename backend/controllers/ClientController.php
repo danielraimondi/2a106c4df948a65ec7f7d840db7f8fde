@@ -53,17 +53,7 @@ class ClientController extends Controller
         ]);
     }
     
-    public function actionMap()
-     {
-        $searchModel = new ClientSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('map', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
+   
     /**
      * Creates a new Client model.
      * If creation is successful, the browser will be redirected to the 'view' page.

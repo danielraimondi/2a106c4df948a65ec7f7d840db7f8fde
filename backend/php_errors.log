@@ -1,88 +1,146 @@
-[13-Oct-2015 11:50:39 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/relevando/backend/views/client/view.php on line 71
-[13-Oct-2015 11:50:39 UTC] PHP Stack trace:
-[13-Oct-2015 11:50:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 11:50:39 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 11:50:39 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 11:50:39 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 11:50:39 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 11:50:39 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 11:50:39 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:50:39 UTC] PHP   8. backend\controllers\ClientController->actionView() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:50:39 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:53
-[13-Oct-2015 11:50:39 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 11:50:39 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 11:50:39 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
-[13-Oct-2015 11:51:19 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/relevando/backend/views/client/view.php on line 71
-[13-Oct-2015 11:51:19 UTC] PHP Stack trace:
-[13-Oct-2015 11:51:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 11:51:19 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 11:51:19 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 11:51:19 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 11:51:19 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 11:51:19 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 11:51:19 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:51:19 UTC] PHP   8. backend\controllers\ClientController->actionView() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:51:19 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:53
-[13-Oct-2015 11:51:19 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 11:51:19 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 11:51:19 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
-[13-Oct-2015 11:51:29 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/relevando/backend/views/client/view.php on line 71
-[13-Oct-2015 11:51:29 UTC] PHP Stack trace:
-[13-Oct-2015 11:51:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 11:51:29 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 11:51:29 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 11:51:29 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 11:51:29 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 11:51:29 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 11:51:29 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:51:29 UTC] PHP   8. backend\controllers\ClientController->actionView() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:51:29 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:53
-[13-Oct-2015 11:51:29 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 11:51:29 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 11:51:29 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
-[13-Oct-2015 11:52:03 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/relevando/backend/views/client/view.php on line 71
-[13-Oct-2015 11:52:03 UTC] PHP Stack trace:
-[13-Oct-2015 11:52:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 11:52:03 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 11:52:03 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 11:52:03 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 11:52:03 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 11:52:03 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 11:52:03 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:52:03 UTC] PHP   8. backend\controllers\ClientController->actionView() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:52:03 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:53
-[13-Oct-2015 11:52:03 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 11:52:03 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 11:52:03 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
-[13-Oct-2015 11:54:59 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/relevando/backend/views/client/view.php on line 71
-[13-Oct-2015 11:54:59 UTC] PHP Stack trace:
-[13-Oct-2015 11:54:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 11:54:59 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 11:54:59 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 11:54:59 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 11:54:59 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 11:54:59 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 11:54:59 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:54:59 UTC] PHP   8. backend\controllers\ClientController->actionView() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:54:59 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:53
-[13-Oct-2015 11:54:59 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 11:54:59 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 11:54:59 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
-[13-Oct-2015 11:56:07 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/relevando/backend/views/client/view.php on line 71
-[13-Oct-2015 11:56:07 UTC] PHP Stack trace:
-[13-Oct-2015 11:56:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 11:56:07 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 11:56:07 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 11:56:07 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 11:56:07 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 11:56:07 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 11:56:07 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:56:07 UTC] PHP   8. backend\controllers\ClientController->actionView() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 11:56:07 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:53
-[13-Oct-2015 11:56:07 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 11:56:07 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 11:56:07 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
-[13-Oct-2015 13:38:23 UTC] An Error occurred while handling another error:
+[14-Oct-2015 14:06:47 UTC] PHP Fatal error:  Call to a member function getModels() on a non-object in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 23
+[14-Oct-2015 14:06:47 UTC] PHP Stack trace:
+[14-Oct-2015 14:06:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 14:06:47 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 14:06:47 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 14:06:47 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 14:06:47 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 14:06:47 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 14:06:47 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 14:06:47 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 14:06:47 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:70
+[14-Oct-2015 14:06:47 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 14:06:47 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 14:06:47 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 14:06:47 UTC] PHP  13. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[14-Oct-2015 14:07:33 UTC] PHP Fatal error:  Call to a member function getModels() on a non-object in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 23
+[14-Oct-2015 14:07:33 UTC] PHP Stack trace:
+[14-Oct-2015 14:07:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 14:07:33 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 14:07:33 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 14:07:33 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 14:07:33 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 14:07:33 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 14:07:33 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 14:07:33 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 14:07:33 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:70
+[14-Oct-2015 14:07:33 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 14:07:33 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 14:07:33 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 14:07:33 UTC] PHP  13. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[14-Oct-2015 17:34:33 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 155
+[14-Oct-2015 17:34:33 UTC] PHP Stack trace:
+[14-Oct-2015 17:34:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 17:34:33 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 17:34:33 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 17:34:33 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 17:34:33 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 17:34:33 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 17:34:33 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:34:33 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:34:33 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:63
+[14-Oct-2015 17:34:33 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 17:34:33 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 17:34:33 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 17:35:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 155
+[14-Oct-2015 17:35:36 UTC] PHP Stack trace:
+[14-Oct-2015 17:35:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 17:35:36 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 17:35:36 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 17:35:36 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 17:35:36 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 17:35:36 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 17:35:36 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:35:36 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:35:36 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:63
+[14-Oct-2015 17:35:36 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 17:35:36 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 17:35:36 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 17:36:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 155
+[14-Oct-2015 17:36:36 UTC] PHP Stack trace:
+[14-Oct-2015 17:36:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 17:36:36 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 17:36:36 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 17:36:36 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 17:36:36 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 17:36:36 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 17:36:36 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:36:36 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:36:36 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:71
+[14-Oct-2015 17:36:36 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 17:36:36 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 17:36:36 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 17:37:29 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 155
+[14-Oct-2015 17:37:29 UTC] PHP Stack trace:
+[14-Oct-2015 17:37:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 17:37:29 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 17:37:29 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 17:37:29 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 17:37:29 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 17:37:29 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 17:37:29 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:37:29 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:37:29 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:67
+[14-Oct-2015 17:37:29 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 17:37:29 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 17:37:29 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 17:38:52 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 155
+[14-Oct-2015 17:38:52 UTC] PHP Stack trace:
+[14-Oct-2015 17:38:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 17:38:52 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 17:38:52 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 17:38:52 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 17:38:52 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 17:38:52 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 17:38:52 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:38:52 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:38:52 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:67
+[14-Oct-2015 17:38:52 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 17:38:52 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 17:38:52 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 17:39:10 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 155
+[14-Oct-2015 17:39:10 UTC] PHP Stack trace:
+[14-Oct-2015 17:39:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 17:39:10 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 17:39:10 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 17:39:10 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 17:39:10 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 17:39:10 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 17:39:10 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:39:10 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:39:10 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:70
+[14-Oct-2015 17:39:10 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 17:39:10 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 17:39:10 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 17:40:13 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 155
+[14-Oct-2015 17:40:13 UTC] PHP Stack trace:
+[14-Oct-2015 17:40:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 17:40:13 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 17:40:13 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 17:40:13 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 17:40:13 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 17:40:13 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 17:40:13 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:40:13 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:40:13 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:66
+[14-Oct-2015 17:40:13 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 17:40:13 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 17:40:13 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 17:41:08 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 155
+[14-Oct-2015 17:41:08 UTC] PHP Stack trace:
+[14-Oct-2015 17:41:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[14-Oct-2015 17:41:08 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[14-Oct-2015 17:41:08 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[14-Oct-2015 17:41:08 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[14-Oct-2015 17:41:08 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[14-Oct-2015 17:41:08 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[14-Oct-2015 17:41:08 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:41:08 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[14-Oct-2015 17:41:08 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:64
+[14-Oct-2015 17:41:08 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[14-Oct-2015 17:41:08 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[14-Oct-2015 17:41:08 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 19:40:28 UTC] An Error occurred while handling another error:
 exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
 Stack trace:
 #0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
@@ -98,9 +156,9 @@ Stack trace:
 #10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
 #11 {main}
 Previous exception:
-exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "clientmap".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "map".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
 Stack trace:
-#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('clientmap', Array)
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('map', Array)
 #1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
 #2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
 #3 {main}
@@ -117,7 +175,7 @@ $_SERVER = [
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36',
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
     'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
-    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; _cioid=773651; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; _cio=2b55df57-cd4d-8287-387d-979fafdce23e; _csrf=4d8256104c959ccf20655821c3bedcad7782a3f3f878d2edd5ac150196dbdc37a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%222axr4i067Y68L7MoJrunobogDUihr3y_%22%3B%7D; PHPSESSID=32gcbk4v8a5abj7bp967vgiqc5; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; _cioid=773651; ajs_user_id=773651; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; _cio=d07e44b7-c9fe-520b-7a4c-6b3a1091e1ce; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=488f882b3f96761e355cabc39f7a296da788ccd8015caf117b732d564c1fcf2ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2295WfuxhatmDCAXJiu66ajN2E-ndf68vW%22%3B%7D; PHPSESSID=2sekh70tn93vae41l4go0ertk6',
     'HTTP_X_FORWARDED_PROTO' => 'https',
     'HTTP_X_REGION' => 'usw',
     'HTTP_X_FORWARDED_FOR' => '190.0.157.37',
@@ -130,26 +188,26 @@ $_SERVER = [
     'SERVER_NAME' => 'test-danielraimondi.c9.io',
     'SERVER_ADDR' => '172.17.228.116',
     'SERVER_PORT' => '443',
-    'REMOTE_ADDR' => '10.240.0.3',
+    'REMOTE_ADDR' => '10.240.0.13',
     'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
     'REQUEST_SCHEME' => 'https',
     'CONTEXT_PREFIX' => '',
     'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
     'SERVER_ADMIN' => '[no address given]',
     'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
-    'REMOTE_PORT' => '57176',
-    'REDIRECT_URL' => '/relevando/backend/web/clientmap',
+    'REMOTE_PORT' => '54003',
+    'REDIRECT_URL' => '/relevando/backend/web/map',
     'GATEWAY_INTERFACE' => 'CGI/1.1',
     'SERVER_PROTOCOL' => 'HTTP/1.1',
     'REQUEST_METHOD' => 'GET',
     'QUERY_STRING' => '',
-    'REQUEST_URI' => '/relevando/backend/web/clientmap',
+    'REQUEST_URI' => '/relevando/backend/web/map',
     'SCRIPT_NAME' => '/relevando/backend/web/index.php',
     'PHP_SELF' => '/relevando/backend/web/index.php',
-    'REQUEST_TIME_FLOAT' => 1444743503.3250000476837158203125,
-    'REQUEST_TIME' => 1444743503,
+    'REQUEST_TIME_FLOAT' => 1444851628.374000072479248046875,
+    'REQUEST_TIME' => 1444851628,
 ]
-[13-Oct-2015 14:32:46 UTC] An Error occurred while handling another error:
+[14-Oct-2015 19:41:28 UTC] An Error occurred while handling another error:
 exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
 Stack trace:
 #0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
@@ -165,17 +223,18 @@ Stack trace:
 #10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
 #11 {main}
 Previous exception:
-exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:125
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "map".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
 Stack trace:
-#0 /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php(59): backend\controllers\ClientController->findModel(NULL)
-#1 [internal function]: backend\controllers\ClientController->actionMap()
-#2 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
-#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
-#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('map', Array)
-#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('client/map', Array)
-#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#7 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
-#8 {main}
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('map', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
 $_SERVER = [
     'REDIRECT_STATUS' => '200',
     'HTTP_HOST' => 'test-danielraimondi.c9.io',
@@ -184,7 +243,7 @@ $_SERVER = [
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36',
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
     'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
-    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; _cioid=773651; _cio=2b55df57-cd4d-8287-387d-979fafdce23e; _csrf=4d8256104c959ccf20655821c3bedcad7782a3f3f878d2edd5ac150196dbdc37a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%222axr4i067Y68L7MoJrunobogDUihr3y_%22%3B%7D; PHPSESSID=32gcbk4v8a5abj7bp967vgiqc5; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; _cioid=773651; ajs_user_id=773651; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; _cio=d07e44b7-c9fe-520b-7a4c-6b3a1091e1ce; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=488f882b3f96761e355cabc39f7a296da788ccd8015caf117b732d564c1fcf2ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2295WfuxhatmDCAXJiu66ajN2E-ndf68vW%22%3B%7D; PHPSESSID=2sekh70tn93vae41l4go0ertk6',
     'HTTP_X_FORWARDED_PROTO' => 'https',
     'HTTP_X_REGION' => 'usw',
     'HTTP_X_FORWARDED_FOR' => '190.0.157.37',
@@ -197,65 +256,157 @@ $_SERVER = [
     'SERVER_NAME' => 'test-danielraimondi.c9.io',
     'SERVER_ADDR' => '172.17.228.116',
     'SERVER_PORT' => '443',
-    'REMOTE_ADDR' => '10.240.213.116',
+    'REMOTE_ADDR' => '10.240.169.177',
     'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
     'REQUEST_SCHEME' => 'https',
     'CONTEXT_PREFIX' => '',
     'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
     'SERVER_ADMIN' => '[no address given]',
     'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
-    'REMOTE_PORT' => '48396',
-    'REDIRECT_URL' => '/relevando/backend/web/client/map',
+    'REMOTE_PORT' => '51541',
+    'REDIRECT_URL' => '/relevando/backend/web/map',
     'GATEWAY_INTERFACE' => 'CGI/1.1',
     'SERVER_PROTOCOL' => 'HTTP/1.1',
     'REQUEST_METHOD' => 'GET',
     'QUERY_STRING' => '',
-    'REQUEST_URI' => '/relevando/backend/web/client/map',
+    'REQUEST_URI' => '/relevando/backend/web/map',
     'SCRIPT_NAME' => '/relevando/backend/web/index.php',
     'PHP_SELF' => '/relevando/backend/web/index.php',
-    'REQUEST_TIME_FLOAT' => 1444746766.466000080108642578125,
-    'REQUEST_TIME' => 1444746766,
+    'REQUEST_TIME_FLOAT' => 1444851688.5520000457763671875,
+    'REQUEST_TIME' => 1444851688,
 ]
-[13-Oct-2015 16:18:53 UTC] PHP Parse error:  syntax error, unexpected '$searchModel' (T_VARIABLE) in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 20
-[13-Oct-2015 16:18:53 UTC] PHP Stack trace:
-[13-Oct-2015 16:18:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 16:18:53 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 16:18:53 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 16:18:53 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 16:18:53 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 16:18:53 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 16:18:53 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 16:18:53 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 16:18:53 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:64
-[13-Oct-2015 16:18:53 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 16:18:53 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 16:18:53 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
-[13-Oct-2015 16:27:49 UTC] PHP Fatal error:  Class 'GridView' not found in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 18
-[13-Oct-2015 16:27:49 UTC] PHP Stack trace:
-[13-Oct-2015 16:27:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 16:27:49 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 16:27:49 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 16:27:49 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 16:27:49 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 16:27:49 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 16:27:49 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 16:27:49 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 16:27:49 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:64
-[13-Oct-2015 16:27:49 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 16:27:49 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 16:27:49 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
-[13-Oct-2015 16:27:49 UTC] PHP  13. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
-[13-Oct-2015 16:54:23 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/relevando/backend/views/client/map.php on line 19
-[13-Oct-2015 16:54:23 UTC] PHP Stack trace:
-[13-Oct-2015 16:54:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
-[13-Oct-2015 16:54:23 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
-[13-Oct-2015 16:54:23 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
-[13-Oct-2015 16:54:23 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
-[13-Oct-2015 16:54:23 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
-[13-Oct-2015 16:54:23 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
-[13-Oct-2015 16:54:23 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 16:54:23 UTC] PHP   8. backend\controllers\ClientController->actionMap() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
-[13-Oct-2015 16:54:23 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ClientController.php:64
-[13-Oct-2015 16:54:23 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
-[13-Oct-2015 16:54:23 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
-[13-Oct-2015 16:54:23 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[14-Oct-2015 19:41:32 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "map".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('map', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; _cioid=773651; ajs_user_id=773651; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; _cio=d07e44b7-c9fe-520b-7a4c-6b3a1091e1ce; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=488f882b3f96761e355cabc39f7a296da788ccd8015caf117b732d564c1fcf2ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2295WfuxhatmDCAXJiu66ajN2E-ndf68vW%22%3B%7D; PHPSESSID=2sekh70tn93vae41l4go0ertk6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.157.37',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.228.116',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.169.177',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '51611',
+    'REDIRECT_URL' => '/relevando/backend/web/map',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/map',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1444851692.697000026702880859375,
+    'REQUEST_TIME' => 1444851692,
+]
+[14-Oct-2015 19:42:24 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "map".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('map', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; _cioid=773651; ajs_user_id=773651; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; _cio=d07e44b7-c9fe-520b-7a4c-6b3a1091e1ce; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=488f882b3f96761e355cabc39f7a296da788ccd8015caf117b732d564c1fcf2ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2295WfuxhatmDCAXJiu66ajN2E-ndf68vW%22%3B%7D; PHPSESSID=2sekh70tn93vae41l4go0ertk6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.157.37',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.228.116',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.13',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '55425',
+    'REDIRECT_URL' => '/relevando/backend/web/map',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/map',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1444851744.0629999637603759765625,
+    'REQUEST_TIME' => 1444851744,
+]

@@ -97,6 +97,10 @@ class SiteController extends Controller
         }
     }
 
+    public function actionMap(){
+        return $this->render('map');
+    }
+    
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
