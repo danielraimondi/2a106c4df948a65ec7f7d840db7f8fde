@@ -58,16 +58,36 @@ use yii\widgets\ActiveForm;
       mapTypeId: google.maps.MapTypeId.TERRAIN
     });
     
-    if (latInput.value && lngInput.value)
-      addMarker({lat: parseFloat(latInput.value), lng: parseFloat(lngInput.value)});
+    var markerIcon = {
+                    url: "../images/streetview.ico",
+                    size: new google.maps.Size(32, 32),
+                    //origin: new google.maps.Point(25, 25),
+                    anchor: new google.maps.Point(16, 24),
+                    scaledSize: new google.maps.Size(32, 32)
+                };
+    
+    if (latInput.value && lngInput.value){
+      var marker = new google.maps.Marker({
+                position: {lat: parseFloat(latInput.value), lng: parseFloat(lngInput.value)},
+                map: map,
+                icon: markerIcon
+            });
+      markers.push(marker);
+    }
+      
     
   
     // This event listener will call addMarker() when the map is clicked.
     map.addListener('click', function(event) {
       deleteMarkers();
-      addMarker(event.latLng);
       latInput.value = event.latLng.lat();
       lngInput.value = event.latLng.lng();
+      var marker = new google.maps.Marker({
+                position: {lat: parseFloat(latInput.value), lng: parseFloat(lngInput.value)},
+                map: map,
+                icon: markerIcon
+            });
+      markers.push(marker);
     });
   
 

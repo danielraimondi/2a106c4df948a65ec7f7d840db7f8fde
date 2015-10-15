@@ -58,12 +58,18 @@ $this->params['breadcrumbs'][] = $this->title;
   // The user can then click an option to hide, show or delete the markers.
   var map;
   var markers = [];
-  var lat = <?= $model->user_lat ?>,
-      lng = <?= $model->user_lng ?>,
-      radius = <?= $model->user_radius ?>;
- 
+  var lat = parseFloat(<?= $model->user_lat ?>),
+      lng = parseFloat(<?= $model->user_lng ?>),
+      radius = parseFloat(<?= $model->user_radius ?>);
+  
+  
   function initMap() {
-    var center = {lat: parseFloat(lat), lng: parseFloat(lng)};
+    
+    
+    var center = {lat: -34.893753, lng: -56.165217};
+    
+    if (lat && lng)
+        center = {lat: lat, lng: lng};
   
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
@@ -71,14 +77,26 @@ $this->params['breadcrumbs'][] = $this->title;
       mapTypeId: google.maps.MapTypeId.TERRAIN
     });
   
-    // This event listener will call addMarker() when the map is clicked.
-  
-    // Adds a marker at the center of the map.
-    //addMarker(haightAshbury);
-  
+    var markerIcon = {
+                    url: "../images/streetview.ico",
+                    size: new google.maps.Size(32, 32),
+                    //origin: new google.maps.Point(25, 25),
+                    anchor: new google.maps.Point(16, 24),
+                    scaledSize: new google.maps.Size(32, 32)
+                };
+    
+    if (lat && lng){
+      var marker = new google.maps.Marker({
+                position: {lat: lat, lng: lng},
+                map: map,
+                icon: markerIcon
+            });
+      markers.push(marker);
+      drawRadius();
+    }
       
-      addMarker({lat: parseFloat(lat), lng: parseFloat(lng)});
-      drawRadius()
+      
+      
   }
   
   // Adds a marker to the map and push to the array.
@@ -121,8 +139,8 @@ $this->params['breadcrumbs'][] = $this->title;
       fillColor: '#3366FF',
       fillOpacity: 0.1,
       map: map,
-      center: {lat: parseFloat(lat), lng: parseFloat(lng)},
-      radius: parseFloat(radius)
+      center: {lat: lat, lng: lng},
+      radius: radius
     });
   }
 

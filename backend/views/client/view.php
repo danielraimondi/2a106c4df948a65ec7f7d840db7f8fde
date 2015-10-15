@@ -53,11 +53,11 @@ $this->params['breadcrumbs'][] = $this->title;
   var map;
   var markers = [];
       
-  var lat = <?= $model->client_lat ?>,
-      lng = <?= $model->client_long ?>;
+  var lat = parseFloat(<?= $model->client_lat ?>),
+      lng = parseFloat(<?= $model->client_long ?>);
   
   function initMap() {
-    var center = {lat: parseFloat(lat), lng: parseFloat(lng)};
+    var center = {lat: lat, lng: lng};
   
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
@@ -71,7 +71,19 @@ $this->params['breadcrumbs'][] = $this->title;
     //addMarker(haightAshbury);
   
       
-      addMarker({lat: parseFloat(lat), lng: parseFloat(lng)});
+      var markerIcon = {
+                    url: "../images/shop2.ico",
+                    size: new google.maps.Size(32, 32),
+                    //origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(15, 25),
+                    scaledSize: new google.maps.Size(32, 32)
+                };
+        
+        var marker = new google.maps.Marker({
+            position: {lat: lat, lng: lng},
+            map: map,
+            icon: markerIcon
+        });
   }
   
   // Adds a marker to the map and push to the array.

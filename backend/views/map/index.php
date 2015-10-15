@@ -52,10 +52,28 @@ $this->params['breadcrumbs'][] = $this->title;
     
     // MARKERS COMERCIOS
     for (c in clients){
+        
+        var markerIcon = {
+                    url: "images/shop2.ico",
+                    size: new google.maps.Size(32, 32),
+                    //origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(15, 25),
+                    scaledSize: new google.maps.Size(32, 32)
+                };
+        
         var marker = new google.maps.Marker({
             position: {lat: parseFloat(clients[c].client_lat), lng: parseFloat(clients[c].client_long)},
-            map: map
+            map: map,
+            icon: markerIcon
         });
+        
+        
+        // var marker = new google.maps.Marker({
+        //     position: {lat: parseFloat(clients[c].client_lat), lng: parseFloat(clients[c].client_long)},
+        //     map: map,
+        //     //icon: markerIcon
+        // });
+        
         markers.push(marker);
         
         var content = 'ID: '+clients[c].client_id+'<br>Name: '+clients[c].client_name;     
@@ -78,12 +96,34 @@ $this->params['breadcrumbs'][] = $this->title;
     for (r in relevators){
         
         if (relevators[r].user_lat != null && relevators[r].user_lng != null){
+            
+            var markerIcon = {
+                    url: "images/streetview.ico",
+                    size: new google.maps.Size(32, 32),
+                    //origin: new google.maps.Point(25, 25),
+                    anchor: new google.maps.Point(16, 24),
+                    scaledSize: new google.maps.Size(32, 32)
+                };
+            
             var marker = new google.maps.Marker({
                 position: {lat: parseFloat(relevators[r].user_lat), lng: parseFloat(relevators[r].user_lng)},
-                map: map
+                map: map,
+                icon: markerIcon
             });
         
             markers.push(marker);
+            
+            
+            var cityCircle = new google.maps.Circle({
+                strokeColor: '#0000FF',
+                  strokeOpacity: 0.5,
+                  strokeWeight: 0.5,
+                  fillColor: '#3366FF',
+                  fillOpacity: 0.1,
+                  map: map,
+                  center: {lat: parseFloat(relevators[r].user_lat), lng: parseFloat(relevators[r].user_lng)},
+                  radius: parseFloat(relevators[r].user_radius)
+                });
                 
             var content = 'ID: '+relevators[r].id+'<br>Name: '+relevators[r].username;     
         

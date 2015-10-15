@@ -46,7 +46,7 @@ if (isset(Yii::$app->user->identity)) :
                     ['label' => '<i class="fa fa-check-square"></i><span>Categories</span>', 'url' => ['/product_cat']],
                     ['label' => '<i class="fa fa-cubes"></i><span>Products</span>', 'url' => ['/product']],
                     ['label' => '<i class="fa fa-diamond"></i><span>Clients</span>', 'url' => ['/client']],
-                    ['label' => '<i class="fa fa-user"></i><span>Profile</span>', 'url' => ['/user/profile/show','id'=>isset(Yii::$app->user->identity) ? Yii::$app->user->identity->id : -1], 'visible' =>!Yii::$app->user->isGuest],
+                    //['label' => '<i class="fa fa-user"></i><span>Profile</span>', 'url' => ['/user/profile/show','id'=>isset(Yii::$app->user->identity) ? Yii::$app->user->identity->id : -1], 'visible' =>!Yii::$app->user->isGuest],
                     ['label' => '<i class="fa fa-street-view"></i><span>Relevators</span>', 'url' => ['/relevador']],
                     ['label' => '<i class="fa fa-map"></i><span>Map</span>', 'url' => ['/map']],
                     ['label' => '<i class="fa fa-file-code-o"></i><span>Gii</span>', 'url' => ['/gii']],
