@@ -3,6 +3,7 @@
 namespace  api\modules\v1\models;
 
 use Yii;
+use \yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "product".
@@ -38,6 +39,11 @@ class Product extends \yii\db\ActiveRecord
         ];
     }
 
+    public static function primaryKey()
+    {
+        return ['prod_id'];
+    }
+    
     /**
      * @inheritdoc
      */

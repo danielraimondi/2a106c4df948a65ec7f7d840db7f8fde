@@ -16,9 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'priority')->textInput() ?>
 
-    <?= $form->field($model, 'open_time')->textInput() ?>
-    
-    <?= $form->field($model, 'close_time')->textInput() ?>
+    <?= $form->field($model, 'day')->dropDownList([ 'Monday' => 'Monday', 'Tuesday' => 'Tuesday', 'Wednesday' => 'Wednesday', 'Thursday' => 'Thursday', 'Friday' => 'Friday', 'Saturday' => 'Saturday', 'Sunday' => 'Sunday', ], ['prompt' => '']) ?>
     
     <?= $form->field($model, 'client_address')->textInput() ?>
     

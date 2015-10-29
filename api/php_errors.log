@@ -10,3 +10,6 @@
 [06-Oct-2015 15:03:59 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/relevando/api/tests/../../common/config/aliases.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/relevando/api/tests/_bootstrap.php on line 18
 [06-Oct-2015 15:03:59 UTC] PHP Stack trace:
 [06-Oct-2015 15:03:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/tests/_bootstrap.php:0
+[28-Oct-2015 20:23:43 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
+[28-Oct-2015 20:23:43 UTC] PHP Stack trace:
+[28-Oct-2015 20:23:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0

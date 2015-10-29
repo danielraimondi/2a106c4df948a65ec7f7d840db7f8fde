@@ -33,8 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 //'client_long',
                 'client_address',
                 'priority',
-                'open_time',
-                'close_time',
+                'day',
     
                 ['class' => 'yii\grid\ActionColumn'],
             ],

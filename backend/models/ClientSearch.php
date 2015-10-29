@@ -19,7 +19,7 @@ class ClientSearch extends Client
     {
         return [
             [['client_id', 'priority'], 'integer'],
-            [['client_name', 'client_address', 'open_time', 'close_time'], 'safe'],
+            [['client_name', 'client_address', 'day'], 'safe'],
             [['client_lat', 'client_long'], 'number'],
         ];
     }
@@ -61,8 +61,7 @@ class ClientSearch extends Client
             'client_lat' => $this->client_lat,
             'client_long' => $this->client_long,
             'priority' => $this->priority,
-            'open_time' => $this->open_time,
-            'close_time' => $this->close_time,
+            'day' => $this->day,
         ]);
 
         $query->andFilterWhere(['like', 'client_name', $this->client_name]);

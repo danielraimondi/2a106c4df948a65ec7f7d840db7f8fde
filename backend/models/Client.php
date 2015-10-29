@@ -12,8 +12,7 @@ use Yii;
  * @property double $client_lat
  * @property double $client_long
  * @property integer $priority
- * @property string $open_time
- * @property string $close_time
+ * @property string $day
  */
 class Client extends \yii\db\ActiveRecord
 {
@@ -31,10 +30,10 @@ class Client extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['client_name', 'client_lat', 'client_address', 'client_long', 'priority', 'open_time', 'close_time'], 'required'],
+            [['client_name', 'client_lat', 'client_address', 'client_long', 'priority', 'day'], 'required'],
             [['client_id', 'priority'], 'integer'],
             [['client_lat', 'client_long'], 'number'],
-            [['open_time', 'close_time'], 'safe'],
+            [['day'], 'safe'],
             [['client_name', 'client_address'], 'string', 'max' => 255]
         ];
     }
@@ -51,8 +50,7 @@ class Client extends \yii\db\ActiveRecord
             //'client_lat' => Yii::t('app', 'Client Lat'),
             //'client_long' => Yii::t('app', 'Client Long'),
             'priority' => Yii::t('app', 'Priority'),
-            'open_time' => Yii::t('app', 'Open Time'),
-            'close_time' => Yii::t('app', 'Close Time'),
+            'day' => Yii::t('app', 'Day of the week'),
         ];
     }
 }

@@ -35,8 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'client_lat',
             //'client_long',
             'priority',
-            'open_time',
-            'close_time',
+            'day',
         ],
     ]) ?>
     
