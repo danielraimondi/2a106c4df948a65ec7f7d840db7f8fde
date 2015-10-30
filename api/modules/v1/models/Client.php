@@ -19,7 +19,7 @@ use \yii\db\ActiveRecord;
  *
 
  */
-class Product extends \yii\db\ActiveRecord
+class Client extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -37,10 +37,9 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['client_id','client_name', 'client_adress', 'client_lat','client_long','priority','open_time','close_time'], 'required'],
+            [['client_id','client_name', 'client_adress', 'client_lat','client_long','priority','day'], 'required'],
             [['cat_id' , 'priority'], 'integer'],
             [['client_lat','client_long'],'float'],
-            [['open_time','close_time'],'time'],
             [['client_name', 'client_adress'], 'string', 'max' => 255]
         ];
     }
@@ -62,8 +61,7 @@ class Product extends \yii\db\ActiveRecord
             'client_lat' => Yii::t('app', 'Latitud'),
             'client_long' => Yii::t('app', 'Longitud'),
             'priority' => Yii::t('app', 'Prioridad'),
-            'open_time' => Yii::t('app', 'Abre'),
-            'close_time' => Yii::t('app', 'Cierra'),
+            'day' => Yii::t('app', 'Day of the week'),
         ];
     }
 

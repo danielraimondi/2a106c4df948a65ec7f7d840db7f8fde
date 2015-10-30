@@ -18,14 +18,7 @@ return [
     'components' => [        
         'user' => [
             'identityClass' => 'common\models\User',
-            'enableSession' => false,
-            //'loginUrl' => null,
-        ],
-        'request' => [
-            // Enable JSON Input:
-            'parsers' => [
-                'application/json' => 'yii\web\JsonParser',
-            ]
+            'enableAutoLogin' => false,
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -41,28 +34,16 @@ return [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                 [
-                    'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/product'  
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => ['v1/product_cat', 'v1/client', 'v1/product', 'v1/survey'],
                     'tokens' => [
                         '{id}' => '<id:\\w+>'
                     ]
+                    
                 ]
-                    'HEAD <apiv:v\d+>/<controller:\w+>'              => '<apiv>/<controller>/index',
-                    'GET <apiv:v\d+>/<controller:\w+>'               => '<apiv>/<controller>/index',
-                    'HEAD <apiv:v\d+>/<controller:\w+>/<id:(.)+>'    => '<apiv>/<controller>/view',
-                    'GET <apiv:v\d+>/<controller:\w+>/<id:(.)+>'     => '<apiv>/<controller>/view',
-                    'POST <apiv:v\d+>/<controller:\w+>/<id:(.)+>'    => '<apiv>/<controller>/create', 
-                    'PUT <apiv:v\d+>/<controller:\w+>/<id:(.)+>'     => '<apiv>/<controller>/update',
-                    'PATCH <apiv:v\d+>/<controller:\w+>/<id:(.)+>'   => '<apiv>/<controller>/update',
-                    'DELETE <apiv:v\d+>/<controller:\w+>/<id:(.)+>'  => '<apiv>/<controller>/delete',                
-            ]       
+            ],        
         ]
     ],
     'params' => $params,
 ];
-
-
-                    //'class' => 'yii\reset\UrlRule', 'controller' => 'Client',
-                    //'GET <apiv:v\d+>/<controller:\w+>'              => '<apiv>/<controller>/client',
-                    ///path/to/EntryScript.php?name1=value1

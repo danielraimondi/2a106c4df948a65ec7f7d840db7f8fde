@@ -13,3 +13,30 @@
 [28-Oct-2015 20:23:43 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
 [28-Oct-2015 20:23:43 UTC] PHP Stack trace:
 [28-Oct-2015 20:23:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:33:03 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
+[29-Oct-2015 15:33:03 UTC] PHP Stack trace:
+[29-Oct-2015 15:33:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:34:01 UTC] PHP Warning:  require(/home/ubuntu/workspace/relevando/api/web/../config/bootstrap.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/relevando/api/web/index.php on line 10
+[29-Oct-2015 15:34:01 UTC] PHP Stack trace:
+[29-Oct-2015 15:34:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:34:01 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/relevando/api/web/../config/bootstrap.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/relevando/api/web/index.php on line 10
+[29-Oct-2015 15:34:01 UTC] PHP Stack trace:
+[29-Oct-2015 15:34:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:34:53 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
+[29-Oct-2015 15:34:53 UTC] PHP Stack trace:
+[29-Oct-2015 15:34:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:35:23 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
+[29-Oct-2015 15:35:23 UTC] PHP Stack trace:
+[29-Oct-2015 15:35:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:35:27 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
+[29-Oct-2015 15:35:27 UTC] PHP Stack trace:
+[29-Oct-2015 15:35:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:37:48 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
+[29-Oct-2015 15:37:48 UTC] PHP Stack trace:
+[29-Oct-2015 15:37:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:37:53 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
+[29-Oct-2015 15:37:53 UTC] PHP Stack trace:
+[29-Oct-2015 15:37:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[29-Oct-2015 15:39:07 UTC] PHP Parse error:  syntax error, unexpected ''tokens'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/relevando/api/config/main.php on line 47
+[29-Oct-2015 15:39:07 UTC] PHP Stack trace:
+[29-Oct-2015 15:39:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0

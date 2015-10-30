@@ -1,8 +1,8 @@
 <?php
 
-namespace  api\modules\v1\models;
+namespace api\modules\v1\models;
 
-use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "product_cat".
@@ -12,7 +12,7 @@ use Yii;
  *
  * @property Product[] $products
  */
-class Product_cat extends \yii\db\ActiveRecord
+class Product_cat extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -33,20 +33,11 @@ class Product_cat extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels()
+    public static function primaryKey()
     {
-        return [
-            'cat_id' => Yii::t('app', 'Cat ID'),
-            'cat_name' => Yii::t('app', 'Category'),
-        ];
+        return ['cat_id'];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
     public function getProducts()
     {
         return $this->hasMany(Product::className(), ['cat_id' => 'cat_id']);
