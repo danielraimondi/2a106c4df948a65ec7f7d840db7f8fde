@@ -12,7 +12,7 @@ use Yii;
  * @property integer $user_id
  * @property integer $prod_id
  * @property integer $stock
- * @property integer $order
+ * @property integer $ord
  *
  * @property Product $prod
  * @property Client $client
@@ -34,7 +34,7 @@ class Survey extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['client_id', 'user_id', 'prod_id', 'stock', 'order'], 'required'],
+            [['survey_date','client_id', 'user_id', 'prod_id', 'stock', 'order'], 'required'],
             [['survey_date'], 'safe'],
             [['client_id', 'user_id', 'prod_id', 'stock', 'order'], 'integer']
         ];
