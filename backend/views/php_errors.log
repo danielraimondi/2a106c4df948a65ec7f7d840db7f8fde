@@ -1,0 +1,9 @@
+[30-Oct-2015 23:37:39 UTC] PHP Fatal error:  Class 'Yii' not found in /home/ubuntu/workspace/relevando/backend/views/chart/index.php on line 7
+[30-Oct-2015 23:37:39 UTC] PHP Stack trace:
+[30-Oct-2015 23:37:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/views/chart/index.php:0
+[30-Oct-2015 23:46:56 UTC] PHP Fatal error:  Class 'Yii' not found in /home/ubuntu/workspace/relevando/backend/views/chart/index.php on line 7
+[30-Oct-2015 23:46:56 UTC] PHP Stack trace:
+[30-Oct-2015 23:46:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/views/chart/index.php:0
+[30-Oct-2015 23:48:11 UTC] PHP Fatal error:  Class 'Yii' not found in /home/ubuntu/workspace/relevando/backend/views/chart/index.php on line 12
+[30-Oct-2015 23:48:11 UTC] PHP Stack trace:
+[30-Oct-2015 23:48:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/views/chart/index.php:0

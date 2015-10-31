@@ -42,6 +42,7 @@ if (isset(Yii::$app->user->identity)) :
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
                     '<li class="header">Menu</li>',
+                    ['label' => '<i class="fa fa-bar-chart"></i><span>Charts</span>', 'url' => ['/charts']],
                     ['label' => '<i class="fa fa-users"></i><span>Users</span>', 'url' => ['/user/admin']],
                     ['label' => '<i class="fa fa-check-square"></i><span>Categories</span>', 'url' => ['/product_cat']],
                     ['label' => '<i class="fa fa-cubes"></i><span>Products</span>', 'url' => ['/product']],
