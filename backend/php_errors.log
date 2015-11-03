@@ -1741,3 +1741,910 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1446251573.98799991607666015625,
     'REQUEST_TIME' => 1446251573,
 ]
+[31-Oct-2015 14:20:13 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "relevando/backend/web/plugins/chartjs/Chart.js".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('relevando/backe...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.8,en;q=0.6,gl;q=0.4',
+    'HTTP_COOKIE' => '_csrf=eb3db39ef3e5e99ebaeedfa501d94a025dc8db475d7121a5770248cba28c700ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zaDXuO828UAL8w_uYCMvU_zGvAGv-hi4%22%3B%7D; __cfduid=d97eba6b84c79b19ab736b1dd396157741445432724; ajs_anonymous_id=%22bf226b46-cc3a-4ff9-9706-90ccc45c2fed%22; amplitude_idc9.io=eyJkZXZpY2VJZCI6Ijg0NGQwNjhhLTUwZjItNDE5OC1hODA1LTJlYzk4ZTk3MzhhMCIsInVzZXJJZCI6IjY5ODI4MCIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7IkV4cGVyaW1lbnQ6IEVJRF8xNV9Td2FwX1NwYWNlIjoiRW5hYmxlZCIsImlkIjoiNjk4MjgwIiwidWlkIjoiNjk4MjgwIiwidXNlcm5hbWUiOiJiZW56YWl0ZW4iLCJlbWFpbCI6ImJlbnphaXRlbl9AaG90bWFpbC5jb20iLCJhY3RpdmUiOmZhbHNlLCJhbHBoYSI6ZmFsc2UsImJldGEiOmZhbHNlLCJmaXJzdE5hbWUiOiJiZW56YWl0ZW4iLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJiZW56YWl0ZW4iLCJub19uZXdzbGV0dGVyIjpmYWxzZSwicHJpY2luZ1BsYW4iOiJGcmVlIiwicmVnaW9uIjoidXN3IiwiY3JlYXRlZEF0IjoxNDMyODIwNzk0MDk3LCJjOXZlcnNpb24iOiJ2MiIsInN1YnNjcmlwdGlvbl9vbl9zaWdudXAiOiJmcmVlIiwibGFzdFdvcmtzcGFjZVR5cGVVc2VkIjoicGhwIn0sIm9wdE91dCI6ZmFsc2V9; PHPSESSID=lkps418fsq4u0euuqhsl4fu2r1; _td=bad43296-b4b9-4090-8b69-f5f0fb82d786; ajs_group_id=null; ajs_user_id=%22698280%22; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20698280%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fc9.io%2F%22%2C%22%24initial_referring_domain%22%3A%20%22c9.io%22%2C%22mp_name_tag%22%3A%20%22benzaiten_%40hotmail.com%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Enabled%22%2C%22id%22%3A%20%22698280%22%2C%22uid%22%3A%20%22698280%22%2C%22active%22%3A%20false%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22%24email%22%3A%20%22benzaiten_%40hotmail.com%22%2C%22%24first_name%22%3A%20%22benzaiten%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22benzaiten%22%2C%22%24username%22%3A%20%22benzaiten%22%2C%22c9version%22%3A%20%22v2%22%2C%22%24created%22%3A%20%222015-05-28T13%3A46%3A34.097Z%22%2C%22%24search_engine%22%3A%20%22google%22%2C%22subscription_on_signup%22%3A%20%22free%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; c9.live.proxy=D9mRCUV3a%2F9JRZkMFYpYvLuJcVfnruG8vPR%2FqyC4%2BCk.MxPOD8G3kEtuhBy3q97%2BHFTXW10Q29uBqtfSweH%2BdpU',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '186.50.219.217',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.1.5',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.42',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '36634',
+    'REDIRECT_URL' => '/relevando/backend/web/relevando/backend/web/plugins/chartjs/Chart.js',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/relevando/backend/web/plugins/chartjs/Chart.js',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446301213.86100006103515625,
+    'REQUEST_TIME' => 1446301213,
+]
+[03-Nov-2015 12:05:54 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '6',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'LlF5Uzc0MmdpMxYgQVIfMh87IWFZX1MKSmMKARoZVyIDOANnXH1xIQ==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; _gat=1; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.157.37',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.42',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '46881',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446552354.8180000782012939453125,
+    'REQUEST_TIME' => 1446552354,
+]
+[03-Nov-2015 12:05:56 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '6',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'LlF5Uzc0MmdpMxYgQVIfMh87IWFZX1MKSmMKARoZVyIDOANnXH1xIQ==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; _gat=1; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.157.37',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.48',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '37002',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446552356.2149999141693115234375,
+    'REQUEST_TIME' => 1446552356,
+]
+[03-Nov-2015 12:05:57 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '7',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'LlF5Uzc0MmdpMxYgQVIfMh87IWFZX1MKSmMKARoZVyIDOANnXH1xIQ==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; _gat=1; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.157.37',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.38',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '58130',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446552357.42199993133544921875,
+    'REQUEST_TIME' => 1446552357,
+]
+[03-Nov-2015 12:35:10 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '7',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'NC1kdGtZYjVzTwsHHT9PYAVHPEYFMgNYUB8XJkZ0B3AZRB5AABAhcw==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.137.69',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.41',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '37105',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446554110.8980000019073486328125,
+    'REQUEST_TIME' => 1446554110,
+]
+[03-Nov-2015 12:35:14 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '6',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'NC1kdGtZYjVzTwsHHT9PYAVHPEYFMgNYUB8XJkZ0B3AZRB5AABAhcw==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.137.69',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.41',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '37116',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446554114.2679998874664306640625,
+    'REQUEST_TIME' => 1446554114,
+]
+[03-Nov-2015 12:36:19 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '7',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'NC1kdGtZYjVzTwsHHT9PYAVHPEYFMgNYUB8XJkZ0B3AZRB5AABAhcw==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.137.69',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.41',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '37317',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446554179.209000110626220703125,
+    'REQUEST_TIME' => 1446554179,
+]
+[03-Nov-2015 12:36:19 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '7',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'NC1kdGtZYjVzTwsHHT9PYAVHPEYFMgNYUB8XJkZ0B3AZRB5AABAhcw==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.137.69',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.42',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '53316',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446554179.7119998931884765625,
+    'REQUEST_TIME' => 1446554179,
+]
+[03-Nov-2015 12:36:21 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '6',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'NC1kdGtZYjVzTwsHHT9PYAVHPEYFMgNYUB8XJkZ0B3AZRB5AABAhcw==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.137.69',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.28',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '53941',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446554181.9309999942779541015625,
+    'REQUEST_TIME' => 1446554181,
+]
+[03-Nov-2015 12:36:23 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '7',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'NC1kdGtZYjVzTwsHHT9PYAVHPEYFMgNYUB8XJkZ0B3AZRB5AABAhcw==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.137.69',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.68',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '54246',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446554183.479000091552734375,
+    'REQUEST_TIME' => 1446554183,
+]
+[03-Nov-2015 16:18:01 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controlador/procesar.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controlador/pro...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '7',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'RGZ4dnJxMFYDBBcFBBcdA3UMIEQcGlE7IFQLJF9cVRNpDwJCGThzEA==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsImdsb2JhbFVzZXJQcm9wZXJ0aWVzIjp7InVpZCI6NzczNjUxLCJ1c2VybmFtZSI6ImRhbmllbHJhaW1vbmRpIiwiZW1haWwiOiJkYW5pZWwucmFpbW9uZGlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoxNDM5OTkyMjk0OTY5LCJhY3RpdmUiOnRydWUsImFscGhhIjpmYWxzZSwiYmV0YSI6ZmFsc2UsImM5dmVyc2lvbiI6InYyIiwiZmlyc3ROYW1lIjoiZGFuaWVscmFpbW9uZGkiLCJsYXN0TmFtZSI6IiIsIm5hbWUiOiJkYW5pZWxyYWltb25kaSIsIm5vX25ld3NsZXR0ZXIiOmZhbHNlLCJwcmljaW5nUGxhbiI6IkZyZWUiLCJyZWdpb24iOiJ1c3ciLCJFeHBlcmltZW50OiBFSURfMTVfU3dhcF9TcGFjZSI6IkRpc2FibGVkIiwiaWQiOjc3MzY1MSwic3Vic2NyaXB0aW9uX29uX3NpZ251cCI6IiIsImxhc3RXb3Jrc3BhY2VUeXBlVXNlZCI6InBocCJ9LCJvcHRPdXQiOmZhbHNlfQ==; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=d9ac8b999652d43f87ba7cf719a34c6eff18db4dd0dc3ce193724dda414f2390a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Gbosvf-U1jX2nkamd2sR--eE-iz4kICF%22%3B%7D; PHPSESSID=ibtnpo8snmb6vsfjtn6cds71a6',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.137.69',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.68',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '42874',
+    'REDIRECT_URL' => '/relevando/backend/web/controlador/procesar.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controlador/procesar.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446567481.5629999637603759765625,
+    'REQUEST_TIME' => 1446567481,
+]
+[03-Nov-2015 16:28:28 UTC] PHP Parse error:  syntax error, unexpected '-', expecting '(' in /home/ubuntu/workspace/relevando/backend/models/Route.php on line 54
+[03-Nov-2015 16:28:28 UTC] PHP Stack trace:
+[03-Nov-2015 16:28:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[03-Nov-2015 16:28:28 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[03-Nov-2015 16:28:28 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[03-Nov-2015 16:28:28 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[03-Nov-2015 16:28:28 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[03-Nov-2015 16:28:28 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[03-Nov-2015 16:28:28 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[03-Nov-2015 16:28:28 UTC] PHP   8. yii\gii\controllers\DefaultController->actionView() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[03-Nov-2015 16:28:28 UTC] PHP   9. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2-gii/controllers/DefaultController.php:43
+[03-Nov-2015 16:28:28 UTC] PHP  10. yii\validators\Validator->validateAttributes() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:352
+[03-Nov-2015 16:28:28 UTC] PHP  11. yii\validators\InlineValidator->validateAttribute() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/validators/Validator.php:240
+[03-Nov-2015 16:28:28 UTC] PHP  12. call_user_func:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/validators/InlineValidator.php:69}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/validators/InlineValidator.php:69
+[03-Nov-2015 16:28:28 UTC] PHP  13. yii\gii\Generator->validateClass() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/validators/InlineValidator.php:69
+[03-Nov-2015 16:28:28 UTC] PHP  14. class_exists() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2-gii/Generator.php:351
+[03-Nov-2015 16:28:28 UTC] PHP  15. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2-gii/Generator.php:351
+[03-Nov-2015 16:28:28 UTC] PHP  16. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2-gii/Generator.php:351
+[03-Nov-2015 16:31:45 UTC] PHP Parse error:  syntax error, unexpected '-', expecting '(' in /home/ubuntu/workspace/relevando/backend/models/Route.php on line 54
+[03-Nov-2015 16:31:45 UTC] PHP Stack trace:
+[03-Nov-2015 16:31:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[03-Nov-2015 16:31:45 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[03-Nov-2015 16:31:45 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[03-Nov-2015 16:31:45 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[03-Nov-2015 16:31:45 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[03-Nov-2015 16:31:45 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[03-Nov-2015 16:31:45 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[03-Nov-2015 16:31:45 UTC] PHP   8. yii\gii\controllers\DefaultController->actionView() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[03-Nov-2015 16:31:45 UTC] PHP   9. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2-gii/controllers/DefaultController.php:43
+[03-Nov-2015 16:31:45 UTC] PHP  10. yii\validators\Validator->validateAttributes() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:352
+[03-Nov-2015 16:31:45 UTC] PHP  11. yii\validators\InlineValidator->validateAttribute() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/validators/Validator.php:240
+[03-Nov-2015 16:31:45 UTC] PHP  12. call_user_func:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/validators/InlineValidator.php:69}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/validators/InlineValidator.php:69
+[03-Nov-2015 16:31:45 UTC] PHP  13. yii\gii\Generator->validateClass() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/validators/InlineValidator.php:69
+[03-Nov-2015 16:31:45 UTC] PHP  14. class_exists() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2-gii/Generator.php:351
+[03-Nov-2015 16:31:45 UTC] PHP  15. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2-gii/Generator.php:351
+[03-Nov-2015 16:31:45 UTC] PHP  16. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2-gii/Generator.php:351
+[03-Nov-2015 16:54:13 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "controllers/chartsController.php".' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('controllers/cha...', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'CONTENT_LENGTH' => '11',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ORIGIN' => 'https://test-danielraimondi.c9.io',
+    'HTTP_X_CSRF_TOKEN' => 'LjVrSFRiNzZEWwAsDhNvWANZOmUdJ3NDbGMMAyVTWGl6fQQibCZHZg==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'HTTP_REFERER' => 'https://test-danielraimondi.c9.io/relevando/backend/web/charts',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.8,en;q=0.6,gl;q=0.4',
+    'HTTP_COOKIE' => '_csrf=4d43675435fbc2b6bc7d698134930869ab6b65d656370f09ee46fc10517364dba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22jnkdZqXn-lQ-IEDuBVgKq1o_THoj8DpP%22%3B%7D; ajs_anonymous_id=%225a7c81ed-a542-44f7-b1a4-0249f4e423eb%22; __cfduid=d48fd1b764b7bab224dd22658992ecdd61445268667; amplitude_idc9.io=eyJkZXZpY2VJZCI6ImJkYjQwMmEzLWQ0ZmItNGNmZi04YjAxLTJjOTg0MTJlZDVmOSIsInVzZXJJZCI6IjY5ODI4MCIsIm9wdE91dCI6ZmFsc2V9; c9.live.proxy=dctCKnOzl3R5XOIPhRRN8Nm9L%2BOErZTPOAIv4Md%2BUE4.SACvSuw9dmG0AzHEx4bVllQdefGWOnAHSw98w9iZGTQ; _td=3860bfe9-30ca-4a03-843c-2b707adac1ee; ajs_group_id=null; ajs_user_id=698280; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20698280%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22mp_name_tag%22%3A%20%22benzaiten_%40hotmail.com%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22id%22%3A%20698280%2C%22uid%22%3A%20698280%2C%22active%22%3A%20false%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22%24email%22%3A%20%22benzaiten_%40hotmail.com%22%2C%22%24first_name%22%3A%20%22benzaiten%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22benzaiten%22%2C%22%24username%22%3A%20%22benzaiten%22%2C%22mp_keyword%22%3A%20%22https%3A%2F%2Fide.c9.io%2Fdanielraimondi%2Ftest%22%2C%22subscription_on_signup%22%3A%20%22free%22%2C%22%24created%22%3A%20%222015-05-28T13%3A46%3A34.097Z%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%2C%22c9version%22%3A%20%22v2%22%7D; PHPSESSID=no44snqfvgkho872u1sp6nnm07',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '179.27.120.99',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.23.17',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.28',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '56782',
+    'REDIRECT_URL' => '/relevando/backend/web/controllers/chartsController.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/controllers/chartsController.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1446569653.96700000762939453125,
+    'REQUEST_TIME' => 1446569653,
+]

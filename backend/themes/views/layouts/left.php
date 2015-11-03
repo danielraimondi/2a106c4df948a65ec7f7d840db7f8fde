@@ -51,6 +51,8 @@ if (isset(Yii::$app->user->identity)) :
                     ['label' => '<i class="fa fa-street-view"></i><span>Relevators</span>', 'url' => ['/relevador']],
                     ['label' => '<i class="fa fa-file-text"></i><span>Surveys</span>', 'url' => ['/survey']],
                     ['label' => '<i class="fa fa-map"></i><span>Map</span>', 'url' => ['/map']],
+                    ['label' => '<i class="fa fa-road"></i><span>Routes</span>', 'url' => ['/route']],
+                    ['label' => '<i class="fa fa-road"></i><span>Route-Clients</span>', 'url' => ['/routeclient']],
                     ['label' => '<i class="fa fa-file-code-o"></i><span>Gii</span>', 'url' => ['/gii']],
                     //['label' => '<i class="fa fa-dashboard"></i><span>Debug</span>', 'url' => ['/debug']],
                     [
