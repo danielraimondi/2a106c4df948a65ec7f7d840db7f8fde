@@ -1,3 +1,12 @@
+
+<?php
+/* @var $this yii\web\View */
+use yii\helpers\Html;
+
+$this->title = 'relevador';
+
+
+?>
 <!doctype html>
 <html>
 <head lang="en">
@@ -148,45 +157,34 @@
 			<div class="row title-row">
 				<div class="col-12 font-thin">Realizar pedido</div>
 			</div><!-- /row -->
-			
+			<tr>
+                 <td></td>
+                 <td>
+                  <input id="cmdEnter" name="cmdEnter" type="submit"  value="Actulizar...">
+                   </td>
+               </tr>
 			
 			<div class="row content-row">
 				
 				<div class="panel panel-default">
 					
+				  <div class="panel panel-default">
+				 	<?php
+						$arrayProductos = Yii::api()->web->v1->products();
+					?>
 				  <!-- Default panel contents -->
 				  <div class="panel-heading">Tabla de productos</div>
 				  <!-- Table -->
 				 
-				  <table class="table"  id="tablaPedidos">
-					<tr>
-						<th color="black">Producto</th>
-						<th>Cantidad</th> 
-					</tr>
-					<tr>
-						<td>Coca Cola Ligth</td>
-						<td contenteditable='true'>50</td> 
-					</tr>
-					<tr>
-						<td>Leche Conaprole</td>
-						<td contenteditable='true'>94</td>
-					</tr>
-					<tr>
-						<td>Pasta de dientes Colgate</td>
-						<td contenteditable='true'>10</td>
-					</tr>
-					<tr>
-						<td>Pan tortuga Pancatlan</td>
-						<td contenteditable='true'>19</td> 
-					</tr>
-					<tr>
-						<td>Jugo de naranja Ades</td>
-						<td contenteditable='true'>148</td>
-					</tr>
-					<tr>
-						<td>Agua mineral Matutina</td>
-						<td contenteditable='true'>10</td>
-					</tr>
+				  <table class="table"  id="tableProductos" >
+					 <thead>
+	                 <tr>
+	                  <td><strong>ID</strong></td>
+	                  <td><strong>Nombre</strong></td>
+	                  <td><strong>Categoria</strong></td>
+	                  <td><strong>Imagen</strong></td>
+	                 </tr>
+	                </thead>
 				  </table>
 				</div>
 			</div><!-- /row -->
@@ -302,5 +300,38 @@
 	
 	});
 	</script>
-
+	<script>
+			$(document).ready(function(){
+		  $('#cmdEnter').on("click", null, function() {  
+		     $.ajax({ // ajax call starts
+		          url: 'php/tablaProductos.php', // JQuery loads serverside.php
+		          data: 'Productos=' + $('#txtProd').val(), // Send value of text
+		          dataType: 'json', // Choosing a JSON datatype
+		          success: function(data) // Variable data contains the data we get from serverside
+		          {
+		            
+		          	alert("entra " + data.length);
+					  var html='';
+					  // si la consulta ajax devuelve datos
+					  if(data.length > 0){
+		                  $.each(data, function(i,item){
+							  html += '<tr>'
+		                            html += '<td>'+item.prod_id+'</td>'
+		                            html += '<td>'+item.prod_name+'</td>'
+		                            html += '<td>'+item.cat_id+'</td>'
+		                            html += '<td>'+item.prod_pic+'</td>'
+		                        html += '</tr>';
+						    });
+		              } 
+					  // si no hay datos mostramos mensaje de no encontraron registros
+		                if(html == '') html = '<tr><td colspan="6">No se encontraron productos..</td></tr>'
+		                // añadimos  a nuestra tabla todos los datos encontrados mediante la funcion html
+		                $("#tableProductos tbody").html(html);  
+		                  
+		          }           
+    			 });
+		      return false; // keeps the page from not refreshing 
+		  });
+		})
+	</script>
 </html>

@@ -143,11 +143,11 @@ $this->params['breadcrumbs'][] = $this->title;
         
     }
     
-    // CERRAR INFOWINDOW
-    map.addListener('click', function(event) {
-      if (prev_infowindow)
-        prev_infowindow.close();
-    });
+    // // CERRAR INFOWINDOW
+    // map.addListener('click', function(event) {
+    //   if (prev_infowindow)
+    //     prev_infowindow.close();
+    // });
     
  }
   

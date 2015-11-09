@@ -1,3 +1,12 @@
+
+<?php
+/* @var $this yii\web\View */
+use yii\helpers\Html;
+
+$this->title = 'relevador';
+
+
+?>
 <!doctype html>
 
 <?php
@@ -159,40 +168,22 @@ var_dump($array);
 			<div class="row content-row">
 				
 				<div class="panel panel-default">
-					
+				 	<?php
+						$arrayProductos = Yii::api()->web->v1->products();
+					?>
 				  <!-- Default panel contents -->
 				  <div class="panel-heading">Tabla de productos</div>
 				  <!-- Table -->
 				 
-				  <table class="table"  id="tablaPedidos">
-					<tr>
-						<th color="black">Producto</th>
-						<th>Cantidad</th> 
-					</tr>
-					<tr>
-						<td>Coca Cola Ligth</td>
-						<td contenteditable='true'>50</td> 
-					</tr>
-					<tr>
-						<td>Leche Conaprole</td>
-						<td contenteditable='true'>94</td>
-					</tr>
-					<tr>
-						<td>Pasta de dientes Colgate</td>
-						<td contenteditable='true'>10</td>
-					</tr>
-					<tr>
-						<td>Pan tortuga Pancatlan</td>
-						<td contenteditable='true'>19</td> 
-					</tr>
-					<tr>
-						<td>Jugo de naranja Ades</td>
-						<td contenteditable='true'>148</td>
-					</tr>
-					<tr>
-						<td>Agua mineral Matutina</td>
-						<td contenteditable='true'>10</td>
-					</tr>
+				  <table class="table"  id="tableProductos" >
+					 <thead>
+	                 <tr>
+	                  <td><strong>ID</strong></td>
+	                  <td><strong>Nombre</strong></td>
+	                  <td><strong>Categori</strong></td>
+	                  <td><strong>Imagen</strong></td>
+	                 </tr>
+	                </thead>
 				  </table>
 				</div>
 			</div><!-- /row -->
