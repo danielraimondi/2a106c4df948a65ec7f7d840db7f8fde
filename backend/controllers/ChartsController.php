@@ -12,20 +12,18 @@ class ChartsController extends Controller
 {
     public function actionIndex()
     {
-        /*
+        
         $query = chart_Survey::find();
         
         
-        $tops = $query->select('client_id, prod_id, order')
-        ->from('survey')
-        ->where('client_id=:id', array(':id'=>$id_selected))
+        $tops = $query->limit(5)
         ->orderBy(['order' => SORT_DESC,])
-        ->limit(3);
-        
+        ->all();
+       
         return $this->render('index', [
-            'tops' => $tops
-        ]);  */
-        
+            'tops' => $tops,
+           
+        ]);
         
         
             
@@ -53,8 +51,7 @@ class ChartsController extends Controller
        
        
        
-          return $this->render('index');
+          //return $this->render('index');
     }
-    
     
 }

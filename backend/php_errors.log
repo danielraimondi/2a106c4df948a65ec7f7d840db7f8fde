@@ -7466,3 +7466,199 @@ $_SERVER = [
 [10-Nov-2015 12:44:50 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
 [10-Nov-2015 12:44:50 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
 [10-Nov-2015 12:44:50 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 13:19:28 UTC] PHP Fatal error:  Call to undefined function decryptByKey() in /home/ubuntu/workspace/relevando/backend/views/site/index.php on line 7
+[10-Nov-2015 13:19:28 UTC] PHP Stack trace:
+[10-Nov-2015 13:19:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 13:19:28 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 13:19:28 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 13:19:28 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 13:19:28 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 13:19:28 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 13:19:28 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:19:28 UTC] PHP   8. backend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:19:28 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/SiteController.php:92
+[10-Nov-2015 13:19:28 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 13:19:28 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 13:19:28 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 13:19:28 UTC] PHP  13. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[10-Nov-2015 13:19:57 UTC] PHP Fatal error:  Call to undefined function decryptByKey() in /home/ubuntu/workspace/relevando/backend/views/site/index.php on line 8
+[10-Nov-2015 13:19:57 UTC] PHP Stack trace:
+[10-Nov-2015 13:19:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 13:19:57 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 13:19:57 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 13:19:57 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 13:19:57 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 13:19:57 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 13:19:57 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:19:57 UTC] PHP   8. backend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:19:57 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/SiteController.php:92
+[10-Nov-2015 13:19:57 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 13:19:57 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 13:19:57 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 13:19:57 UTC] PHP  13. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[10-Nov-2015 13:31:23 UTC] PHP Fatal error:  Cannot use object of type yii\db\ActiveQuery as array in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 141
+[10-Nov-2015 13:31:23 UTC] PHP Stack trace:
+[10-Nov-2015 13:31:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 13:31:23 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 13:31:23 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 13:31:23 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 13:31:23 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 13:31:23 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 13:31:23 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:31:23 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:31:23 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:27
+[10-Nov-2015 13:31:23 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 13:31:23 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 13:31:23 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 13:31:23 UTC] PHP  13. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[10-Nov-2015 13:41:11 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 64
+[10-Nov-2015 13:41:11 UTC] PHP Stack trace:
+[10-Nov-2015 13:41:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 13:41:11 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 13:41:11 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 13:41:11 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 13:41:11 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 13:41:11 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 13:41:11 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:41:11 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:41:11 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:56
+[10-Nov-2015 13:41:11 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 13:41:11 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 13:41:11 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 13:48:00 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 161
+[10-Nov-2015 13:48:00 UTC] PHP Stack trace:
+[10-Nov-2015 13:48:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 13:48:00 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 13:48:00 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 13:48:00 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 13:48:00 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 13:48:00 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 13:48:00 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:48:00 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 13:48:00 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:56
+[10-Nov-2015 13:48:00 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 13:48:00 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 13:48:00 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 14:02:13 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 43
+[10-Nov-2015 14:02:13 UTC] PHP Stack trace:
+[10-Nov-2015 14:02:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 14:02:13 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 14:02:13 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 14:02:13 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 14:02:13 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 14:02:13 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 14:02:13 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:02:13 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:02:13 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:56
+[10-Nov-2015 14:02:13 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 14:02:13 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 14:02:13 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 14:04:03 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 43
+[10-Nov-2015 14:04:03 UTC] PHP Stack trace:
+[10-Nov-2015 14:04:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 14:04:03 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 14:04:03 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 14:04:03 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 14:04:03 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 14:04:03 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 14:04:03 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:04:03 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:04:03 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:56
+[10-Nov-2015 14:04:03 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 14:04:03 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 14:04:03 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 14:17:04 UTC] PHP Parse error:  syntax error, unexpected '>', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php on line 21
+[10-Nov-2015 14:17:04 UTC] PHP Stack trace:
+[10-Nov-2015 14:17:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 14:17:04 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 14:17:04 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 14:17:04 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 14:17:04 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:449
+[10-Nov-2015 14:17:04 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:521
+[10-Nov-2015 14:17:04 UTC] PHP   7. class_exists() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[10-Nov-2015 14:17:04 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[10-Nov-2015 14:17:04 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[10-Nov-2015 14:33:41 UTC] PHP Parse error:  syntax error, unexpected '0' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 17
+[10-Nov-2015 14:33:41 UTC] PHP Stack trace:
+[10-Nov-2015 14:33:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 14:33:41 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 14:33:41 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 14:33:41 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 14:33:41 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 14:33:41 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 14:33:41 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:33:41 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:33:41 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:26
+[10-Nov-2015 14:33:41 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 14:33:41 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 14:33:41 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 14:36:15 UTC] PHP Parse error:  syntax error, unexpected '0' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 17
+[10-Nov-2015 14:36:15 UTC] PHP Stack trace:
+[10-Nov-2015 14:36:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 14:36:15 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 14:36:15 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 14:36:15 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 14:36:15 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 14:36:15 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 14:36:15 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:36:15 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:36:15 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:26
+[10-Nov-2015 14:36:15 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 14:36:15 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 14:36:15 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 14:36:31 UTC] PHP Parse error:  syntax error, unexpected '0' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 17
+[10-Nov-2015 14:36:31 UTC] PHP Stack trace:
+[10-Nov-2015 14:36:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 14:36:31 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 14:36:31 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 14:36:31 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 14:36:31 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 14:36:31 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 14:36:31 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:36:31 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 14:36:31 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:26
+[10-Nov-2015 14:36:31 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 14:36:31 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 14:36:31 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 15:26:38 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 38
+[10-Nov-2015 15:26:38 UTC] PHP Stack trace:
+[10-Nov-2015 15:26:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 15:26:38 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 15:26:38 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 15:26:38 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 15:26:38 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 15:26:38 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 15:26:38 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 15:26:38 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 15:26:38 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:26
+[10-Nov-2015 15:26:38 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 15:26:38 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 15:26:38 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 15:31:51 UTC] PHP Parse error:  syntax error, unexpected '$rows' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 38
+[10-Nov-2015 15:31:51 UTC] PHP Stack trace:
+[10-Nov-2015 15:31:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 15:31:51 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 15:31:51 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 15:31:51 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 15:31:51 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 15:31:51 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 15:31:51 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 15:31:51 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 15:31:51 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:26
+[10-Nov-2015 15:31:51 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 15:31:51 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 15:31:51 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[10-Nov-2015 15:56:51 UTC] PHP Parse error:  syntax error, unexpected ''?>],' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/ubuntu/workspace/relevando/backend/views/charts/index.php on line 38
+[10-Nov-2015 15:56:51 UTC] PHP Stack trace:
+[10-Nov-2015 15:56:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[10-Nov-2015 15:56:51 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[10-Nov-2015 15:56:51 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[10-Nov-2015 15:56:51 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[10-Nov-2015 15:56:51 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[10-Nov-2015 15:56:51 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[10-Nov-2015 15:56:51 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 15:56:51 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[10-Nov-2015 15:56:51 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php:26
+[10-Nov-2015 15:56:51 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[10-Nov-2015 15:56:51 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[10-Nov-2015 15:56:51 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
