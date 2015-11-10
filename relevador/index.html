@@ -1,4 +1,6 @@
 
+<?php include('/php/tablaProductos.php');?>
+
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
@@ -267,6 +269,9 @@ $this->title = 'relevador';
 		</div><!-- /container -->
 	</div><!-- /Slide 6 -->
 	
+	
+		
+	
 </body>
 
 	<!-- SCRIPTS -->
@@ -284,7 +289,7 @@ $this->title = 'relevador';
 </script> 
 	
 	<!-- fancybox init -->
-	<script>
+	<!--	<script>
 	$(document).ready(function(e) {
 		var lis = $('.nav > li');
 		menu_focus( lis[0], 1 );
@@ -299,12 +304,52 @@ $this->title = 'relevador';
 		});
 	
 	});
-	</script>
+	</script> -->
+	
+<script src="js/jquery-1.8.2.min.js"></script>
+<script>
+  $(function() {
+  $("#cmdEnter").click(function() {
+       $.getJSON("http://test-danielraimondi.c9.io/relevando/api/web/v1/products?tags="+tags+"&tagmode=any&format=json&jsoncallback=?",
+        function(data){
+		alert("entra " + data.length);
+					  var html='';
+					  // si la consulta ajax devuelve datos
+					  if(data.length > 0){
+		                  $.each(data, function(i,item){
+							  html += '<tr>'
+		                            html += '<td>'+item.prod_id+'</td>'
+		                            html += '<td>'+item.prod_name+'</td>'
+		                            html += '<td>'+item.cat_id+'</td>'
+		                            html += '<td>'+item.prod_pic+'</td>'
+		                        html += '</tr>';
+						    });
+		              } 
+					  // si no hay datos mostramos mensaje de no encontraron registros
+		                if(html == '') html = '<tr><td colspan="6">No se encontraron productos..</td></tr>'
+		                // añadimos  a nuestra tabla todos los datos encontrados mediante la funcion html
+		                $("#tableProductos tbody").html(html);  
+		                  
+		          } 
+          
+        });
+      });
+      
+      // asignamos el texto de búsqueda al campo de salida del resultado
+      $("#tagsToSearch").text(tags);
+    });
+     });
+  });
+</script>	
+
+
+	<!--
 	<script>
 			$(document).ready(function(){
 		  $('#cmdEnter').on("click", null, function() {  
 		     $.ajax({ // ajax call starts
-		          url: 'php/tablaProductos.php', // JQuery loads serverside.php
+		     console.log("entro");
+		          url: 'https://test-danielraimondi.c9.io/relevando/api/web/v1/products', // JQuery loads serverside.php
 		          data: 'Productos=' + $('#txtProd').val(), // Send value of text
 		          dataType: 'json', // Choosing a JSON datatype
 		          success: function(data) // Variable data contains the data we get from serverside
@@ -333,5 +378,5 @@ $this->title = 'relevador';
 		      return false; // keeps the page from not refreshing 
 		  });
 		})
-	</script>
+	</script> -->
 </html>
