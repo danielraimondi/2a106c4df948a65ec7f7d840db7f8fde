@@ -16,14 +16,52 @@ class ChartsController extends Controller
         $query = chart_Survey::find();
         
         
-        $tops = $query->limit(5)
+        // Trae las 5 COMPRAS más altas de todos los clientes
+        $tops = (new \yii\db\Query())
+        ->select('client_id, prod_id, order, survey_date')
+        ->from('survey')
         ->orderBy(['order' => SORT_DESC,])
+        ->limit(5)
         ->all();
+        
+        
+        // Trae las 5 CANTIDADES de COMPRAS más altas de todos los clientes o sea los que compraron más veces sin importar la cantidad de productos
+         $cantPedidos = (new \yii\db\Query())
+        ->select('client_id, COUNT(client_id)')
+        ->from('survey')
+        ->where('survey_date > DATE_SUB(CURDATE(), INTERVAL 300 DAY)')
+        ->groupBy('client_id')
+        ->all();
+        
+        
+    
+        
+        
+        
        
         return $this->render('index', [
-            'tops' => $tops,
+            'tops' => $tops,'cantPedidos' => $cantPedidos,
            
         ]);
+        
+        
+        /*//-------------- cantidad de pedidos de los últimos 10 días
+        
+        
+        SELECT  `client_id` , COUNT(  `client_id` ) 
+        FROM  `survey` 
+        WHERE  `survey_date` > DATE_SUB( CURDATE( ) , INTERVAL 50 DAY ) 
+        GROUP BY  `client_id`
+        
+        
+        client_id    COUNT( `client_id` )
+            1            3
+            7            1
+
+        
+        //--------------*/
+        
+        
         
         
             
@@ -53,5 +91,31 @@ class ChartsController extends Controller
        
           //return $this->render('index');
     }
+    
+    
+    /*
+     protected function findModel($id)
+    {
+        if (($model = Product::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }*/
+    
+    
+      /**
+     * Displays a single Product model.
+     * @param integer $id
+     * @return mixed
+     */
+     
+     /*
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }*/
     
 }

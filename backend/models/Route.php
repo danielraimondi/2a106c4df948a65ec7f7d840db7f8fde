@@ -13,6 +13,7 @@ use Yii;
  *
  * @property Route-client[] $route-clients
  * @property Client[] $clients
+ * @property Relevador $relevator
  */
 class Route extends \yii\db\ActiveRecord
 {
@@ -44,7 +45,7 @@ class Route extends \yii\db\ActiveRecord
         return [
             'route_id' => Yii::t('app', 'Route ID'),
             'route_date' => Yii::t('app', 'Route Date'),
-            'user_id' => Yii::t('app', 'User ID'),
+            'user_id' => Yii::t('app', 'Relevator'),
         ];
     }
 
@@ -62,5 +63,10 @@ class Route extends \yii\db\ActiveRecord
     public function getClients()
     {
         return $this->hasMany(Client::className(), ['client_id' => 'client_id'])->viaTable('route-client', ['route_id' => 'route_id']);
+    }
+    
+    public function getRelevator()
+    {
+        return $this->hasOne(Relevador::className(), ['id' => 'user_id']);
     }
 }

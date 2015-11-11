@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'route_id',
             'route_date',
-            'user_id',
+            'relevator.username',
         ],
     ]) ?>
 
