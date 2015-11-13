@@ -14,10 +14,12 @@ return [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
-                'username' => 'relevando.com@gmail.com',
-                'password' => 'relevando.1',
+                'username' => 'relevando2@gmail.com',
+                'password' => 'mlrgxgrgitmgcumy',
                 'port' => '587',
                 'encryption' => 'tls',
+                // 'port' => '587',
+                // 'encryption' => 'ssl',
             ],
         ],
         
