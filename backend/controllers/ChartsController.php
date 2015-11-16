@@ -3,7 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\chart_Survey;
+use backend\models\Survey;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -13,6 +13,9 @@ class ChartsController extends Controller
     public function actionIndex()
     {
         
+      
+        // Array con todos los pedidos
+        $surveys = \backend\models\Survey::find()->asArray()->orderBy(['order' => SORT_DESC,])->all();
       
         // Trae las COMPRAS más altas de todos los clientes
         $tops = (new \yii\db\Query())
@@ -38,8 +41,6 @@ class ChartsController extends Controller
         ->distinct(true)
         ->all();
         
-//******************
-
 // Trae los CLIENTES ordenados de menor a mayor con las ordenes de mayor a menor
         $tops1 = (new \yii\db\Query())
         ->select('client_id, prod_id, order, survey_date')
@@ -51,11 +52,8 @@ class ChartsController extends Controller
         
    // Trae todos los datos del cliente seleccionado
 
-      $cli = $_POST["id"];//POST value de dropdown  <-<-------------------------------<<<--------------<--<-<--<-
-     if ($cli ==null){
-          $cli=1;
-     }
-   
+      $cli = 1;
+    
         $cli_sleccionado = (new \yii\db\Query())
         ->select('client_id, prod_id, order, survey_date')
         ->from('survey')
@@ -71,8 +69,9 @@ class ChartsController extends Controller
             'tot_cli' => $tot_cli, 
             'var' => $var, 
             'tops1' => $tops1,
-            'cli' => $cli,
+            'tot_cli' => $tot_cli,
             'cli_sleccionado' => $cli_sleccionado,
+            'surveys'=> $surveys
            
         ]);
         

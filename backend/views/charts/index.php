@@ -4,15 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\widgets\ActiveForm;
-use backend\models\Survey;
+
 $this->title = Yii::t('app', 'Charts');
 $this->params['breadcrumbs'][] = $this->title;
+
+
+
+
 ?>
 
 <?php 
 
 //MOSTRAR contenido de la matriz
-function recorro($tops1){
+/*function recorro($tops1){
         foreach($tops1 as $key=>$value){
             if (is_array($value)){
                 //si es un array sigo recorriendo
@@ -31,11 +35,13 @@ function recorro($tops1){
           }
  
        }
-} 
+} */
+
+
 
 //recorro($tops1);
 
-print_r ( $cli);
+//print_r ( $surveys);
 
 ?>
 
@@ -46,6 +52,52 @@ print_r ( $cli);
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         
         <script type="text/javascript">
+        
+// **********ENVIO DE SELECCION DEL DROPDOWN****************        //devuelve un array con los pedidos del cliente
+          var surveys=<?php echo json_encode($surveys) ?> ;
+          
+          //Inicializo la funcion CON EL 1er cliente 
+          var id_seleccionado = <?php echo $tot_cli[0]['client_id'] ?>; 
+          var cliente = buscarCliente(id_seleccionado);
+          cliente_cero (cliente); 
+           
+                    function buscarCliente(idCliente){
+                        
+                        console.log("---entre a funcion buscarCliente: con el valor: "+idCliente);
+                        
+                        var pedidosCliente=[];
+                        for (s in surveys)
+                            if (surveys[s].client_id==idCliente)
+                                pedidosCliente.push(surveys[s]);
+                        
+                       // console.log(JSON.stringify(pedidosCliente[0]['survey_date'] ));
+                      
+                        return pedidosCliente;
+                    }
+                    
+        //id_seleccionado se actualiza segun el id elegido
+                    function mostrarResultados(idCliente){
+                        
+                        cliente = buscarCliente(idCliente);
+                        console.log(cliente.length)
+                        cliente_cero (cliente);
+                        drawChart();
+                        
+                    }
+       //cargar el resto del array con 0
+            function cliente_cero (cliente){
+                while (cliente.length <5){
+                    console.log("cliente_cero " + cliente.length);
+                    cliente[cliente.length]= "";
+                    
+                }
+                
+            }
+       
+                    //var cliente = buscarCliente(1);
+                    
+                    //console.log(JSON.stringify(cliente));
+   
 
 // **********FUNCION DE LAS GRAFICAS****************
           // Carga las visualizaciones
@@ -119,13 +171,14 @@ print_r ( $cli);
                     chart2.draw(view2, options2); 
   
    //DATA/CHART3/OPTIONS3  Trae las 5 COMPRAS más altas el CLIENTE SELECCIONADO
-                   var data = google.visualization.arrayToDataTable([
+  
+             var data = google.visualization.arrayToDataTable([
                 ["ID productos", "Cantidad", { role: "style" } ],
-                ["<?php echo "Id: ".$cli_sleccionado[0]['prod_id']."  (".$cli_sleccionado[0]['survey_date'].")"?>", <?php echo $cli_sleccionado[0]['order']?>, "#008B45"],
-                ["<?php echo "Id: ".$cli_sleccionado[1]['prod_id']."  (".$cli_sleccionado[1]['survey_date'].")"?>", <?php echo $cli_sleccionado[1]['order']?>, "#00CD66"],
-                ["<?php echo "Id: ".$cli_sleccionado[2]['prod_id']."  (".$cli_sleccionado[2]['survey_date'].")"?>", <?php echo $cli_sleccionado[2]['order']?>, "#00EE76"],
-                ["<?php echo "Id: ".$cli_sleccionado[3]['prod_id']."  (".$cli_sleccionado[3]['survey_date'].")"?>", <?php echo $cli_sleccionado[3]['order']?>, "#4EEE94"],
-                ["<?php echo "Id: ".$cli_sleccionado[4]['prod_id']."  (".$cli_sleccionado[4]['survey_date'].")"?>", <?php echo $cli_sleccionado[4]['order']?>, "#98FB98"]
+                ["Id: " + cliente[0]['prod_id'] + "  (" + cliente[0]['survey_date'] + ")", parseInt(cliente[0]['order']), "#008B45"],
+                ["Id: " + cliente[1]['prod_id'] + "  (" + cliente[1]['survey_date'] + ")", parseInt(cliente[1]['order']), "#00CD66"],
+                ["Id: " + cliente[2]['prod_id'] + "  (" + cliente[2]['survey_date'] + ")", parseInt(cliente[2]['order']), "#00EE76"],
+                ["Id: " + cliente[3]['prod_id'] + "  (" + cliente[3]['survey_date'] + ")", parseInt(cliente[3]['order']), "#4EEE94"],
+                [( "Id: " + cliente[4]['prod_id'] + "  (" + cliente[4]['survey_date'] + ")" ).toString(), parseInt(cliente[4]['order']), "#98FB98"]
               ]);
             
                   var view3 = new google.visualization.DataView(data);
@@ -147,21 +200,14 @@ print_r ( $cli);
                   
                   var chart3 = new google.visualization.BarChart(document.getElementById("chart_div3"));
                   chart3.draw(view3, options3); 
+                 
+
             }//fin DRAWCHART
   
    
-// **********ENVIO DE SELECCION DEL DROPDOWN****************
 
-        //ENVIANDO mediante un formulario oculto
+
       
-        $("list").change(function(){ // Here we listen for a click on a link within the <li>
-        alert("The paragraph was clicked.");
-            var selectedValue = $(this).html(); // Put the value of the link into a variable
-            $("#someValue").val(selectedValue);
-            $("#someForm").submit();
-            return false;
-        });
-              
           
         </script>
         
@@ -194,29 +240,41 @@ print_r ( $cli);
             
             <!-- TOP 5  de c/cliente -->
            <div role="tabpanel" class="tab-pane" id="messages">    
-               <!--Form oculta -->
-                <form id="someForm" method="post" action="/ChartsController.php">
-                    <input type="hidden" id="someValue" name="someValue">
-                </form>
+               
                 <!-- DROPDOWN-->
                 <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Id
-                        <span class="caret"></span>
-                        </button>
+                        <!--<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                        <!--    Id-->
+                        <!--<span class="caret"></span>-->
+                        <!--</button>-->
                       
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="list">
-                           <?php
-                            foreach($tot_cli as $key) {
-                                echo '<li value="'.$key['client_id'].'"><a  href="#">'.$key['client_id'].'</a></li>';
-                            }
+                       <!-- <form method="post" action="charts/prueba"> -->
+                            <select id="client" name="client" onChange="mostrarResultados(this.value);">
+                                <?php
+                                    foreach($tot_cli as $key) {
+                                        echo '<option value="'.$key['client_id'].'">'.$key['client_id'].'</option>';
+                                    }
+                                ?>
+                            </select>
+                            <?php // echo Html::submitButton() ?>
+                       <!-- </form> -->
+                            
+                        <!--<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="list">-->
+                        <?php
+                            
+                            // foreach($tot_cli as $key) {
+                            //     echo '<li value="'.$key['client_id'].'"><a  href="#">'.$key['client_id'].'</a></li>';
+                            // }
+                            
+                            //foreach($tot_cli as $key) {
+                            //    echo '<li><form method="POST" action="../controllers/ChartsController.php"><button type="submit" class="btn">'.$key['client_id'].'</button></form></li>';
+                            //}
+                            
                             ?>
                         </ul> <i><b>...Por favor, selecciona un cliente. </b></i>
                 </div> <!--finDropDown -->
-                <form name="formulario" method="post" action="../controllers/ChartsController.php">
-                        Id: <input type="text" name="i" value="">
-                        <input type="submit" />
-                </form>
+              
+               
                 <br><center><div id="chart_div3" ></div></center><!--donde se carga la grafica-->
                
                 <!-- TOP 5  reveladores -->

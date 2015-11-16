@@ -1,8 +1,6 @@
 <?php
 
 use yii\helpers\Html;
-use backend\models\Client;
-use backend\models\Relevador;
 
 
 
@@ -15,14 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="client-map">
 
-    <?php
-        
-        $clients = \backend\models\Client::find()->asArray()->all();
-        $relevators = \backend\models\Relevador::find()->asArray()->all();
-        
-    ?>
-    
-    
+   
 <div id="map" style="height:800px; width:100%;"></div>
 
 </div>

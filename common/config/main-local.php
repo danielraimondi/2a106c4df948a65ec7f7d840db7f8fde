@@ -9,19 +9,17 @@ return [
             'charset' => 'utf8'
             ],
             
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'transport' => [
-                'class' => 'Swift_SmtpTransport',
-                'host' => 'smtp.gmail.com',
-                'username' => 'relevando2@gmail.com',
-                'password' => 'mlrgxgrgitmgcumy',
-                'port' => '587',
-                'encryption' => 'tls',
-                // 'port' => '587',
-                // 'encryption' => 'ssl',
-            ],
-        ],
+        // 'mailer' => [
+        //     'class' => 'yii\swiftmailer\Mailer',
+        //     'transport' => [
+        //         'class' => 'Swift_SmtpTransport',
+        //         'host' => 'smtp.gmail.com',
+        //         'username' => 'relevando2@gmail.com',
+        //         'password' => 'mlrgxgrgitmgcumy',
+        //         'port' => '587',
+        //         'encryption' => 'tls',
+        //     ],
+        // ],
         
         'authClientCollection' => [
             'class'   => \yii\authclient\Collection::className(),

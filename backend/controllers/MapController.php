@@ -30,7 +30,11 @@ class MapController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $clients = \backend\models\Client::find()->asArray()->all();
+        $relevators = \backend\models\Relevador::find()->asArray()->all();
+        return $this->render('index', [
+            'clients' => $clients,
+            'relevators' => $relevators] );
     }
 
     
