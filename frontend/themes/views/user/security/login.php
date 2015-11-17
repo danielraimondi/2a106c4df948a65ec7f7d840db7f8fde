@@ -61,15 +61,11 @@ $fieldOptions2 = [
         
         <?= Html::a(Yii::t('user', 'Forgot password?'), ['/user/recovery/request'], ['tabindex' => '5']) ?>
 
-        <?= Connect::widget([
-            'baseAuthUrl' => ['/user/security/auth']
-        ]) ?>
+
     
 
         <div class="row">
-            <div class="col-xs-8">
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
-            </div>
+            
             <!-- /.col -->
             <div class="col-xs-4">
                 <?= Html::submitButton(Yii::t('user', 'Sign in'), ['class' => 'btn btn-primary btn-block btn-flat', 'tabindex' => '3']) ?>
@@ -81,9 +77,8 @@ $fieldOptions2 = [
         
          <div class="social-auth-links text-center">
             <p>- OR -</p>
-            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in
-                using Facebook</a>
-            <a href="#" class="btn btn-block btn-social btn-google-plus btn-flat"><i class="fa fa-google-plus"></i> Sign
+           
+            <a href="https://test-danielraimondi.c9.io/relevando/frontend/web/user/security/auth?authclient=google" class="btn btn-block btn-social btn-google-plus btn-flat"><i class="fa fa-google-plus"></i> Sign
                 in using Google+</a>
         </div>
         <!-- /.social-auth-links -->

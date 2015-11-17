@@ -14,7 +14,7 @@ return [
     'modules' => [
          'user' => [
                 'class' => 'dektrium\user\Module',
-                'admins' => ['admin']
+                'admins' => ['admin', 'daniel.raimondi@gmail.com']
             ],
     ],
     'components' => [

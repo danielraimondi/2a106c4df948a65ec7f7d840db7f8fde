@@ -92,8 +92,8 @@ class SiteController extends Controller
             return $this->render('index');
             
         else{
-            Yii::$app->user->logout();
-            return $this->goHome();
+            //Yii::$app->user->logout();
+            return $this->redirect('../../frontend/web');
         }
     }
 

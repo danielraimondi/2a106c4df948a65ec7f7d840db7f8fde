@@ -4,6 +4,8 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\Survey;
+use backend\models\Route;
+use backend\models\Routeclient;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -29,8 +31,9 @@ class ChartsController extends Controller
          $cantPedidos = (new \yii\db\Query())
         ->select('client_id, COUNT(client_id)')
         ->from('survey')
-        ->where('survey_date > DATE_SUB(CURDATE(), INTERVAL 200 DAY)')  //SELECIONA cuantos días atrás se ve !! --<<<--<-<---<<<
+        ->where('survey_date > DATE_SUB(CURDATE(), INTERVAL 20 DAY)')  //SELECIONA cuantos días atrás se ve !! --<<<--<-<---<<<
         ->groupBy('client_id')
+        ->orderBy(['order' => SORT_ASC,])
         ->all();
         
         
@@ -41,36 +44,40 @@ class ChartsController extends Controller
         ->distinct(true)
         ->all();
         
-// Trae los CLIENTES ordenados de menor a mayor con las ordenes de mayor a menor
-        $tops1 = (new \yii\db\Query())
-        ->select('client_id, prod_id, order, survey_date')
+         // Trae todos los relevadores que visitaron a clientes
+        $tot_usu = (new \yii\db\Query())
+        ->select('user_id')
         ->from('survey')
-        ->orderBy( ['client_id'=>SORT_ASC, 'order' => SORT_DESC,])
+        ->distinct(true)
         ->all();
         
         
-        
-   // Trae todos los datos del cliente seleccionado
-
-      $cli = 1;
-    
-        $cli_sleccionado = (new \yii\db\Query())
-        ->select('client_id, prod_id, order, survey_date')
-        ->from('survey')
-        ->where('client_id=:id',array(':id'=>$cli)) //CARGO el cliente seleccinado
-        ->orderBy( ['client_id'=>SORT_ASC, 'order' => SORT_DESC,])
+        //TOTAL clientes que deberían visitar los relevadores
+        $tot_cli_para_visitar = (new \yii\db\Query())
+        ->select('user_id, COUNT(client_id)')
+        ->from('route r, routeclient rc')
+        ->where('r.route_id = rc.route_id')
+        ->groupBy('user_id')
         ->all();
         
+        //TOTAL clientes que VISITARON los relevadores
+         $tot_cli_ya_visitaron = (new \yii\db\Query())
+        ->select('user_id, COUNT(client_id)')
+        ->from('survey ')
+        ->groupBy('user_id')
+        ->all();
         
+  
        //ENVIANDOUUUU...
         return $this->render('index', [
             'tops' => $tops,
             'cantPedidos' => $cantPedidos, 
             'tot_cli' => $tot_cli, 
             'var' => $var, 
-            'tops1' => $tops1,
-            'tot_cli' => $tot_cli,
-            'cli_sleccionado' => $cli_sleccionado,
+           'tot_cli' => $tot_cli,
+           'tot_usu' => $tot_usu,
+           'tot_cli_para_visitar' => $tot_cli_para_visitar,
+           'tot_cli_ya_visitaron' => $tot_cli_ya_visitaron,
             'surveys'=> $surveys
            
         ]);
