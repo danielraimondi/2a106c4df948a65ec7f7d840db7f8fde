@@ -67,25 +67,32 @@ $this->params['breadcrumbs'][] = $this->title;
             
             var clientes_relevadores = buscarClientes(LatRelevador,LngRelevador, RadioRelevador ); //TODOS los clientes que entran en el radio del Relevador
             
-            console.log(clientes_relevadores[0]['client_id']); // SI da error "Uncaught TypeError: Cannot read property 'client_id' of undefined" es porque NO encontró ningún cliente en ese radio
+            //CARGAR LA TABLA
+            document.getElementById("myTable").innerHTML = "";//limpia el contenido
             
+            for (var item in clientes_relevadores) { //carga el contenido
+                var table = document.getElementById("myTable");
+                
+                var row = table.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = clientes_relevadores[item]['client_id'];
+                cell2.innerHTML = clientes_relevadores[item]['priority'];
+            };
             
+           
         }
         
    </script>
-        
-        
-        
        
     </head>
 
     <body>
- 
+     
        <!-- DROPDOWN-->
          <div class="dropdown" >
                        <br><i><b>...Por favor, selecciona un Relevador. </b></i>
                             <select class="form-control" id="relev" name="relev" onChange="relevadorSelec(this.value);" >
-                                <!-- echo '<option value="0"> </option>';-->
                                 <?php
                                     foreach($tot_rel as $key) {
                                         if($key['id'] != 2){ //SACO EL ID 2 PORQUE ES EL ADMIN
@@ -96,13 +103,34 @@ $this->params['breadcrumbs'][] = $this->title;
                             </select>
                            
         </div> <!--finDropDown -->
+        <br>
+        <!-- TABLA con los clientes -->
+        <div class="row ">
+              <div class="col-md-8">
+                  <table class="table table-striped" id="Table">
+                    <thead>
+                      <tr class="success" >
+                        <th class="col-md-6">Id</th>
+                        <th class="col-md-6">Prioridad</th>
+                      </tr>
+                    </thead>
+                </table>
+              </div>
+        </div>
+        
+        <div class="row">
+              <div class="col-md-8">
+                  <table class="table table-striped" id="myTable"></table> <!--  Donde carga los clientes-->
+              </div>
+        </div>
+        
+          
+            
+        
+        
                 
         
-        Lat1 = Lat1 * PI / 180
-        Lon1 = Lon1 * PI / 180
-        Lat2 = Lat2 * PI / 180
-        Lon2 = Lon2 * PI / 180
-        D = 6378.137 * ACos( Cos( Lat1 ) * Cos( Lat2 ) * Cos( Lon2 - Lon1 ) + Sin( Lat1 ) * Sin( Lat2 ) )
+        
     </body>
 </html>
     
