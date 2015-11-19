@@ -15,6 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
         
         <script type="text/javascript" >
         
+        //Inicializo los valores
         var relv=<?php echo json_encode($tot_rel) ?> ; // relv =  $tot_rel
         var cli=<?php echo json_encode($tot_cli) ?> ; // cli =  $tot_cli
         
