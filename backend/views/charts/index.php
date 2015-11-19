@@ -182,7 +182,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ["Id: " + cliente[1]['prod_id'] + "  (" + cliente[1]['survey_date'] + ")", parseInt(cliente[1]['order']), "#48D1CC"],
                 ["Id: " + cliente[2]['prod_id'] + "  (" + cliente[2]['survey_date'] + ")", parseInt(cliente[2]['order']), "#40E0D0"],
                 ["Id: " + cliente[3]['prod_id'] + "  (" + cliente[3]['survey_date'] + ")", parseInt(cliente[3]['order']), "#AFEEEE"],
-                ["Id: " + cliente[4]['prod_id'] + "  (" + cliente[4]['survey_date'] + ")" , parseInt(cliente[4]['order']), "#E0FFFF"]
+                ["Id: " + cliente[4]['prod_id'] + "  (" + cliente[4]['survey_date'] + ")", parseInt(cliente[4]['order']), "#E0FFFF"]
               ]);
             
                   var view3 = new google.visualization.DataView(data);
@@ -194,7 +194,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                    2]);
         
                   var options3 = {
-                    title: ' TOP 5 COMPRAS realizadas por el cliente <?php echo "Id: ".$cli ?>',
+                    title: ' TOP 5 COMPRAS realizadas por el cliente ',
                     width: 900,
                     height: 500,
                     bar: {groupWidth: "95%"},
@@ -242,7 +242,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">TOP 5 compras</a></li>
             <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">TOP 5 clientes</a></li>
             <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">TOP 5 de c/cliente</a></li>
-            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">TOP 5 reveladores</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">% ruta realizada por revelador</a></li>
           </ul>
 
 <!-- **********CONTENIDO de las PESTAÑAS***************-->  
@@ -287,7 +287,9 @@ $this->params['breadcrumbs'][] = $this->title;
                             <select class="form-control" id="relevador" name="relevador" onChange="mostrarResultadosRel(this.value);">
                                 <?php
                                     foreach($tot_usu as $key) {
+                                        if($key['id'] != 2){ //SACO EL ID 2 PORQUE ES EL ADMIN
                                         echo '<option value="'.$key['user_id'].'">'.$key['user_id'].'</option>';
+                                        }
                                     }
                                 ?>
                             </select>

@@ -3,8 +3,8 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use backend\assets\AppAsset;
-use backend\widgets\Alert;
+use movil\assets\AppAsset;
+use movil\widgets\Alert;
 
 /* @var $this \yii\web\View */
 /* @var $content string */

@@ -1321,3 +1321,60 @@ $_SERVER = [
 [16-Nov-2015 00:49:53 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:386
 [16-Nov-2015 00:49:53 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
 [16-Nov-2015 00:49:53 UTC] PHP  13. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[18-Nov-2015 23:24:18 UTC] PHP Fatal error:  Class 'backend\widgets\Alert' not found in /home/ubuntu/workspace/relevando/movil/views/layouts/main.php on line 61
+[18-Nov-2015 23:24:18 UTC] PHP Stack trace:
+[18-Nov-2015 23:24:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/movil/web/index.php:0
+[18-Nov-2015 23:24:18 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/movil/web/index.php:18
+[18-Nov-2015 23:24:18 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[18-Nov-2015 23:24:18 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[18-Nov-2015 23:24:18 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[18-Nov-2015 23:24:18 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[18-Nov-2015 23:24:18 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[18-Nov-2015 23:24:18 UTC] PHP   8. dektrium\user\controllers\SecurityController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[18-Nov-2015 23:24:18 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/controllers/SecurityController.php:113
+[18-Nov-2015 23:24:18 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:372
+[18-Nov-2015 23:24:18 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:386
+[18-Nov-2015 23:24:18 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[18-Nov-2015 23:24:18 UTC] PHP  13. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[18-Nov-2015 23:27:24 UTC] PHP Fatal error:  Class 'backend\widgets\Alert' not found in /home/ubuntu/workspace/relevando/movil/views/layouts/main.php on line 61
+[18-Nov-2015 23:27:24 UTC] PHP Stack trace:
+[18-Nov-2015 23:27:24 UTC] PHP   1. yii\base\ErrorHandler->handleException() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[18-Nov-2015 23:27:24 UTC] PHP   2. yii\web\ErrorHandler->renderException() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php:109
+[18-Nov-2015 23:27:24 UTC] PHP   3. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php:85
+[18-Nov-2015 23:27:24 UTC] PHP   4. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[18-Nov-2015 23:27:24 UTC] PHP   5. yii\base\Action->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[18-Nov-2015 23:27:24 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92
+[18-Nov-2015 23:27:24 UTC] PHP   7. yii\web\ErrorAction->run() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92
+[18-Nov-2015 23:27:24 UTC] PHP   8. yii\base\Controller->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorAction.php:109
+[18-Nov-2015 23:27:24 UTC] PHP   9. yii\base\Controller->renderContent() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:372
+[18-Nov-2015 23:27:24 UTC] PHP  10. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:386
+[18-Nov-2015 23:27:24 UTC] PHP  11. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[18-Nov-2015 23:27:24 UTC] PHP  12. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[18-Nov-2015 23:27:50 UTC] PHP Fatal error:  Class 'backend\widgets\Alert' not found in /home/ubuntu/workspace/relevando/movil/views/layouts/main.php on line 61
+[18-Nov-2015 23:27:50 UTC] PHP Stack trace:
+[18-Nov-2015 23:27:50 UTC] PHP   1. yii\base\ErrorHandler->handleException() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[18-Nov-2015 23:27:50 UTC] PHP   2. yii\web\ErrorHandler->renderException() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php:109
+[18-Nov-2015 23:27:50 UTC] PHP   3. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php:85
+[18-Nov-2015 23:27:50 UTC] PHP   4. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[18-Nov-2015 23:27:50 UTC] PHP   5. yii\base\Action->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[18-Nov-2015 23:27:50 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92
+[18-Nov-2015 23:27:50 UTC] PHP   7. yii\web\ErrorAction->run() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92
+[18-Nov-2015 23:27:50 UTC] PHP   8. yii\base\Controller->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorAction.php:109
+[18-Nov-2015 23:27:50 UTC] PHP   9. yii\base\Controller->renderContent() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:372
+[18-Nov-2015 23:27:50 UTC] PHP  10. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:386
+[18-Nov-2015 23:27:50 UTC] PHP  11. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[18-Nov-2015 23:27:50 UTC] PHP  12. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325
+[18-Nov-2015 23:32:16 UTC] PHP Fatal error:  Class 'movil\assets\AppAsset' not found in /home/ubuntu/workspace/relevando/movil/views/layouts/main.php on line 12
+[18-Nov-2015 23:32:16 UTC] PHP Stack trace:
+[18-Nov-2015 23:32:16 UTC] PHP   1. yii\base\ErrorHandler->handleException() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[18-Nov-2015 23:32:16 UTC] PHP   2. yii\web\ErrorHandler->renderException() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php:109
+[18-Nov-2015 23:32:16 UTC] PHP   3. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php:85
+[18-Nov-2015 23:32:16 UTC] PHP   4. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[18-Nov-2015 23:32:16 UTC] PHP   5. yii\base\Action->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[18-Nov-2015 23:32:16 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92
+[18-Nov-2015 23:32:16 UTC] PHP   7. yii\web\ErrorAction->run() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Action.php:92
+[18-Nov-2015 23:32:16 UTC] PHP   8. yii\base\Controller->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorAction.php:109
+[18-Nov-2015 23:32:16 UTC] PHP   9. yii\base\Controller->renderContent() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:372
+[18-Nov-2015 23:32:16 UTC] PHP  10. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:386
+[18-Nov-2015 23:32:16 UTC] PHP  11. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[18-Nov-2015 23:32:16 UTC] PHP  12. require() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:325

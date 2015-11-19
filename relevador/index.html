@@ -1,6 +1,4 @@
 
-<?php include('/php/tablaProductos.php');?>
-
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
@@ -10,6 +8,12 @@ $this->title = 'relevador';
 
 ?>
 <!doctype html>
+
+<?php
+
+$array = array("Leche Conaprole", "Coca Cola", "Pasta de dientes Colgate", "Jugo de naranja Ades");
+var_dump($array);
+?>
 <html>
 <head lang="en">
 	<meta charset="utf-8">
@@ -159,35 +163,62 @@ $this->title = 'relevador';
 			<div class="row title-row">
 				<div class="col-12 font-thin">Realizar pedido</div>
 			</div><!-- /row -->
-			<tr>
-                 <td></td>
-                 <td>
-                  <input id="cmdEnter" name="cmdEnter" type="submit"  value="Actulizar...">
-                   </td>
-               </tr>
+			
 			
 			<div class="row content-row">
 				
 				<div class="panel panel-default">
-					
-				  <div class="panel panel-default">
 				 	<?php
 						$arrayProductos = Yii::api()->web->v1->products();
+						echo "<h2>" . $arrayProductos . "</h2>";
+							
 					?>
-				  <!-- Default panel contents -->
-				  <div class="panel-heading">Tabla de productos</div>
+				  <!-- Default panel contents
+				  <div class="panel-heading">Tabla de productos</div> -->
 				  <!-- Table -->
-				 
-				  <table class="table"  id="tableProductos" >
+				  //
+			<!--	  <table class="table"  id="tableProductos" >
 					 <thead>
 	                 <tr>
 	                  <td><strong>ID</strong></td>
 	                  <td><strong>Nombre</strong></td>
-	                  <td><strong>Categoria</strong></td>
+	                  <td><strong>Categori</strong></td>
 	                  <td><strong>Imagen</strong></td>
 	                 </tr>
 	                </thead>
-				  </table>
+				  </table>-->
+				
+				  <table class="grilla" id="tablajson">
+						<thead>
+							<th>prod_id</th>
+							<th>prod_name</th>
+							<th>cat_id</th>
+							<th>prod_pic</th>
+						</thead>
+						<tbody></tbody>
+					</table>
+						<script type="text/javascript">	
+								$json = file_get_contents('https://test-danielraimondi.c9.io/relevando/api/web/v1/products');
+								$obj = json_decode($json);
+											echo $obj->access_token;
+
+								$(document).ready(function(){
+								var url="https://test-danielraimondi.c9.io/relevando/api/web/v1/products";
+								$("#tablajson tbody").html("");
+								$.getJSON(url,function(attributeLabels){
+								$.each(attributeLabels, function(i,product){
+								var newRow =
+								""
+								+""+product.prod_id+""
+								+""+product.prod_name+""
+								+""+product.cat_id+""
+								+""+product.prod_pic+""
+								+"";
+								$(newRow).appendTo("#tablajson tbody");
+								});
+								});
+								});
+						</script>
 				</div>
 			</div><!-- /row -->
 		</div><!-- /container -->
@@ -269,9 +300,6 @@ $this->title = 'relevador';
 		</div><!-- /container -->
 	</div><!-- /Slide 6 -->
 	
-	
-		
-	
 </body>
 
 	<!-- SCRIPTS -->
@@ -289,7 +317,7 @@ $this->title = 'relevador';
 </script> 
 	
 	<!-- fancybox init -->
-	<!--	<script>
+	<script>
 	$(document).ready(function(e) {
 		var lis = $('.nav > li');
 		menu_focus( lis[0], 1 );
@@ -304,79 +332,7 @@ $this->title = 'relevador';
 		});
 	
 	});
-	</script> -->
-	
-<script src="js/jquery-1.8.2.min.js"></script>
-<script>
-  $(function() {
-  $("#cmdEnter").click(function() {
-       $.getJSON("http://test-danielraimondi.c9.io/relevando/api/web/v1/products?tags="+tags+"&tagmode=any&format=json&jsoncallback=?",
-        function(data){
-		alert("entra " + data.length);
-					  var html='';
-					  // si la consulta ajax devuelve datos
-					  if(data.length > 0){
-		                  $.each(data, function(i,item){
-							  html += '<tr>'
-		                            html += '<td>'+item.prod_id+'</td>'
-		                            html += '<td>'+item.prod_name+'</td>'
-		                            html += '<td>'+item.cat_id+'</td>'
-		                            html += '<td>'+item.prod_pic+'</td>'
-		                        html += '</tr>';
-						    });
-		              } 
-					  // si no hay datos mostramos mensaje de no encontraron registros
-		                if(html == '') html = '<tr><td colspan="6">No se encontraron productos..</td></tr>'
-		                // añadimos  a nuestra tabla todos los datos encontrados mediante la funcion html
-		                $("#tableProductos tbody").html(html);  
-		                  
-		          } 
-          
-        });
-      });
-      
-      // asignamos el texto de búsqueda al campo de salida del resultado
-      $("#tagsToSearch").text(tags);
-    });
-     });
-  });
-</script>	
+	</script>
 
 
-	<!--
-	<script>
-			$(document).ready(function(){
-		  $('#cmdEnter').on("click", null, function() {  
-		     $.ajax({ // ajax call starts
-		     console.log("entro");
-		          url: 'https://test-danielraimondi.c9.io/relevando/api/web/v1/products', // JQuery loads serverside.php
-		          data: 'Productos=' + $('#txtProd').val(), // Send value of text
-		          dataType: 'json', // Choosing a JSON datatype
-		          success: function(data) // Variable data contains the data we get from serverside
-		          {
-		            
-		          	alert("entra " + data.length);
-					  var html='';
-					  // si la consulta ajax devuelve datos
-					  if(data.length > 0){
-		                  $.each(data, function(i,item){
-							  html += '<tr>'
-		                            html += '<td>'+item.prod_id+'</td>'
-		                            html += '<td>'+item.prod_name+'</td>'
-		                            html += '<td>'+item.cat_id+'</td>'
-		                            html += '<td>'+item.prod_pic+'</td>'
-		                        html += '</tr>';
-						    });
-		              } 
-					  // si no hay datos mostramos mensaje de no encontraron registros
-		                if(html == '') html = '<tr><td colspan="6">No se encontraron productos..</td></tr>'
-		                // añadimos  a nuestra tabla todos los datos encontrados mediante la funcion html
-		                $("#tableProductos tbody").html(html);  
-		                  
-		          }           
-    			 });
-		      return false; // keeps the page from not refreshing 
-		  });
-		})
-	</script> -->
 </html>

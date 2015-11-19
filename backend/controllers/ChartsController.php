@@ -14,6 +14,14 @@ class ChartsController extends Controller
 {
     public function actionIndex()
     {
+     
+     
+     if (!Yii::$app->user->identity->isAdmin)
+            return $this->redirect('../../frontend/web');
+            
+        else{
+            
+        
         
       
         // Array con todos los pedidos
@@ -82,7 +90,9 @@ class ChartsController extends Controller
            
         ]);
         
-    }
+    
+        }
+        }
     
     
    }

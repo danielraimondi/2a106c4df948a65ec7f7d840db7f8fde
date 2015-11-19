@@ -43,15 +43,15 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
-                        //'actions' => ['index'],
+                        //'actions' => ['logout', 'index'],
+                        'actions' => ['index'],
                         'allow' => true,
                         'roles' => ['@'],
-                        // 'matchCallback' => function ($rule, $action) {
+                        // 'matchCallback' => function ($rule) {
                         //     return Yii::$app->user->identity->isAdmin;
                         // },
-                        // 'denyCallback' => function ($rule, $action) {
-                        //      return 1;
+                        // 'denyCallback' => function ($rule) {
+                        //      return $this->redirect('../../frontend/web');;
                         // },
                     ],
                 ],
@@ -92,14 +92,11 @@ class SiteController extends Controller
             return $this->render('index');
             
         else{
-            //Yii::$app->user->logout();
+            Yii::$app->user->logout();
             return $this->redirect('../../frontend/web');
         }
     }
 
-    public function actionMap(){
-        return $this->render('map');
-    }
     
     public function actionLogin()
     {

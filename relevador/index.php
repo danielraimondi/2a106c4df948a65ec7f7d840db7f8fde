@@ -174,8 +174,8 @@ var_dump($array);
 				  <!-- Default panel contents -->
 				  <div class="panel-heading">Tabla de productos</div>
 				  <!-- Table -->
-				 
-				  <table class="table"  id="tableProductos" >
+				  //
+			<!--	  <table class="table"  id="tableProductos" >
 					 <thead>
 	                 <tr>
 	                  <td><strong>ID</strong></td>
@@ -184,7 +184,17 @@ var_dump($array);
 	                  <td><strong>Imagen</strong></td>
 	                 </tr>
 	                </thead>
-				  </table>
+				  </table>-->
+				  
+				  <table class="grilla" id="tablajson">
+						<thead>
+							<th>prod_id</th>
+							<th>prod_name</th>
+							<th>cat_id</th>
+							<th>prod_pic</th>
+						</thead>
+						<tbody></tbody>
+					</table>
 				</div>
 			</div><!-- /row -->
 		</div><!-- /container -->
@@ -299,5 +309,23 @@ var_dump($array);
 	
 	});
 	</script>
+	<script>	
+		$(document).ready(function(){
+		var url="https://test-danielraimondi.c9.io/relevando/api/web/v1/products";
+		$("#tablajson tbody").html("");
+		$.getJSON(url,function(products){
+		$.each(products, function(i,products){
+		var newRow =
+		""
+		+""+products.prod_id+""
+		+""+products.prod_name+""
+		+""+products.cat_id+""
+		+""+products.prod_pic+""
+		+"";
+		$(newRow).appendTo("#tablajson tbody");
+		});
+		});
+		});
+</script>
 
 </html>

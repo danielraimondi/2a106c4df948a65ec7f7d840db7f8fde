@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 
+
 /**
  * ProductController implements the CRUD actions for Product model.
  */
@@ -26,7 +27,8 @@ class ProductController extends Controller
             ],
         ];
     }
-
+    
+  
     /**
      * Lists all Product models.
      * @return mixed
