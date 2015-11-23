@@ -140,7 +140,7 @@ $this->params['breadcrumbs'][] = $this->title;
       fillOpacity: 0.1,
       map: map,
       center: {lat: lat, lng: lng},
-      radius: radius
+      radius: radius*1000
     });
   }
 

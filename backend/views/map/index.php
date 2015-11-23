@@ -113,7 +113,7 @@ $this->params['breadcrumbs'][] = $this->title;
                   fillOpacity: 0.1,
                   map: map,
                   center: {lat: parseFloat(relevators[r].user_lat), lng: parseFloat(relevators[r].user_lng)},
-                  radius: parseFloat(relevators[r].user_radius)
+                  radius: parseFloat(relevators[r].user_radius)*1000
                 });
                 
             var content = 'ID: '+relevators[r].id+'<br>Name: '+relevators[r].username;     

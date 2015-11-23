@@ -12732,3 +12732,17 @@ $_SERVER = [
 [19-Nov-2015 11:48:41 UTC] PHP   7. class_exists() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
 [19-Nov-2015 11:48:41 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
 [19-Nov-2015 11:48:41 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[23-Nov-2015 14:32:51 UTC] PHP Parse error:  syntax error, unexpected '$command_route' (T_VARIABLE) in /home/ubuntu/workspace/relevando/backend/views/autoroute/index.php on line 104
+[23-Nov-2015 14:32:51 UTC] PHP Stack trace:
+[23-Nov-2015 14:32:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[23-Nov-2015 14:32:51 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[23-Nov-2015 14:32:51 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[23-Nov-2015 14:32:51 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[23-Nov-2015 14:32:51 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[23-Nov-2015 14:32:51 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[23-Nov-2015 14:32:51 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 14:32:51 UTC] PHP   8. backend\controllers\AutorouteController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 14:32:51 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/relevando/backend/controllers/AutorouteController.php:45
+[23-Nov-2015 14:32:51 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
+[23-Nov-2015 14:32:51 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
+[23-Nov-2015 14:32:51 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247

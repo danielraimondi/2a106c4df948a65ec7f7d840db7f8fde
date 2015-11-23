@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         var LatCliente = 0; 
         var LngCliente = 0; 
         var distancia = 0;
-        
+        var clientes_relevadores = null;
         
         //BUSCA el relevador seleccionado del dropdown 
         function buscarRelevador(idRelevador){
@@ -47,6 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 LatCliente = (cli[n]['client_lat'] * Math.PI) / 180 ;  //se pasa a radianes
                 LngCliente = (cli[n]['client_long'] * Math.PI) / 180 ;  //se pasa a radianes
                 
+                //Calculo de la distancia geografica en Km, entre dos puntos.
                 distancia = 6378.137 * Math.acos( Math.cos( LatRelevador ) * Math.cos( LatCliente ) * Math.cos( LngCliente - LngRelevador ) + Math.sin( LatRelevador ) * Math.sin( LatCliente ) ); //en KM
                 
                 if (parseInt(distancia) < parseInt(RadioRelevador) ){ //si la distancia es menor al radio del Relevador PUSH
@@ -66,8 +67,8 @@ $this->params['breadcrumbs'][] = $this->title;
             LngRelevador = (rel[0]['user_lng'] * Math.PI) / 180 ;  //se pasa a radianes
             RadioRelevador = rel[0]['user_radius'];
             
-            var clientes_relevadores = buscarClientes(LatRelevador,LngRelevador, RadioRelevador ); //TODOS los clientes que entran en el radio del Relevador
-            
+            clientes_relevadores = buscarClientes(LatRelevador,LngRelevador, RadioRelevador ); // *****TODOS los clientes que entran en el radio del Relevador ********
+            console.log(clientes_relevadores[0]);
             //CARGAR LA TABLA
             document.getElementById("myTable").innerHTML = "";//limpia el contenido
             
@@ -84,6 +85,31 @@ $this->params['breadcrumbs'][] = $this->title;
            
         }
         
+        function crearRuta(){
+            if (clientes_relevadores[0] != undefined){ //SI TIENE clientes para ser asignados (clientes_relevadores no es vacio)
+                console.log("no esta vacio");
+            }
+            
+        }
+        
+        <?php
+        //Query con la nueva ruta del dia de hoy
+ /*        $query_route = (new \yii\db\Query())
+            ->select('client_id, prod_id, order')
+            ->from('survey')
+            ->orderBy(['order' => SORT_DESC,])
+            ->limit(3);s
+            
+        // Crea un commando
+        $command_route = $query_route->createCommand();
+            
+        // Ejecuta el commando
+        $rows = $command_route->queryAll(); //TRAE un array con los datos
+        */
+        ?>
+
+
+        
    </script>
        
     </head>
@@ -91,8 +117,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <body>
      
        <!-- DROPDOWN-->
-         <div class="dropdown" >
-                       <br><i><b>...Por favor, selecciona un Relevador. </b></i>
+         <br><div class="row" >
+             <div class="col-md-8">
+                 <i><b>...Por favor, selecciona un Relevador. </b></i>
                             <select class="form-control" id="relev" name="relev" onChange="relevadorSelec(this.value);" >
                                 <?php
                                     foreach($tot_rel as $key) {
@@ -102,6 +129,11 @@ $this->params['breadcrumbs'][] = $this->title;
                                     }
                                 ?>
                             </select>
+             </div>
+             <div class="col-md-4">
+                       
+                   <br> <button type="button" class="btn btn-success glyphicon glyphicon-floppy-saved" onclick ="crearRuta();">   Assign</button>
+             </div>
                            
         </div> <!--finDropDown -->
         <br>
@@ -124,6 +156,7 @@ $this->params['breadcrumbs'][] = $this->title;
                   <table class="table table-striped" id="myTable"></table> <!--  Donde carga los clientes-->
               </div>
         </div>
+        
         
           
             
