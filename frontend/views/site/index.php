@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'Frontend';
+
 ?>
 <!--<div class="site-index">-->
 
@@ -50,3 +51,26 @@ $this->title = 'Frontend';
 
 <!--    </div>-->
 <!--</div>-->
+
+<html>
+    <head>
+    
+    </head>
+    <body>
+    
+        <center><div class="page-header">  
+        <h1>¡ Buenas ! <br><small>Bienvenido al sistema de Relevando.com<br> Aquí podras encontrar toda la información relacionada a tí</small></h1>
+        </div></center>
+        
+        
+        <center><dl>
+            <dt class="bg-info">Gráficas</dt>
+            <dd>- En <kbd>Charts</kbd> podras facilmente ver tú rendimiento.</dd>
+            <br><dt class="bg-info">lallalal</dt>
+         
+            
+        <dl></center>   
+
+        
+    </body>
+</html>

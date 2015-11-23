@@ -15,7 +15,6 @@ $this->title = 'Backend';
     
     </head>
     <body>
-        
     
         <center><div class="page-header">  
         <h1>¡ Buenas ! <br><small>Bienvenido al sistema de Relevando.com<br> Aquí podras encontrar todas las herramientas para una correcta gestión</small></h1>
