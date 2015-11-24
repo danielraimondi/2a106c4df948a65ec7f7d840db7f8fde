@@ -29,27 +29,27 @@ class ChartsController extends Controller
       
         // Trae las COMPRAS más altas de todos los clientes
         $tops = (new \yii\db\Query())
-        ->select('client_id, prod_id, order, survey_date')
-        ->from('survey')
-        ->orderBy(['order' => SORT_DESC,])
+        ->select('s.client_id, s.prod_id, s.order, s.survey_date, c.client_name')
+        ->from('survey s, client c')
+        ->where('c.client_id = s.client_id')
+        ->orderBy(['s.order' => SORT_DESC,])
         ->all();
         
         
         // Trae las 5 CANTIDADES de COMPRAS más altas de todos los clientes o sea los que compraron más veces sin importar la cantidad de productos
          $cantPedidos = (new \yii\db\Query())
-        ->select('client_id, COUNT(client_id)')
-        ->from('survey')
-        ->where('survey_date > DATE_SUB(CURDATE(), INTERVAL 20 DAY)')  //SELECIONA cuantos días atrás se ve !! --<<<--<-<---<<<
-        ->groupBy('client_id')
-        ->orderBy(['order' => SORT_ASC,])
+        ->select('s.client_id, COUNT(s.client_id), c.client_name')
+        ->from('survey s, client c')
+        ->where('s.survey_date > DATE_SUB(CURDATE(), INTERVAL 20 DAY) AND c.client_id = s.client_id')  //SELECIONA cuantos días atrás se ve !! --<<<--<-<---<<<
+        ->groupBy('s.client_id')
+        ->orderBy(['s.order' => SORT_DESC,])
         ->all();
         
         
         // Trae todos los clientes que realizaron alguna compra
         $tot_cli = (new \yii\db\Query())
-        ->select('client_id')
-        ->from('survey')
-        ->distinct(true)
+        ->select('client_id, client_name')
+        ->from('client')
         ->all();
         
         // Trae todos los relevadores que visitaron a clientes

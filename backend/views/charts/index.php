@@ -8,6 +8,8 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('app', 'Charts');
 $this->params['breadcrumbs'][] = $this->title;
 
+//print_r($cantPedidos);
+
 ?>
 
 <html>
@@ -116,11 +118,11 @@ $this->params['breadcrumbs'][] = $this->title;
  //DATA/CHART/OPTIONS  Trae las 5 COMPRAS más altas de todos los clientes
                var data = google.visualization.arrayToDataTable([
                 ["ID productos", "Productos", { role: "style" } ],
-                ["<?php echo "Id: ".$tops[0]['client_id']."  (".$tops[0]['survey_date'].")"?>", <?php echo $tops[0]['order']?>, "#008B45"],
-                ["<?php echo "Id: ".$tops[1]['client_id']."  (".$tops[1]['survey_date'].")"?>", <?php echo $tops[1]['order']?>, "#00CD66"],
-                ["<?php echo "Id: ".$tops[2]['client_id']."  (".$tops[2]['survey_date'].")"?>", <?php echo $tops[2]['order']?>, "#00EE76"],
-                ["<?php echo "Id: ".$tops[3]['client_id']."  (".$tops[3]['survey_date'].")"?>", <?php echo $tops[3]['order']?>, "#4EEE94"],
-                ["<?php echo "Id: ".$tops[4]['client_id']."  (".$tops[4]['survey_date'].")"?>", <?php echo $tops[4]['order']?>, "#98FB98"]
+                ["<?php echo $tops[0]['client_name']."  (".$tops[0]['survey_date'].")"?>", <?php echo $tops[0]['order']?>, "#008B45"],
+                ["<?php echo $tops[1]['client_name']."  (".$tops[1]['survey_date'].")"?>", <?php echo $tops[1]['order']?>, "#00CD66"],
+                ["<?php echo $tops[2]['client_name']."  (".$tops[2]['survey_date'].")"?>", <?php echo $tops[2]['order']?>, "#00EE76"],
+                ["<?php echo $tops[3]['client_name']."  (".$tops[3]['survey_date'].")"?>", <?php echo $tops[3]['order']?>, "#4EEE94"],
+                ["<?php echo $tops[4]['client_name']."  (".$tops[4]['survey_date'].")"?>", <?php echo $tops[4]['order']?>, "#98FB98"]
               ]);
         
               var view = new google.visualization.DataView(data);
@@ -146,11 +148,11 @@ $this->params['breadcrumbs'][] = $this->title;
    //DATA2/CHART2/OPTIONS2  Trae las 5 COMPRAS más altas de todos los clientes
                    var data = google.visualization.arrayToDataTable([
                 ["Id Cliente", "Compras", { role: "style" } ],
-                ["<?php echo "Id: ".$cantPedidos[0]['client_id']?>", <?php echo $cantPedidos[0]['COUNT(client_id)']?>, "#8B6969"],
-                ["<?php echo "Id: ".$cantPedidos[1]['client_id']?>", <?php echo $cantPedidos[1]['COUNT(client_id)']?>, "#CD9B9B"],
-                ["<?php echo "Id: ".$cantPedidos[2]['client_id']?>", <?php echo $cantPedidos[2]['COUNT(client_id)']?>, "#EEB4B4"],
-                ["<?php echo "Id: ".$cantPedidos[3]['client_id']?>", <?php echo $cantPedidos[3]['COUNT(client_id)']?>, "#FFC1C1"],
-                ["<?php echo "Id: ".$cantPedidos[4]['client_id']?>", <?php echo $cantPedidos[4]['COUNT(client_id)']?>, "#FFD39B"]
+                ["<?php echo "Id: ".$cantPedidos[0]['client_id']." - ".$cantPedidos[0]['client_name']?>", <?php echo $cantPedidos[0]['COUNT(s.client_id)']?>, "#8B6969"],
+                ["<?php echo "Id: ".$cantPedidos[1]['client_id']." - ".$cantPedidos[1]['client_name']?>", <?php echo $cantPedidos[1]['COUNT(s.client_id)']?>, "#CD9B9B"],
+                ["<?php echo "Id: ".$cantPedidos[2]['client_id']." - ".$cantPedidos[2]['client_name']?>", <?php echo $cantPedidos[2]['COUNT(s.client_id)']?>, "#EEB4B4"],
+                ["<?php echo "Id: ".$cantPedidos[3]['client_id']." - ".$cantPedidos[3]['client_name']?>", <?php echo $cantPedidos[3]['COUNT(s.client_id)']?>, "#FFC1C1"],
+                ["<?php echo "Id: ".$cantPedidos[4]['client_id']." - ".$cantPedidos[4]['client_name']?>", <?php echo $cantPedidos[4]['COUNT(s.client_id)']?>, "#FFD39B"]
                
               ]);
             
@@ -267,7 +269,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <select class="form-control" id="client" name="client" onChange="mostrarResultados(this.value);">
                                 <?php
                                     foreach($tot_cli as $key) {
-                                        echo '<option value="'.$key['client_id'].'">'.$key['client_id'].'</option>';
+                                        echo '<option value="'.$key['client_id'].'">'.$key['client_name'].'</option>';
                                     }
                                 ?>
                             </select>
@@ -293,7 +295,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                  }
                                 ?>
                             </select>
-                            
+                            <br><center><i><small>*Si el relevador que buscas no se encuentra aquí, es que no ha visitado aún ningun cliente</small></i></center>
                       
                 </div> <!--finDropDown -->
                     <!--grafica-->

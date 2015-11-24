@@ -1,12 +1,4 @@
 
-<?php
-/* @var $this yii\web\View */
-use yii\helpers\Html;
-
-$this->title = 'relevador';
-
-
-?>
 <!doctype html>
 
 
@@ -21,12 +13,10 @@ $this->title = 'relevador';
 	<meta property="og:title" content="">
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">	
-	
-	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" type="text/css" media="screen">
     
@@ -35,7 +25,7 @@ $this->title = 'relevador';
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
     <!-- Bootstrap core CSS -->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet" media="screen">
+    <!--<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet" media="screen">-->
  	
 </head>
 
@@ -251,11 +241,7 @@ $this->title = 'relevador';
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 	
 	<script src="js/script.js"></script>
-	<script type="text/javascript">
-    $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii"
-    });
-</script> 
+ 
 
 					
 	<!-- fancybox init -->
@@ -287,16 +273,16 @@ $this->title = 'relevador';
 	
 		$(document).ready(function() {
 		    $.ajax({
-		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/routeclients"
-		    }).then(function(data) {
+		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route"
+		    }).then(function(route) {
 		       
 		       var p;
 		        var rutaCliente = [];
-		       for (p in data){
-		       	rutaCliente.append(data[p]);
+		       for (p in route){
+		       	rutaCliente.append(route[p]);
 		       }
 		       
-		       console.log(JSON.stringify(data));
+		       console.log(JSON.stringify(route));
 		    });
 		});
 	  // In the following example, markers appear when the user clicks on the map.
@@ -305,9 +291,6 @@ $this->title = 'relevador';
 	  var map;
 	  var markers = [];
 	      
-	  var clients = <?php echo json_encode($clients) ?> ;
-	  var relevators = <?php echo json_encode($relevators) ?> ;
-	  
 	  function initMap() {
 	    var center = {lat: -34.893753, lng: -56.165217};
 	  
@@ -319,139 +302,8 @@ $this->title = 'relevador';
 	    
 	    prev_infowindow = false;
 	    
-	    
-	    // MARKERS COMERCIOS
-	    for (c in clients){
-	        
-	        var markerIcon = {
-	                    url: "images/shop2.ico",
-	                    size: new google.maps.Size(32, 32),
-	                    //origin: new google.maps.Point(0, 0),
-	                    anchor: new google.maps.Point(15, 25),
-	                    scaledSize: new google.maps.Size(32, 32)
-	                };
-	        
-	        var marker = new google.maps.Marker({
-	            position: {lat: parseFloat(clients[c].client_lat), lng: parseFloat(clients[c].client_long)},
-	            map: map,
-	            icon: markerIcon
-	        });
-	        
-	        
-	        // var marker = new google.maps.Marker({
-	        //     position: {lat: parseFloat(clients[c].client_lat), lng: parseFloat(clients[c].client_long)},
-	        //     map: map,
-	        //     //icon: markerIcon
-	        // });
-	        
-	        markers.push(marker);
-	        
-	        var content = 'ID: '+clients[c].client_id+'<br>Name: '+clients[c].client_name;     
-	
-	        var infowindow = new google.maps.InfoWindow();
-	
-	        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
-	            return function() {
-	                if (prev_infowindow) 
-	                    prev_infowindow.close();
-	                infowindow.setContent(content);
-	                infowindow.open(map,marker);
-	                prev_infowindow = infowindow;
-	            };
-	        })(marker,content,infowindow)); 
-	        
-	    }
-	    
-	    // MARKERS RELEVADORES
-	    for (r in relevators){
-	        
-	        if (relevators[r].user_lat != null && relevators[r].user_lng != null){
-	            
-	            var markerIcon = {
-	                    url: "images/streetview.ico",
-	                    size: new google.maps.Size(32, 32),
-	                    //origin: new google.maps.Point(25, 25),
-	                    anchor: new google.maps.Point(16, 24),
-	                    scaledSize: new google.maps.Size(32, 32)
-	                };
-	            
-	            var marker = new google.maps.Marker({
-	                position: {lat: parseFloat(relevators[r].user_lat), lng: parseFloat(relevators[r].user_lng)},
-	                map: map,
-	                icon: markerIcon
-	            });
-	        
-	            markers.push(marker);
-	            
-	            
-	            var cityCircle = new google.maps.Circle({
-	                strokeColor: '#0000FF',
-	                  strokeOpacity: 0.5,
-	                  strokeWeight: 0.5,
-	                  fillColor: '#3366FF',
-	                  fillOpacity: 0.1,
-	                  map: map,
-	                  center: {lat: parseFloat(relevators[r].user_lat), lng: parseFloat(relevators[r].user_lng)},
-	                  radius: parseFloat(relevators[r].user_radius)*1000
-	                });
-	                
-	            var content = 'ID: '+relevators[r].id+'<br>Name: '+relevators[r].username;     
-	        
-	            var infowindow = new google.maps.InfoWindow();
-	        
-	            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
-	                return function() {
-	                    if (prev_infowindow) 
-	                        prev_infowindow.close();
-	                    infowindow.setContent(content);
-	                    infowindow.open(map,marker);
-	                    prev_infowindow = infowindow;
-	                };
-	            })(marker,content,infowindow));
-	        
-	        }
-	        
-	    }
-	    
-	    // // CERRAR INFOWINDOW
-	    // map.addListener('click', function(event) {
-	    //   if (prev_infowindow)
-	    //     prev_infowindow.close();
-	    // });
-	    
-	 }
-	  
-	  // Adds a marker to the map and push to the array.
-	  // function addMarker(location) {
-	  //   var marker = new google.maps.Marker({
-	  //     position: location,
-	  //     map: map
-	  //   });
-	  //   markers.push(marker);
-	  // }
-	  
-	  // Sets the map on all markers in the array.
-	//   function setMapOnAll(map) {
-	//     for (var i = 0; i < markers.length; i++) {
-	//       markers[i].setMap(map);
-	//     }
-	//   }
-	  
-	  // Removes the markers from the map, but keeps them in the array.
-	  // function clearMarkers() {
-	  //   setMapOnAll(null);
-	  // }
-	  
-	  // Shows any markers currently in the array.
-	  // function showMarkers() {
-	  //   setMapOnAll(map);
-	  // }
-	  
-	  // Deletes all markers in the array by removing references to them.
-	  // function deleteMarkers() {
-	  //   clearMarkers();
-	  //   markers = [];
-	  // }
+	  }
+
 	
 	</script>
 	<script async defer
