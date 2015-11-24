@@ -65,8 +65,8 @@ $this->title = 'Frontend';
         
         <center><dl>
             <dt class="bg-info">Gráficas</dt>
-            <dd>- En <kbd>Charts</kbd> podras facilmente ver tú rendimiento.</dd>
-            <br><dt class="bg-info">lallalal</dt>
+            <dd>- En <kbd>Charts/Historical</kbd> podras facilmente ver tú rendimiento.</dd>
+        
          
             
         <dl></center>   

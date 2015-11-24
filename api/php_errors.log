@@ -68,3 +68,53 @@
 [09-Nov-2015 23:26:24 UTC] PHP  10. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/rest/IndexAction.php:61
 [09-Nov-2015 23:26:24 UTC] PHP  11. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/rest/IndexAction.php:61
 [09-Nov-2015 23:26:24 UTC] PHP  12. include() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/BaseYii.php:288
+[23-Nov-2015 23:13:29 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\StdClass' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/ProductController.php on line 19
+[23-Nov-2015 23:13:29 UTC] PHP Stack trace:
+[23-Nov-2015 23:13:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[23-Nov-2015 23:13:29 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[23-Nov-2015 23:13:29 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[23-Nov-2015 23:13:29 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[23-Nov-2015 23:13:29 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[23-Nov-2015 23:13:29 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[23-Nov-2015 23:13:29 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:13:29 UTC] PHP   8. api\modules\v1\controllers\ProductController->actionVer() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:14:06 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\stdClass' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/ProductController.php on line 19
+[23-Nov-2015 23:14:06 UTC] PHP Stack trace:
+[23-Nov-2015 23:14:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[23-Nov-2015 23:14:06 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[23-Nov-2015 23:14:06 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[23-Nov-2015 23:14:06 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[23-Nov-2015 23:14:06 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[23-Nov-2015 23:14:06 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[23-Nov-2015 23:14:06 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:14:06 UTC] PHP   8. api\modules\v1\controllers\ProductController->actionVer() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:14:17 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\stdClass' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/ProductController.php on line 19
+[23-Nov-2015 23:14:17 UTC] PHP Stack trace:
+[23-Nov-2015 23:14:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[23-Nov-2015 23:14:17 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[23-Nov-2015 23:14:17 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[23-Nov-2015 23:14:17 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[23-Nov-2015 23:14:17 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[23-Nov-2015 23:14:17 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[23-Nov-2015 23:14:17 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:14:17 UTC] PHP   8. api\modules\v1\controllers\ProductController->actionVer() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:14:34 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\stdObject' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/ProductController.php on line 19
+[23-Nov-2015 23:14:34 UTC] PHP Stack trace:
+[23-Nov-2015 23:14:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[23-Nov-2015 23:14:34 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[23-Nov-2015 23:14:34 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[23-Nov-2015 23:14:34 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[23-Nov-2015 23:14:34 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[23-Nov-2015 23:14:34 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[23-Nov-2015 23:14:34 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:14:34 UTC] PHP   8. api\modules\v1\controllers\ProductController->actionVer() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:15:14 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\stdClass' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/ProductController.php on line 19
+[23-Nov-2015 23:15:14 UTC] PHP Stack trace:
+[23-Nov-2015 23:15:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[23-Nov-2015 23:15:14 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[23-Nov-2015 23:15:14 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[23-Nov-2015 23:15:14 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[23-Nov-2015 23:15:14 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[23-Nov-2015 23:15:14 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[23-Nov-2015 23:15:14 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[23-Nov-2015 23:15:14 UTC] PHP   8. api\modules\v1\controllers\ProductController->actionVer() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55

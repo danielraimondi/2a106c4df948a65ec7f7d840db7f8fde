@@ -288,9 +288,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <?php
                                     foreach($tot_usu as $key) {
                                         if($key['id'] != 2){ //SACO EL ID 2 PORQUE ES EL ADMIN
-                                        echo '<option value="'.$key['user_id'].'">'.$key['user_id'].'</option>';
+                                        echo '<option value="'.$key['user_id'].'">'.$key['username'].'</option>';
                                         }
-                                    }
+                                                 }
                                 ?>
                             </select>
                             

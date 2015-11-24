@@ -9,11 +9,7 @@ $this->title = 'relevador';
 ?>
 <!doctype html>
 
-<?php
 
-$array = array("Leche Conaprole", "Coca Cola", "Pasta de dientes Colgate", "Jugo de naranja Ades");
-var_dump($array);
-?>
 <html>
 <head lang="en">
 	<meta charset="utf-8">
@@ -32,7 +28,8 @@ var_dump($array);
 	
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	
-	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" type="text/css" media="screen">
+    
 	<link rel="prefetch" href="images/zoom.png">
 	
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,31 +107,9 @@ var_dump($array);
 				<div class="hr">&nbsp;</div>
 			</div><!-- /row -->
 			<div align="center">
-				 <div id="map-container" class="col-md-6"></div>
- 				<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-				<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-				<!-- Include all compiled plugins (below), or include individual files as needed -->
-				<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-				<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-				<script>	
-			 
-				  function init_map() {
-					var var_location = new google.maps.LatLng(-34.87803902769132,-56.18609116819539);
-					var var_mapoptions = {
-					  center: var_location,
-					  zoom: 12
-					};
-			 		var var_marker = new google.maps.Marker({
-						position: var_location,
-						map: var_map,
-						title:"Montevideo"});
-			 		var var_map = new google.maps.Map(document.getElementById("map-container"),
-						var_mapoptions);
-			 
-					var_marker.setMap(var_map);	
-				  }
-				  google.maps.event.addDomListener(window, 'load', init_map);
-				</script>
+				<div class="client-map">
+					<div id="map" style="height:800px; width:100%;"></div>
+				</div>
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide2 -->
@@ -168,28 +143,7 @@ var_dump($array);
 			<div class="row content-row">
 				
 				<div class="panel panel-default">
-				 	<?php
-						$arrayProductos = Yii::api()->web->v1->products();
-						echo "<h2>" . $arrayProductos . "</h2>";
-						$array = array("Leche Conaprole", "Coca Cola", "Pasta de dientes Colgate", "Jugo de naranja Ades");
-var_dump($array);
-							
-					?>
-				  <!-- Default panel contents
-				  <div class="panel-heading">Tabla de productos</div> -->
-				  <!-- Table -->
-				  //
-			<!--	  <table class="table"  id="tableProductos" >
-					 <thead>
-	                 <tr>
-	                  <td><strong>ID</strong></td>
-	                  <td><strong>Nombre</strong></td>
-	                  <td><strong>Categori</strong></td>
-	                  <td><strong>Imagen</strong></td>
-	                 </tr>
-	                </thead>
-				  </table>-->
-				
+				<input type="button" value="Genera una tabla" onclick="tablamulti()">
 				  <table class="grilla" id="tablajson">
 						<thead>
 							<th>prod_id</th>
@@ -199,28 +153,11 @@ var_dump($array);
 						</thead>
 						<tbody></tbody>
 					</table>
-						<script type="text/javascript">	
-								$json = file_get_contents('https://test-danielraimondi.c9.io/relevando/api/web/v1/products');
-								$obj = json_decode($json);
-											echo $obj->access_token;
-
-								$(document).ready(function(){
-								var url="https://test-danielraimondi.c9.io/relevando/api/web/v1/products";
-								$("#tablajson tbody").html("");
-								$.getJSON(url,function(attributeLabels){
-								$.each(attributeLabels, function(i,product){
-								var newRow =
-								""
-								+""+product.prod_id+""
-								+""+product.prod_name+""
-								+""+product.cat_id+""
-								+""+product.prod_pic+""
-								+"";
-								$(newRow).appendTo("#tablajson tbody");
-								});
-								});
-								});
-						</script>
+					
+					
+					
+				
+						
 				</div>
 			</div><!-- /row -->
 		</div><!-- /container -->
@@ -310,14 +247,17 @@ var_dump($array);
 	<script src="js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+	
 	<script src="js/script.js"></script>
 	<script type="text/javascript">
     $(".form_datetime").datetimepicker({
         format: "dd MM yyyy - hh:ii"
     });
 </script> 
-	
+
+					
 	<!-- fancybox init -->
 	<script>
 	$(document).ready(function(e) {
@@ -332,9 +272,191 @@ var_dump($array);
 				}
 			}
 		});
+		
+	
+	    $('#tablajson').DataTable( {
+	        "ajax": 'https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json'
+	    } );
 	
 	});
 	</script>
 
+
+	<script>
+	
+	
+		$(document).ready(function() {
+		    $.ajax({
+		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/routeclients"
+		    }).then(function(data) {
+		       
+		       var p;
+		        var rutaCliente = [];
+		       for (p in data){
+		       	rutaCliente.append(data[p]);
+		       }
+		       
+		       console.log(JSON.stringify(data));
+		    });
+		});
+	  // In the following example, markers appear when the user clicks on the map.
+	  // The markers are stored in an array.
+	  // The user can then click an option to hide, show or delete the markers.
+	  var map;
+	  var markers = [];
+	      
+	  var clients = <?php echo json_encode($clients) ?> ;
+	  var relevators = <?php echo json_encode($relevators) ?> ;
+	  
+	  function initMap() {
+	    var center = {lat: -34.893753, lng: -56.165217};
+	  
+	    map = new google.maps.Map(document.getElementById('map'), {
+	    zoom: 13,
+	    center: center,
+	    mapTypeId: google.maps.MapTypeId.TERRAIN
+	    });
+	    
+	    prev_infowindow = false;
+	    
+	    
+	    // MARKERS COMERCIOS
+	    for (c in clients){
+	        
+	        var markerIcon = {
+	                    url: "images/shop2.ico",
+	                    size: new google.maps.Size(32, 32),
+	                    //origin: new google.maps.Point(0, 0),
+	                    anchor: new google.maps.Point(15, 25),
+	                    scaledSize: new google.maps.Size(32, 32)
+	                };
+	        
+	        var marker = new google.maps.Marker({
+	            position: {lat: parseFloat(clients[c].client_lat), lng: parseFloat(clients[c].client_long)},
+	            map: map,
+	            icon: markerIcon
+	        });
+	        
+	        
+	        // var marker = new google.maps.Marker({
+	        //     position: {lat: parseFloat(clients[c].client_lat), lng: parseFloat(clients[c].client_long)},
+	        //     map: map,
+	        //     //icon: markerIcon
+	        // });
+	        
+	        markers.push(marker);
+	        
+	        var content = 'ID: '+clients[c].client_id+'<br>Name: '+clients[c].client_name;     
+	
+	        var infowindow = new google.maps.InfoWindow();
+	
+	        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+	            return function() {
+	                if (prev_infowindow) 
+	                    prev_infowindow.close();
+	                infowindow.setContent(content);
+	                infowindow.open(map,marker);
+	                prev_infowindow = infowindow;
+	            };
+	        })(marker,content,infowindow)); 
+	        
+	    }
+	    
+	    // MARKERS RELEVADORES
+	    for (r in relevators){
+	        
+	        if (relevators[r].user_lat != null && relevators[r].user_lng != null){
+	            
+	            var markerIcon = {
+	                    url: "images/streetview.ico",
+	                    size: new google.maps.Size(32, 32),
+	                    //origin: new google.maps.Point(25, 25),
+	                    anchor: new google.maps.Point(16, 24),
+	                    scaledSize: new google.maps.Size(32, 32)
+	                };
+	            
+	            var marker = new google.maps.Marker({
+	                position: {lat: parseFloat(relevators[r].user_lat), lng: parseFloat(relevators[r].user_lng)},
+	                map: map,
+	                icon: markerIcon
+	            });
+	        
+	            markers.push(marker);
+	            
+	            
+	            var cityCircle = new google.maps.Circle({
+	                strokeColor: '#0000FF',
+	                  strokeOpacity: 0.5,
+	                  strokeWeight: 0.5,
+	                  fillColor: '#3366FF',
+	                  fillOpacity: 0.1,
+	                  map: map,
+	                  center: {lat: parseFloat(relevators[r].user_lat), lng: parseFloat(relevators[r].user_lng)},
+	                  radius: parseFloat(relevators[r].user_radius)*1000
+	                });
+	                
+	            var content = 'ID: '+relevators[r].id+'<br>Name: '+relevators[r].username;     
+	        
+	            var infowindow = new google.maps.InfoWindow();
+	        
+	            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+	                return function() {
+	                    if (prev_infowindow) 
+	                        prev_infowindow.close();
+	                    infowindow.setContent(content);
+	                    infowindow.open(map,marker);
+	                    prev_infowindow = infowindow;
+	                };
+	            })(marker,content,infowindow));
+	        
+	        }
+	        
+	    }
+	    
+	    // // CERRAR INFOWINDOW
+	    // map.addListener('click', function(event) {
+	    //   if (prev_infowindow)
+	    //     prev_infowindow.close();
+	    // });
+	    
+	 }
+	  
+	  // Adds a marker to the map and push to the array.
+	  // function addMarker(location) {
+	  //   var marker = new google.maps.Marker({
+	  //     position: location,
+	  //     map: map
+	  //   });
+	  //   markers.push(marker);
+	  // }
+	  
+	  // Sets the map on all markers in the array.
+	//   function setMapOnAll(map) {
+	//     for (var i = 0; i < markers.length; i++) {
+	//       markers[i].setMap(map);
+	//     }
+	//   }
+	  
+	  // Removes the markers from the map, but keeps them in the array.
+	  // function clearMarkers() {
+	  //   setMapOnAll(null);
+	  // }
+	  
+	  // Shows any markers currently in the array.
+	  // function showMarkers() {
+	  //   setMapOnAll(map);
+	  // }
+	  
+	  // Deletes all markers in the array by removing references to them.
+	  // function deleteMarkers() {
+	  //   clearMarkers();
+	  //   markers = [];
+	  // }
+	
+	</script>
+	<script async defer
+	  src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap">
+	        
+	</script>
 
 </html>

@@ -68,12 +68,13 @@ $this->params['breadcrumbs'][] = $this->title;
             RadioRelevador = rel[0]['user_radius'];
             
             clientes_relevadores = buscarClientes(LatRelevador,LngRelevador, RadioRelevador ); // *****TODOS los clientes que entran en el radio del Relevador ********
-            console.log(clientes_relevadores[0]);
+           
             //CARGAR LA TABLA
             document.getElementById("myTable").innerHTML = "";//limpia el contenido
             
             for (var item in clientes_relevadores) { //carga el contenido
                 var table = document.getElementById("myTable");
+                 console.log(table);
                 
                 var row = table.insertRow(-1);
                 var cell1 = row.insertCell(0);
@@ -143,16 +144,16 @@ $this->params['breadcrumbs'][] = $this->title;
                   <table class="table table-striped" id="Table">
                     <thead>
                       <tr class="success" >
-                        <th class="col-md-6">Id</th>
-                        <th class="col-md-6">Prioridad</th>
+                        <th class="col-md-2">Id</th>
+                        <th class="col-md-4">Prioridad</th>
                       </tr>
                     </thead>
                 </table>
               </div>
         </div>
-        
+         
         <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-10">
                   <table class="table table-striped" id="myTable"></table> <!--  Donde carga los clientes-->
               </div>
         </div>

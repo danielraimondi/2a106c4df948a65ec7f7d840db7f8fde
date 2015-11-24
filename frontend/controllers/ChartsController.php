@@ -14,7 +14,7 @@ class ChartsController extends \yii\web\Controller
         $tot_cli_para_visitar = (new \yii\db\Query())
         ->select('user_id, COUNT(client_id)')
         ->from('route r, routeclient rc')
-        ->where('r.route_id = rc.route_id') // <<<<<<<<<---------FALTA traer EL ID del usuario logeado!!!
+        ->where('r.route_id = rc.route_id') 
         ->groupBy('user_id')
         ->all();
         
@@ -27,17 +27,17 @@ class ChartsController extends \yii\web\Controller
         
         //TOTAL de rutas asignadas
         $tot_rutas_asignadas = (new \yii\db\Query())
-        ->select('user_id, COUNT(client_id)')
-        ->from('survey ')
-        ->groupBy('user_id')
+        ->select('*')
+        ->from('route')
         ->all();
         
         
   
        //ENVIANDOUUUU...
         return $this->render('index', [
-           'tot_cli_para_visitar' => $tot_cli_para_visitar,
-           'tot_cli_ya_visitaron' => $tot_cli_ya_visitaron
+            'tot_rutas_asignadas' => $tot_rutas_asignadas,
+            'tot_cli_para_visitar' => $tot_cli_para_visitar,
+            'tot_cli_ya_visitaron' => $tot_cli_ya_visitaron
             
         ]);
        

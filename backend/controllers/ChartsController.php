@@ -52,10 +52,11 @@ class ChartsController extends Controller
         ->distinct(true)
         ->all();
         
-         // Trae todos los relevadores que visitaron a clientes
+        // Trae todos los relevadores que visitaron a clientes
         $tot_usu = (new \yii\db\Query())
-        ->select('user_id')
-        ->from('survey')
+        ->select('user_id, username')
+        ->from('survey s, user u')
+        ->where('s.user_id = u.id')
         ->distinct(true)
         ->all();
         
