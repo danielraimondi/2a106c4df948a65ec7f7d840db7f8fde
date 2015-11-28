@@ -1,0 +1,124 @@
+<!doctype html>
+<head>
+
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" type="text/css" media="screen">  
+<link rel="stylesheet" href="css/tablas.css" type="text/css" media="screen"> -->
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  -->
+
+
+<script>
+
+$(document).ready(function() {
+			
+
+
+
+			$.ajax({
+				url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes",
+				type: 'GET',
+
+				success: function(result) {
+					
+
+					var combo = document.getElementById('selectCliente'),
+						temp = '',
+						dataTemp;
+
+					for (c in result){
+						temp += "<option value='"+result[c].client_id+"'>"+result[c].client_name+"</option>";	
+					}
+					combo.innerHTML += temp;
+					
+				 },
+
+				error: function (request, status, error) {
+					alert("No se puede conectar con el servidor...");
+				}
+			});
+
+
+			
+
+
+
+            $.ajax({
+                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json",
+                type: 'GET',
+                
+                success: function(result) {
+                    
+                    
+                    var divTabla= document.getElementById('tablaPedidos'),
+                    	temp = '',
+                    	dataTemp;
+
+                    temp +="<thead><tr><th>ID</th><th>Producto</th><th>Stock</th><th>Pedir</th></tr></thead><tbody>";
+                    
+                    for (var i=0, tam=result.data.length; i< tam; i++){
+                    	dataTemp = result.data[i];
+                    	temp += "<tr><td>"+dataTemp[0]+"</td><td>"+dataTemp[1]+"</td><td><input id='stock'"+dataTemp[0]+"></td><td><input id='pedido'"+dataTemp[0]+"></td></tr>";	
+                    }
+                    temp += "</tbody></form>";
+                    divTabla.innerHTML = temp;
+                },
+                error: function (request, status, error) {
+		        alert("No se puede conectar con el servidor...");
+		    	}
+            })
+
+			$(formulario).on('submit', function(e) {
+
+				var tabla = document.getElementById("tablaPedidos");
+				
+				var fechaCompleta = new Date(),
+					fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate(),
+					idCliente = document.getElementById('selectCliente').value;
+				
+				for (row in tabla.rows)
+					console.log(row);
+				
+				
+
+				// for (f in filas){
+				// 	var pedido = {
+				// 		survey_date: fecha,
+				// 		client_id: idCliente,
+				// 		user_id: 1,
+				// 		prod_id: filas[f].value,
+				// 		stock: filas[f].value,
+				// 		order: filas[f].value
+				// 	}
+				// 	console.log(JSON.stringify(pedido));
+				// }
+
+			});
+
+
+});
+
+
+
+</script>
+
+</head>
+
+<body>
+
+
+
+<div id='tabla'>
+	<form id='formulario'>
+		<label for='selectCliente'>Cliente:</label>
+		<select id="selectCliente"></select>
+		<table id='tablaPedidos' class='' cellspacing='0' width='50%'></table>
+		<input type="submit" name="submit"/>
+	</form>
+	
+
+</div>
+
+
+</body>
+

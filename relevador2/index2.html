@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script>
+   
+   $(document).ready(function() {
+   	console.log($(form1).serialize())
+    $(form1).on('submit', function(e) {
+            // Prevent form submission
+            e.preventDefault();
+
+            
+                
+
+            // Use Ajax to submit form data
+            $.ajax({
+                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
+                type: 'POST',
+                data: $(form1).serialize(),
+                
+                success: function(result) {
+                    alert("EXITO");
+                },
+                error: function (request, status, error) {
+		        alert("Datos duplicados o inconsistentes");
+		    	}
+		    	
+            });console.log(form1);
+        });
+});
+
+</script>
+</head>
+<body>
+    
+					 <form class="form-signin" id="form1">
+					  <h2 class="form-signin-heading">Realizar Pedido</h2>
+					  <p>Fecha:            <input id="survey_date" class="form-control" type="text" required name="survey_date" placeholder="Fecha" ></p>
+					  <p>Id Cliente:       <input id="client_id" class="form-control" type="text" required name="client_id" placeholder="Id Cliente" ></p>
+					  <p>Id Usuario:       <input id="user_id" class="form-control" type="text" required name="user_id" placeholder="Id Usuario" ></p>
+					  <p>Producto:         <input id="prod_id" class="form-control" type="text" required name="prod_id" placeholder="Id Producto" ></p>
+					  <p>Stock:            <input id="stock" class="form-control" type="text" required name="stock" placeholder="Stock" ></p>
+					  <p>Cantidad a pedir: <input id="order" class="form-control" type="text" required name="order" placeholder="Cantidad a pedir" ></p>
+					  <p><input type="submit" name="submit"/> </p>
+					  
+					</form>
+					
+</<body>
+	
+
+</html>

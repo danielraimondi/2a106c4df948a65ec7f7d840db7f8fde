@@ -25,6 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
         var LngCliente = 0; 
         var distancia = 0;
         var clientes_relevadores = null;
+        var ruta_encontrada = [];
+        
         
         //BUSCA el relevador seleccionado del dropdown 
         function buscarRelevador(idRelevador){
@@ -38,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             return rel_encontrado;
         }
         
-        
+        //BUSCA TODOS los clientes en un radio
         function buscarClientes(LatRelevador,LngRelevador, RadioRelevador ){
                       
             var cli_encontrado=[];
@@ -58,8 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
             return cli_encontrado;
         }
         
-       
-       //TRAE todos los clientes que entran en el radio del relevador id_rel del dropdwon
+       //TRAE y MUESTRA todos los clientes que entran en el radio del relevador id_rel del dropdwon
         function relevadorSelec(id_rel){
             var rel = buscarRelevador(id_rel)
             
@@ -67,24 +68,77 @@ $this->params['breadcrumbs'][] = $this->title;
             LngRelevador = (rel[0]['user_lng'] * Math.PI) / 180 ;  //se pasa a radianes
             RadioRelevador = rel[0]['user_radius'];
             
-            clientes_relevadores = buscarClientes(LatRelevador,LngRelevador, RadioRelevador ); // *****TODOS los clientes que entran en el radio del Relevador ********
+            // TODOS los clientes que entran en el radio del Relevador
+            clientes_relevadores = buscarClientes(LatRelevador,LngRelevador, RadioRelevador ); 
            
-            //CARGAR LA TABLA
+           //***TODOS los clientes PRESENTES EN LA RUTA OPTIMA  -<<<<<<<<<<-----<<<<<<<<<<<-----<<<<<<<<<<<<<<<
+           ruta_encontrada = ruta_optima(LatRelevador, LngRelevador, RadioRelevador, clientes_relevadores); 
+           
+           //CARGAR LA TABLA
             document.getElementById("myTable").innerHTML = "";//limpia el contenido
             
-            for (var item in clientes_relevadores) { //carga el contenido
+            for (var item in ruta_encontrada) { //carga el contenido
                 var table = document.getElementById("myTable");
                  console.log(table);
                 
                 var row = table.insertRow(-1);
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
-                cell1.innerHTML = clientes_relevadores[item]['client_id'];
-                cell2.innerHTML = clientes_relevadores[item]['priority'];
+                cell1.innerHTML = ruta_encontrada[item]['client_name'];
+                cell2.innerHTML = ruta_encontrada[item]['priority'];
             };
-            
            
         }
+        
+        //BUSCA ruta más OPTIMA
+        function ruta_optima (latRelevador, LngRelevador, radio_relevador, tot_clientes){
+            
+            console.log("entre a ruta_optima");
+            
+            var latInicial = latRelevador;
+            var lngInicial = LngRelevador;
+            
+            distancia =  0.0000000000000000000;
+            var resultado = [];
+            var dist= [];
+            
+            console.log("TOTAL INICIAL: "+tot_clientes.length);
+            
+            
+            
+            while ( (resultado.length < 5) && (tot_clientes.length > 0) ) // Si no llegué a mi tope de 5 clientes O el total de clientes es vacio
+            {
+                
+                var dist_minima = radio_relevador;
+                for (key in tot_clientes){
+                    
+                    var LatCliente = (tot_clientes[key]['client_lat'] * Math.PI) / 180  //se pasa a radianes
+                    var LngCliente = (tot_clientes[key]['client_long'] * Math.PI) / 180  //se pasa a radianes
+                    
+                    //Calculo de la distancia geografica en Km, entre dos puntos.
+                    distancia = 6378.137 * Math.acos( Math.cos( latInicial ) * Math.cos( LatCliente ) * Math.cos( LngCliente - lngInicial ) + Math.sin( latInicial ) * Math.sin( LatCliente ) ); //en KM
+                 
+                    if( distancia < dist_minima){
+                       
+                        dist_minima = distancia; //Actualizo
+                        puntero_unset = key;
+                    }
+                }//for
+                
+                resultado.push(tot_clientes[puntero_unset]);//GUARDO Cliente en Resultado
+                
+                tot_clientes.splice(puntero_unset, 1); //ELIMINO el cliente que me sirvió de tot_clientes
+                
+                latInicial = LatCliente; //Actualizo el nuevo punto inicial (El cliente seleccionado)
+                lngInicial = LngCliente; //Actualizo el nuevo punto inicial (El cliente seleccionado)
+                
+                
+            }//while
+            console.log("****pasé el WHILE******");
+            console.log("TOTAL FINAL: "+tot_clientes.length);
+            return resultado;
+            
+        }//ruta_optima
         
         function crearRuta(){
             if (clientes_relevadores[0] != undefined){ //SI TIENE clientes para ser asignados (clientes_relevadores no es vacio)
@@ -92,24 +146,7 @@ $this->params['breadcrumbs'][] = $this->title;
             }
             
         }
-        
-        <?php
-        //Query con la nueva ruta del dia de hoy
- /*        $query_route = (new \yii\db\Query())
-            ->select('client_id, prod_id, order')
-            ->from('survey')
-            ->orderBy(['order' => SORT_DESC,])
-            ->limit(3);s
-            
-        // Crea un commando
-        $command_route = $query_route->createCommand();
-            
-        // Ejecuta el commando
-        $rows = $command_route->queryAll(); //TRAE un array con los datos
-        */
-        ?>
-
-
+       
         
    </script>
        
@@ -125,7 +162,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <?php
                                     foreach($tot_rel as $key) {
                                         if($key['id'] != 2){ //SACO EL ID 2 PORQUE ES EL ADMIN
-                                        echo '<option value="'.$key['id'].'">'.$key['id'].'</option>';
+                                        echo '<option value="'.$key['id'].'">'.$key['username'].'</option>';
                                         }
                                     }
                                 ?>
@@ -144,8 +181,8 @@ $this->params['breadcrumbs'][] = $this->title;
                   <table class="table table-striped" id="Table">
                     <thead>
                       <tr class="success" >
-                        <th class="col-md-2">Id</th>
-                        <th class="col-md-4">Prioridad</th>
+                        <th class="col-md-6">Client Name</th>
+                        <th class="col-md-2">Prioridad</th>
                       </tr>
                     </thead>
                 </table>
@@ -153,7 +190,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
          
         <div class="row">
-              <div class="col-md-10">
+              <div class="col-md-8">
                   <table class="table table-striped" id="myTable"></table> <!--  Donde carga los clientes-->
               </div>
         </div>

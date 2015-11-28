@@ -118,3 +118,15 @@
 [23-Nov-2015 23:15:14 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
 [23-Nov-2015 23:15:14 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
 [23-Nov-2015 23:15:14 UTC] PHP   8. api\modules\v1\controllers\ProductController->actionVer() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[25-Nov-2015 16:12:16 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 24
+[25-Nov-2015 16:12:16 UTC] PHP Stack trace:
+[25-Nov-2015 16:12:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[25-Nov-2015 16:12:16 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[25-Nov-2015 16:12:16 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[25-Nov-2015 16:12:16 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[25-Nov-2015 16:12:16 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:449
+[25-Nov-2015 16:12:16 UTC] PHP   6. yii\base\Module->createController() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:513
+[25-Nov-2015 16:12:16 UTC] PHP   7. yii\base\Module->createControllerByID() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:521
+[25-Nov-2015 16:12:16 UTC] PHP   8. class_exists() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[25-Nov-2015 16:12:16 UTC] PHP   9. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[25-Nov-2015 16:12:16 UTC] PHP  10. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563

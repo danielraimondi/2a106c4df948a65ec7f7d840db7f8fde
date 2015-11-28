@@ -12802,3 +12802,84 @@ $_SERVER = [
 [24-Nov-2015 12:15:02 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:371
 [24-Nov-2015 12:15:02 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:149
 [24-Nov-2015 12:15:02 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/View.php:247
+[26-Nov-2015 19:06:04 UTC] PHP Fatal error:  Class 'yii\db\ActiveRecord' not found in /home/ubuntu/workspace/relevando/backend/models/chart_Survey.php on line 22
+[26-Nov-2015 19:06:04 UTC] PHP Stack trace:
+[26-Nov-2015 19:06:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/models/chart_Survey.php:0
+[26-Nov-2015 19:06:12 UTC] PHP Fatal error:  Class 'yii\db\ActiveRecord' not found in /home/ubuntu/workspace/relevando/backend/models/Route.php on line 19
+[26-Nov-2015 19:06:12 UTC] PHP Stack trace:
+[26-Nov-2015 19:06:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/models/Route.php:0
+[26-Nov-2015 19:06:15 UTC] PHP Fatal error:  Class 'backend\models\Route' not found in /home/ubuntu/workspace/relevando/backend/models/RouteSearch.php on line 14
+[26-Nov-2015 19:06:15 UTC] PHP Stack trace:
+[26-Nov-2015 19:06:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/models/RouteSearch.php:0
+[26-Nov-2015 19:06:47 UTC] PHP Fatal error:  Class 'yii\db\ActiveRecord' not found in /home/ubuntu/workspace/relevando/backend/models/User.php on line 32
+[26-Nov-2015 19:06:47 UTC] PHP Stack trace:
+[26-Nov-2015 19:06:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/models/User.php:0
+[28-Nov-2015 14:20:53 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: autoroute/index1' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('index1', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('autoroute/index...', Array)
+#2 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.8,en;q=0.6,gl;q=0.4',
+    'HTTP_COOKIE' => 'ajs_anonymous_id=%22c1247493-9542-4aa6-bb30-11dc0be47f0d%22; _csrf=cbb305107188e366e57329f9a5fdda2d16c3f3f5a4a38b1e005390d7520eeb43a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Tj9mqALjiTMIhvYGJvzif8YMoj6oSjnX%22%3B%7D; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjE2YTYzMjE5LTQ2MWQtNDllNy1hYTY0LWQ1NWRhN2Q2NTMzMSIsInVzZXJJZCI6IjY5ODI4MCIsIm9wdE91dCI6ZmFsc2V9; PHPSESSID=o50m11qk4k6su198tpob1bve55; c9.live.proxy=IO7eMl3bs0kX%2FmiylU6qTL%2BvN7aS6Is1E%2BssqwllnBs.vin%2B6h0lvS%2F5N7Zg0JYVafYBocXHxqvFAclt2y09KDg; _td=0c0ea03b-c847-467b-a654-029cb112966d; ajs_group_id=null; ajs_user_id=698280; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20%22698280%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fc9.io%2Fsignin.html%3Fredirect%3Dhttps%253A%252F%252Fc9.io%252Fapi%252Fnc%252Fauth%253Fresponse_type%253Dtoken%2526client_id%253Dide%2526login_hint%253D%26login_hint%3D%26style%3D%22%2C%22%24initial_referring_domain%22%3A%20%22c9.io%22%2C%22mp_name_tag%22%3A%20%22benzaiten_%40hotmail.com%22%2C%22uid%22%3A%20698280%2C%22active%22%3A%20false%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20698280%2C%22%24created%22%3A%20%222015-05-28T13%3A46%3A34.097Z%22%2C%22%24email%22%3A%20%22benzaiten_%40hotmail.com%22%2C%22%24first_name%22%3A%20%22benzaiten%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22benzaiten%22%2C%22%24username%22%3A%20%22benzaiten%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22free%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%2C%22%24search_engine%22%3A%20%22google%22%7D; XDEBUG_SESSION=cloud9ide',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '179.24.255.125',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.0.46',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.28',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '55090',
+    'REDIRECT_URL' => '/relevando/backend/web/autoroute/index1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/autoroute/index1',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1448720453.3989999294281005859375,
+    'REQUEST_TIME' => 1448720453,
+]

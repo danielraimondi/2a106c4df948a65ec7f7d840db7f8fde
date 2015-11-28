@@ -25,15 +25,15 @@ class AutorouteController extends \yii\web\Controller
             
         //TODOS los Relevadores
          $tot_rel = (new \yii\db\Query())
-        ->select('id, user_lat, user_lng, user_radius')
+        ->select('id, username, user_lat, user_lng, user_radius')
         ->from('user')
         ->orderBy(['id' => SORT_ASC,])
         ->all();
         
         
-        //TODOS de Clientes
+        //TODOS los Clientes
          $tot_cli = (new \yii\db\Query())
-        ->select('client_id, client_lat, client_long, priority, day')
+        ->select('client_id, client_name, client_lat, client_long, priority, day')
         ->from('client')
         ->orderBy(['priority' => SORT_ASC,]) //de 1  a  10
         ->all();

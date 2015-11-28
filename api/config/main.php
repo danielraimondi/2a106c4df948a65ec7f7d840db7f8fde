@@ -33,16 +33,19 @@ return [
             'enablePrettyUrl' => true,
             'enableStrictParsing' => true,
             'showScriptName' => false,
-            /*'rules' => [
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => ['v1/product_cat', 'v1/client', 'v1/product', 'v1/survey', 'v1/route', 'v1/routeclient', 'v1/user'],
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ]
+            // 'rules' => [
+            //     [
+            //         'pluralize'     => false,
+            //         'class' => 'yii\rest\UrlRule', 
+            //         'controller' => ['v1/product_cat', 'v1/client', 'v1/product', 'v1/survey', 'v1/route', 'v1/routeclient', 'v1/user'],
+            //         'tokens' => [
+            //             '{id}' => '<id:\\w+>'
+            //         ],
                     
-                ]
-            ],*/
+            //     ],
+            // ],
+            
+            
             'rules' => [
                     'GET <apiv:v\d+>/<controller:\w+>/<action:\w+>'  => '<apiv>/<controller>/<action>',
                     
@@ -50,12 +53,11 @@ return [
                     'GET <apiv:v\d+>/<controller:\w+>'               => '<apiv>/<controller>/index',
                     'HEAD <apiv:v\d+>/<controller:\w+>/<id:(.)+>'    => '<apiv>/<controller>/view',
                     'GET <apiv:v\d+>/<controller:\w+>/<id:(.)+>'     => '<apiv>/<controller>/view',
-                    'POST <apiv:v\d+>/<controller:\w+>/<id:(.)+>'    => '<apiv>/<controller>/create', 
+                    'POST <apiv:v\d+>/<controller:\w+>'    => '<apiv>/<controller>/create', 
                     'PUT <apiv:v\d+>/<controller:\w+>/<id:(.)+>'     => '<apiv>/<controller>/update',
                     'PATCH <apiv:v\d+>/<controller:\w+>/<id:(.)+>'   => '<apiv>/<controller>/update',
-                    'DELETE <apiv:v\d+>/<controller:\w+>/<id:(.)+>'  => '<apiv>/<controller>/delete', 
-                    
-            ]       
+                    'DELETE <apiv:v\d+>/<controller:\w+>/<id:(.)+>'  => '<apiv>/<controller>/delete',
+            ],       
         ]
     ],
     'params' => $params,

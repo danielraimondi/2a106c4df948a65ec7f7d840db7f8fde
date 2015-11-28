@@ -18,7 +18,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">	
 	
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" type="text/css" media="screen">
+
+	
     
 	<link rel="prefetch" href="images/zoom.png">
 	
@@ -26,6 +27,16 @@
  
     <!-- Bootstrap core CSS -->
     <!--<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet" media="screen">-->
+ 	
+ 	
+ 	<script type="text/javascript">
+		var nextinput = 0;
+		function AgregarCampos(){
+		nextinput++;
+		campo = '<li id="rut'+nextinput+'">Campo:<input type="text" size="20" id="campo' + nextinput + '"&nbsp; name="campo' + nextinput + '"&nbsp; /></li>';
+		$("#campos").append(campo);
+		}
+	</script>
  	
 </head>
 
@@ -46,7 +57,7 @@
 					<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">INICIO</span></a></li>
 					<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-map-marker"></span> <span class="text">RUTAS</span></a></li>
 					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">STOCK</span></a></li>
-					<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-barcode"></span> <span class="text">PEDIDOS</span></a></li>
+				<!--	<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-barcode"></span> <span class="text">PEDIDOS</span></a></li>-->
 					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-signal"></span> <span class="text">ESTADO</span></a></li>
 					<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACTO</span></a></li>
 				</ul>
@@ -67,22 +78,23 @@
 	</div><!-- /.arrows -->
 	
 	
-	<!-- === MAIN Background === -->
+	<!-- === MAIN Background  Inicio=== -->
 	<div class="slide story" id="slide-1" data-slide="1">
 		<div class="container">
 			<div id="home-row-1" class="row clearfix">
 				<div class="col-12">
 					<h1 class="font-semibold">Relevando.com.uy </h1>
-					<h4 class="font-thin">Bienvenido a nuestra aplicación RELEVANDO.COM.UY <a class="font-semibold" href="#">acceso a usuarios</a> </h4>
+					<h4 class="font-thin">Bienvenido a nuestra aplicación RELEVANDO.COM.UY  </h4>
+					<h4> <a class="font-semibold" href="#">acceso a usuarios</a> </h4>
 					<br>
 					<br>
 				</div><!-- /col-12 -->
 			</div><!-- /row -->
 			<div id="home-row-2" class="row clearfix">
-				<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="2"><img src="images/s01.png"></div><span>RUTAS</span></div>
-				<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="3"><img src="images/s03.png"></div><span>STOCK</span></div>
-				<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="4"><img src="images/s02.png"></div><span>PEDIDOS</span></div>
-				<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="5"><img src="images/s04.png"></div><span>ESTADO</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><img src="images/s01.png"></div><span>RUTAS</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><img src="images/s03.png"></div><span>STOCK</span></div>
+			<!--	<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="4"><img src="images/s02.png"></div><span>PEDIDOS</span></div> -->
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="5"><img src="images/s04.png"></div><span>ESTADO</span></div>
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide1 -->
@@ -91,7 +103,7 @@
 	<div class="slide story" id="slide-2" data-slide="2">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-thin">Mis Rutas</div>
+				<div class="col-12 ">Mis Rutas</div>
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
@@ -107,6 +119,7 @@
 	<!-- === SLide 3 - stock -->
 	<div class="slide story" id="slide-3" data-slide="3">
 		<div class="row">
+			<!--	
 			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p01-large.jpg"><img class="thumb" src="images/portfolio/p01-small.jpg" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p02-large.jpg"><img class="thumb" src="images/portfolio/p02-small.jpg" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p09-large.jpg"><img class="thumb" src="images/portfolio/p09-small.jpg" alt=""></a></div>
@@ -119,6 +132,7 @@
 			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p04-large.jpg"><img class="thumb" src="images/portfolio/p04-small.jpg" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p11-large.jpg"><img class="thumb" src="images/portfolio/p11-small.jpg" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p12-large.jpg"><img class="thumb" src="images/portfolio/p12-small.jpg" alt=""></a></div>
+			 -->
 		</div><!-- /row -->
 	</div><!-- /slide3 -->
 	
@@ -126,28 +140,54 @@
 	<div class="slide story" id="slide-4" data-slide="4">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-thin">Realizar pedido</div>
+				<div class="col-12 ">Realizar pedido</div>
 			</div><!-- /row -->
 			
 			
 			<div class="row content-row">
 				
 				<div class="panel panel-default">
-				<input type="button" value="Genera una tabla" onclick="tablamulti()">
-				  <table class="grilla" id="tablajson">
-						<thead>
-							<th>prod_id</th>
-							<th>prod_name</th>
-							<th>cat_id</th>
-							<th>prod_pic</th>
-						</thead>
-						<tbody></tbody>
-					</table>
-					
-					
-					
-				
-						
+					<table  align="center" border=1 cellspacing=1 cellpadding=1>
+					<tr>
+					    <td><table  align="center" border=1 cellspacing=1 cellpadding=1>
+						<!-- 	<table class="grill" id="tablajson">
+								<thead>
+									<th BGCOLOR=3:3:9>Identificador</th>
+									<th BGCOLOR=3:3:9>Nombre</th>
+									<th BGCOLOR=3:3:9>Categoria</th>
+									<th BGCOLOR=3:3:9>Imagen</th>
+								</thead>
+								<tbody></tbody>
+							</table>
+					    <td><table  align="center" border=1  cellspacing=1 cellpadding=1>
+					    		<table class="grill" id="tablaStock">
+					    		<thead>
+					    			<th BGCOLOR=3:3:9>Stock</th>
+					    				<td id = "stock" onclick = "update(this.id)">Stock1</td>
+					    			<tbody></tbody>
+					    		</thead>
+					    	</table>-->
+						<table>
+					        <thead>
+					            <tr>
+					                <th>Producto</th>
+					                <th>ID</th>
+					                <th>Pedido</th>
+					                <th>Sumar</th>
+					                <th>Restar</th>
+					                <th>Stock</th>
+					                <th>Sumar</th>
+					                <th>Restar</th>
+					            </tr>
+					        </thead>
+					        <tbody id="tabla-elementos">
+					            
+					        </tbody>
+					    </table>
+					    
+					</tr>
+					</table> 
+			     	<button type="button" id="EnviarPedido">Envia Pedido</button>
 				</div>
 			</div><!-- /row -->
 		</div><!-- /container -->
@@ -158,33 +198,21 @@
 		<div class="container">
 			<div class="row title-row">
 				<div class="col-12 font-light">Estado de cumplimiento</div>
-			</div><!-- /row -->
+			
 			<div class="row content-row">
 				<div class="row subtitle-row">
-					<div class="col-12 font-light">Total cumplido del <span class="font-semibold">negocio</span></div>
-				</div><!-- /row -->
-				<div class="progress">
-				  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-					<span class="sr-only">40% Complete (success)</span>
-				  </div>
-				</div>
-				<div class="row subtitle-row">
 					<div class="col-12 font-light">Total cumplido del <span class="font-semibold">día</span></div>
-				</div><!-- /row -->
-				<div class="progress">
-				  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-					<span class="sr-only">20% Complete</span>
-				  </div>
 				</div>
-				<div class="row subtitle-row">
-					<div class="col-12 font-light">Total cumplido del <span class="font-semibold">mes</span></div>
-				</div><!-- /row -->
-				<div class="progress">
-				  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-					<span class="sr-only">45% Complete</span>
-				  </div>
+				<div class="progress">	
+					<div class="progress progress-success">
+						<div class="progress-bar" style="float: left; width: 0%; " data-percentage="60" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
 				</div>
-			</div><!-- /row -->
+			</div>
+			
+			
+				
+
 		</div><!-- /container -->
 	</div><!-- /Slide 5 -->
 	
@@ -239,10 +267,17 @@
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js" type="text/css" media="screen">
+	<script src="js/crearTabla.js"></script>
 	<script src="js/script.js"></script>
- 
-
+	<script type = "text/javascript">
+	  function update(id){
+	    //Get contents off cell clicked
+	    var content = document.getElementById(id).firstChild.nodeValue;
+	    //Switch to text input field
+	    document.getElementById(id).innerHTML = "<input type = 'text' name = 'txtNewInput' id = 'txtNewInput' value = '" + content + "'/>";
+	  }
+	</script>
 					
 	<!-- fancybox init -->
 	<script>
@@ -258,31 +293,236 @@
 				}
 			}
 		});
+	/*	$('#tablajson').DataTable( {
+			        "ajax": 'https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json'
+			    } );
 		
-	
-	    $('#tablajson').DataTable( {
-	        "ajax": 'https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json'
-	    } );
-	
+		$.ajax({url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product"
+				}).then(function(productos){
+				var p;
+				var i =1;
+				var table = document.getElementById("tablaStock");
+				  for(p in productos){
+				  var row = table.insertRow(i);
+				  var cell1 = row.insertCell(0);
+				  i++;
+				  cell1.innerHTML = "hola";
+				   var content = document.getElementById(tablaStock).firstChild.nodeValue;
+					document.getElementById(cell1).innerHTML = "<input type = 'text' name = 'txtNewInput' id = 'txtNewInput' value = '" + content + "'/>";
+				  }	
+		});*/
+		
+		var btnAgregar = document.getElementById('EnviarPedido');
+		
+		function btnAgregar_Click(event) {
+		 	var	eleSurvey;
+			/*$.ajax({url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey"
+				}).then(function(elementosSurvey){
+					//eleSurvey = elementosSurvey[0];
+					
+				});*/
+				/*eleSurvey.survey_date = "2012-12-12";
+				eleSurvey.client_id = "1";
+				eleSurvey.user_id = "1";
+				eleSurvey.prod_id = "4"
+				eleSurvey.stock = "8";
+				eleSurvey.order = "10";*/
+				var response = [];
+				var item = {
+			        survey_date: '2015/12/26',
+			        client_id: 1,
+			        user_id: 1,
+			        prod_id: 4,
+			        stock: 8,
+			        order: 10
+			    };
+			    response.push(item);
+				
+				var date = new Date();
+				var json = JSON.stringify(date);
+				var f = JSON.stringify({"survey_date": json, "client_id": "1", "user_id": "1", "prod_id": "4", "stock": "8", "order": "10"});
+				
+			
+
+				console.log(f);
+			
+			$.ajax({
+                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
+                type: 'POST',
+                data: $(f).serialize(),
+                
+                success: function(result) {
+                    alert("EXITO");
+                },
+                error: function (request, status, error) {
+		        alert(request.responseText);
+		    	}
+            });
+            console.log("entro");
+		}
+		
+		btnAgregar.addEventListener('click', btnAgregar_Click);
+		
+		function btnMas_Click(event) {
+			   //console.log(this.stockLinea);
+			   this.td3.textContent = this.stockLinea + 1;
+			   this.stockLinea = this.stockLinea + 1;
+			
+			}
+			
+		function btnMenos_Click(event) {
+			   //console.log(this.stockLinea);
+			   this.td3.textContent = this.stockLinea - 1;
+			   this.stockLinea = this.stockLinea - 1;
+			
+			}
+			
+		function btnMasStock_Click(event) {
+			   //console.log(this.stockLinea);
+			   this.td6.textContent = this.stockReal + 1;
+			   this.stockReal = this.stockReal + 1;
+			
+			}
+			
+		function btnMenosStock_Click(event) {
+			   //console.log(this.stockLinea);
+			   this.td6.textContent = this.stockReal - 1;
+			   this.stockReal = this.stockReal - 1;
+			
+			}
+		
+		$.ajax({url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product"
+				}).then(function(productos){
+					var tablaElementos = document.getElementById('tabla-elementos');
+					var p;
+					for (p in productos) {
+				        var elemento = productos[p];
+				        var stockLinea = 0 ;
+				        var stockReal = 0;
+				        var tr = document.createElement('tr');
+				        var td1 = document.createElement('td');
+				        var td2 = document.createElement('td');
+				        var td3 = document.createElement('td');
+				        var td4 = document.createElement('td');
+				        var td5 = document.createElement('td');
+				        var td6 = document.createElement('td');
+				        var td7 = document.createElement('td');
+				        var td8 = document.createElement('td');
+				           
+				      
+				        tr.appendChild(td1);
+				        tr.appendChild(td2);
+				        tr.appendChild(td3);
+				        tr.appendChild(td4);
+				        tr.appendChild(td5);
+				        tr.appendChild(td6);
+				        tr.appendChild(td7);
+				        tr.appendChild(td8);
+				        
+				        td1.textContent = elemento.prod_name;
+				        td2.textContent = elemento.prod_id;
+				        td3.textContent = stockLinea;
+				        tablaElementos.appendChild(tr);
+				       
+				        var nuevoBotonMas = document.createElement('button');
+				        nuevoBotonMas.type = 'Boton';
+				        nuevoBotonMas.textContent = '+';
+				        
+				        nuevoBotonMas.addEventListener('click', btnMas_Click);
+				        nuevoBotonMas.elemento = elemento;
+				        nuevoBotonMas.stockLinea = stockLinea;
+				        nuevoBotonMas.td3 = td3;
+				        td4.appendChild(nuevoBotonMas);
+				        
+				        var nuevoBotonMenos = document.createElement('button');
+				        nuevoBotonMenos.type = 'Boton';
+				        nuevoBotonMenos.textContent = '-';
+				        
+				        nuevoBotonMenos.addEventListener('click', btnMenos_Click);
+				        nuevoBotonMenos.elemento = elemento;
+				        nuevoBotonMenos.stockLinea = stockLinea;
+				        nuevoBotonMenos.td3 = td3;
+				        td5.appendChild(nuevoBotonMenos);
+				       
+				       	td6.textContent = stockReal;
+				       
+				        var nuevoBotonMasStock = document.createElement('button');
+				        nuevoBotonMasStock.type = 'Boton';
+				        nuevoBotonMasStock.textContent = '+';
+				        
+				        nuevoBotonMasStock.addEventListener('click', btnMasStock_Click);
+				        nuevoBotonMasStock.elemento = elemento;
+				        nuevoBotonMasStock.stockReal = stockReal;
+				        nuevoBotonMasStock.td6 = td6;
+				        td7.appendChild(nuevoBotonMasStock);
+				        
+				        var nuevoBotonMenosStock = document.createElement('button');
+				        nuevoBotonMenosStock.type = 'Boton';
+				        nuevoBotonMenosStock.textContent = '-';
+				        
+				        nuevoBotonMenosStock.addEventListener('click', btnMenosStock_Click);
+				        nuevoBotonMenosStock.elemento = elemento;
+				        nuevoBotonMenosStock.stockReal = stockReal;
+				        nuevoBotonMenosStock.td6 = td6;
+				        td8.appendChild(nuevoBotonMenosStock);
+				        
+				        
+				    }
+			});		
 	});
-	</script>
-
-
-	<script>
-	
 	
 		$(document).ready(function() {
 		    $.ajax({
-		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route"
+		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes"
 		    }).then(function(route) {
+		    	$.ajax({
+		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey/cumplidas_hoy"
+		    		}).then(function(relevadoosHoy) {
+		      // console.log(JSON.stringify(route));
 		       
+		       //cargar puntos de los locales a relevar en el mapa
 		       var p;
-		        var rutaCliente = [];
+		       var rutaCliente = [];
+		        var flightPlanCoordinates = [];
 		       for (p in route){
-		       	rutaCliente.append(route[p]);
+		       	rutaCliente.push(route[p]);
+		            var markerIcon = {
+			                    url: "images/shop2.ico",
+			                    size: new google.maps.Size(32, 32),
+			                    //origin: new google.maps.Point(0, 0),
+			                    anchor: new google.maps.Point(15, 25),
+			                    scaledSize: new google.maps.Size(32, 32)
+			                };
+			        
+			        var marker = new google.maps.Marker({
+			            position: {lat: parseFloat(rutaCliente[p].client_lat), lng: parseFloat(rutaCliente[p].client_long)},
+			            map: map,
+			            icon: markerIcon
+			            
+			        });
+			        flightPlanCoordinates.push(new google.maps.LatLng(parseFloat(rutaCliente[p].client_lat),parseFloat(rutaCliente[p].client_long)));
+      
+			 
 		       }
 		       
-		       console.log(JSON.stringify(route));
+		    var flightPath = new google.maps.Polyline({
+		    path: flightPlanCoordinates,
+		    strokeColor: "#FF0000",
+		    strokeOpacity: 1.0,
+		    strokeWeight: 2
+		  });
+		
+		  flightPath.setMap(map);
+		  
+		       // Esta función calcula la ruta con el API de Google Maps  
+			    
+		       //cargar porcentaje de relevados
+				   var $relHoy = relevadoosHoy[0].cantidad;
+				   var $bar = $('.progress-bar');
+				   $bar.width($relHoy * 1000 / route.length);
+				   //console.log($bar.width());
+				   $bar.text( Math.round($relHoy * 100 / route.length) + "%");
+	    		});
 		    });
 		});
 	  // In the following example, markers appear when the user clicks on the map.
@@ -293,14 +533,21 @@
 	      
 	  function initMap() {
 	    var center = {lat: -34.893753, lng: -56.165217};
-	  
 	    map = new google.maps.Map(document.getElementById('map'), {
 	    zoom: 13,
 	    center: center,
 	    mapTypeId: google.maps.MapTypeId.TERRAIN
 	    });
-	    
 	    prev_infowindow = false;
+	    
+	   	  var myLatLng = new google.maps.LatLng(0, -180);
+		  var myOptions = {
+		    zoom: 3,
+		    center: myLatLng,
+		    mapTypeId: google.maps.MapTypeId.TERRAIN
+		  };
+		
+		  
 	    
 	  }
 
@@ -308,7 +555,6 @@
 	</script>
 	<script async defer
 	  src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap">
-	        
 	</script>
 
 </html>

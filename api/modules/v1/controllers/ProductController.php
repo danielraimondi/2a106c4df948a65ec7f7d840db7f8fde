@@ -53,9 +53,7 @@ class ProductController extends ActiveController
 	        
 	        $datos[$key][] = $producto->attributes['prod_id'];
 	        $datos[$key][] = $producto->attributes['prod_name'];
-	        $datos[$key][] = $producto->attributes['cat_id'];
-	        $datos[$key][] = $producto->attributes['prod_id'];
-	    
+	        
 	    endforeach; 
 	    
 	    $resultado->data = $datos;
