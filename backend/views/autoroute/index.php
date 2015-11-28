@@ -26,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
         var distancia = 0;
         var clientes_relevadores = null;
         var ruta_encontrada = [];
+        var rel = [];
         
         
         //BUSCA el relevador seleccionado del dropdown 
@@ -62,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
         
        //TRAE y MUESTRA todos los clientes que entran en el radio del relevador id_rel del dropdwon
         function relevadorSelec(id_rel){
-            var rel = buscarRelevador(id_rel)
+            rel = buscarRelevador(id_rel)
             
             LatRelevador = (rel[0]['user_lat'] * Math.PI) / 180 ;  //se pasa a radianes
             LngRelevador = (rel[0]['user_lng'] * Math.PI) / 180 ;  //se pasa a radianes
@@ -88,7 +89,91 @@ $this->params['breadcrumbs'][] = $this->title;
                 cell2.innerHTML = ruta_encontrada[item]['priority'];
             };
            
+           //CARGA EL MAPA
+            initMap();
+           
         }
+        
+        //MAPA
+        var map;
+        var markers = [];
+        var labels = '123456789';
+        
+        function initMap() {
+            var labelIndex = 0;
+            var center = {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)}; //CENTRO MAPA EN EL RELEVADOR
+          
+            map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: center,
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+            });
+            
+            prev_infowindow = false;
+            
+            
+            // MARKERS COMERCIOS
+            for (c in ruta_encontrada){
+                
+                var markerIcon = {
+                            url: "../images/shop2.ico",
+                            size: new google.maps.Size(32, 32),
+                            anchor: new google.maps.Point(15, 25),
+                            scaledSize: new google.maps.Size(32, 32)
+                        };
+                
+                
+                var marker = new google.maps.Marker({
+                    position: {lat: parseFloat(ruta_encontrada[c].client_lat), lng: parseFloat(ruta_encontrada[c].client_long)},
+                    label: labels[labelIndex++ % labels.length],
+                    map: map,
+                    icon: markerIcon
+                });
+                markers.push(marker);
+                
+                var content = 'ID: '+ruta_encontrada[c].client_id+'<br>Name: '+ruta_encontrada[c].client_name;     
+        
+            var infowindow = new google.maps.InfoWindow();
+    
+        }//for
+        
+        // MARKER RELEVADOR
+          
+                var markerIcon = {
+                        url: "../images/streetview.ico",
+                        size: new google.maps.Size(32, 32),
+                        anchor: new google.maps.Point(16, 24),
+                        scaledSize: new google.maps.Size(32, 32)
+                    };
+                
+                var marker = new google.maps.Marker({
+                    position: {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)},
+                    map: map,
+                    icon: markerIcon
+                });
+            
+                markers.push(marker);
+                
+                
+                var cityCircle = new google.maps.Circle({
+                    strokeColor: '#0000FF',
+                      strokeOpacity: 0.5,
+                      strokeWeight: 0.5,
+                      fillColor: '#3366FF',
+                      fillOpacity: 0.1,
+                      map: map,
+                      center: {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)},
+                      radius: parseFloat(rel[0].user_radius)*1000
+                    });
+                    
+                var content = 'ID: '+rel[0].id+'<br>Name: '+rel[0].username;     
+            
+                var infowindow = new google.maps.InfoWindow();
+            
+        }
+
+            
+            
         
         //BUSCA ruta más OPTIMA
         function ruta_optima (latRelevador, LngRelevador, radio_relevador, tot_clientes){
@@ -147,9 +232,11 @@ $this->params['breadcrumbs'][] = $this->title;
             
         }
        
+     
         
    </script>
-       
+       <script async defer
+  src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
     </head>
 
     <body>
@@ -195,13 +282,14 @@ $this->params['breadcrumbs'][] = $this->title;
               </div>
         </div>
         
-        
-          
-            
-        
-        
-                
-        
+        <div class="client-map">
+
+   
+<div id="map" style="height:350px; width:800PX;"></div>
+
+</div>
+
+  
         
     </body>
 </html>

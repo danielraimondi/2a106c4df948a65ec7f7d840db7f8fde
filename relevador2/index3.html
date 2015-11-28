@@ -58,11 +58,11 @@ $(document).ready(function() {
                     
                     for (var i=0, tam=result.data.length; i< tam; i++){
                     	dataTemp = result.data[i];
-                    	temp += "<tr><td>"+dataTemp[0]+"</td><td>"+dataTemp[1]+"</td><td><input id='stock'"+dataTemp[0]+"></td><td><input id='pedido'"+dataTemp[0]+"></td></tr>";	
+                    	temp += "<tr><td id='id"+dataTemp[0]+"'>"+dataTemp[0]+"</td><td>"+dataTemp[1]+"</td><td><input value=0 id='stock"+dataTemp[0]+"'></td><td><input value=0 id='pedido"+dataTemp[0]+"'></td></tr>";	
                     }
                     temp += "</tbody></form>";
                     divTabla.innerHTML = temp;
-                },
+                }, 
                 error: function (request, status, error) {
 		        alert("No se puede conectar con el servidor...");
 		    	}
@@ -75,24 +75,43 @@ $(document).ready(function() {
 				var fechaCompleta = new Date(),
 					fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate(),
 					idCliente = document.getElementById('selectCliente').value;
-				
-				for (row in tabla.rows)
-					console.log(row);
-				
-				
+					
+					
+				$.ajax({
+                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json",
+                type: 'GET',
+                
+                success: function(result) {
+                    
+                    for (var i=0, tam=result.data.length; i< tam; i++){
+                    	
+                    	dataTemp = result.data[i];
+                    	$.ajax({
+			                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
+			                type: 'POST',
+			                data: {
+			                	survey_date: fecha,
+			                	client_id: idCliente,
+			                	user_id: 1,  //harcodeado
+			                	prod_id: document.getElementById("id"+dataTemp[0]).innerHTML,
+			                	stock: document.getElementById("stock"+dataTemp[0]).value,
+			                	oder: document.getElementById("pedido"+dataTemp[0]).value,
+			                },
+			             	success: function(result) {
+			                    console.log("EXITO");
+			                },
+			                error: function (request, status, error) {
+						        console.log(request);
+						        console.log("Datos duplicados o inconsistentes");
+					    	},
+                    	}); //ajax
+                    	
+                    } // for
+                   
+                } // success
 
-				// for (f in filas){
-				// 	var pedido = {
-				// 		survey_date: fecha,
-				// 		client_id: idCliente,
-				// 		user_id: 1,
-				// 		prod_id: filas[f].value,
-				// 		stock: filas[f].value,
-				// 		order: filas[f].value
-				// 	}
-				// 	console.log(JSON.stringify(pedido));
-				// }
-
+			}); //ajax
+			
 			});
 
 
