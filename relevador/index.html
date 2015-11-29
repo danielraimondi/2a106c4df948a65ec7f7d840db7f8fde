@@ -37,6 +37,37 @@
 		$("#campos").append(campo);
 		}
 	</script>
+	
+	<script>
+	    function muestraMensaje() {
+		console.log("hago click2");
+		var fechaCompleta = new Date();
+		var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
+		var	idCliente = document.getElementById('selectCliente').value;
+		
+		for (var p in productos){
+            	
+            	$.ajax({
+	                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
+	                type: 'POST',
+	                dataType: 'json',
+	                data: {
+	                	survey_date: fecha,
+	                	client_id: idCliente,
+	                	user_id: 1,  //harcodeado
+	                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
+	                	stock: (document.getElementById("stock"+productos[p]).value),
+	                	order: (document.getElementById("order"+productos[p]).value)
+	                }
+	               
+            	}); //ajax
+
+		}; // for
+		alert("Pedido enviado Correctamente");
+
+		}
+	</script>
+			     	
  	
 </head>
 
@@ -56,7 +87,7 @@
 				<ul class="nav row">
 					<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">INICIO</span></a></li>
 					<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-map-marker"></span> <span class="text">RUTAS</span></a></li>
-					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">STOCK</span></a></li>
+					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">REALIZAR PEDIDO</span></a></li>
 				<!--	<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-barcode"></span> <span class="text">PEDIDOS</span></a></li>-->
 					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-signal"></span> <span class="text">ESTADO</span></a></li>
 					<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACTO</span></a></li>
@@ -92,7 +123,7 @@
 			</div><!-- /row -->
 			<div id="home-row-2" class="row clearfix">
 				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><img src="images/s01.png"></div><span>RUTAS</span></div>
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><img src="images/s03.png"></div><span>STOCK</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><img src="images/s03.png"></div><span>REALIZAR PEDIDO</span></div>
 			<!--	<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="4"><img src="images/s02.png"></div><span>PEDIDOS</span></div> -->
 				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="5"><img src="images/s04.png"></div><span>ESTADO</span></div>
 			</div><!-- /row -->
@@ -110,7 +141,7 @@
 			</div><!-- /row -->
 			<div align="center">
 				<div class="client-map">
-					<div id="map" style="height:800px; width:100%;"></div>
+					<div id="map" style="height:500px; width:80%;"></div>
 				</div>
 			</div><!-- /row -->
 		</div><!-- /container -->
@@ -119,20 +150,7 @@
 	<!-- === SLide 3 - stock -->
 	<div class="slide story" id="slide-3" data-slide="3">
 		<div class="row">
-			<!--	
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p01-large.jpg"><img class="thumb" src="images/portfolio/p01-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p02-large.jpg"><img class="thumb" src="images/portfolio/p02-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p09-large.jpg"><img class="thumb" src="images/portfolio/p09-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p010-large.jpg"><img class="thumb" src="images/portfolio/p10-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p05-large.jpg"><img class="thumb" src="images/portfolio/p05-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p06-large.jpg"><img class="thumb" src="images/portfolio/p06-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p07-large.jpg"><img class="thumb" src="images/portfolio/p07-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p08-large.jpg"><img class="thumb" src="images/portfolio/p08-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p03-large.jpg"><img class="thumb" src="images/portfolio/p03-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p04-large.jpg"><img class="thumb" src="images/portfolio/p04-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p11-large.jpg"><img class="thumb" src="images/portfolio/p11-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p12-large.jpg"><img class="thumb" src="images/portfolio/p12-small.jpg" alt=""></a></div>
-			 -->
+		
 		</div><!-- /row -->
 	</div><!-- /slide3 -->
 	
@@ -143,54 +161,20 @@
 				<div class="col-12 ">Realizar pedido</div>
 			</div><!-- /row -->
 			
-			
-			<div class="row content-row">
-				
-				<div class="panel panel-default">
-					<table  align="center" border=1 cellspacing=1 cellpadding=1>
-					<tr>
-					    <td><table  align="center" border=1 cellspacing=1 cellpadding=1>
-						<!-- 	<table class="grill" id="tablajson">
-								<thead>
-									<th BGCOLOR=3:3:9>Identificador</th>
-									<th BGCOLOR=3:3:9>Nombre</th>
-									<th BGCOLOR=3:3:9>Categoria</th>
-									<th BGCOLOR=3:3:9>Imagen</th>
-								</thead>
-								<tbody></tbody>
-							</table>
-					    <td><table  align="center" border=1  cellspacing=1 cellpadding=1>
-					    		<table class="grill" id="tablaStock">
-					    		<thead>
-					    			<th BGCOLOR=3:3:9>Stock</th>
-					    				<td id = "stock" onclick = "update(this.id)">Stock1</td>
-					    			<tbody></tbody>
-					    		</thead>
-					    	</table>-->
-						<table>
-					        <thead>
-					            <tr>
-					                <th>Producto</th>
-					                <th>ID</th>
-					                <th>Pedido</th>
-					                <th>Sumar</th>
-					                <th>Restar</th>
-					                <th>Stock</th>
-					                <th>Sumar</th>
-					                <th>Restar</th>
-					            </tr>
-					        </thead>
-					        <tbody id="tabla-elementos">
-					            
-					        </tbody>
-					    </table>
-					    
-					</tr>
-					</table> 
-			     	<button type="button" id="EnviarPedido">Envia Pedido</button>
+					<div id='tabla'>
+						<form id='formulario'>
+							<label for='selectCliente'>Cliente:</label>
+							<select id="selectCliente"></select>
+							<table id='tablaPedidos' class='' cellspacing='0' width='50%' align='center'></table>
+						</form>
+					</div>
+			     	
+			     	
+			     	<button type="button" id="EnviarPedido" onclick="muestraMensaje()">Envia Pedido</button>
+			     	
 				</div>
 			</div><!-- /row -->
-		</div><!-- /container -->
+		<!--</div><!-- /container -->
 	</div><!-- /slide4 -->
 	
 	<!-- === Slide 5 / ESTADO === -->
@@ -279,196 +263,36 @@
 	  }
 	</script>
 					
-	<!-- fancybox init -->
+
 	<script>
 	$(document).ready(function(e) {
-		var lis = $('.nav > li');
-		menu_focus( lis[0], 1 );
-		
-		$(".fancybox").fancybox({
-			padding: 10,
-			helpers: {
-				overlay: {
-					locked: false
-				}
-			}
-		});
-	/*	$('#tablajson').DataTable( {
-			        "ajax": 'https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json'
-			    } );
-		
-		$.ajax({url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product"
-				}).then(function(productos){
-				var p;
-				var i =1;
-				var table = document.getElementById("tablaStock");
-				  for(p in productos){
-				  var row = table.insertRow(i);
-				  var cell1 = row.insertCell(0);
-				  i++;
-				  cell1.innerHTML = "hola";
-				   var content = document.getElementById(tablaStock).firstChild.nodeValue;
-					document.getElementById(cell1).innerHTML = "<input type = 'text' name = 'txtNewInput' id = 'txtNewInput' value = '" + content + "'/>";
-				  }	
-		});*/
-		
-		var btnAgregar = document.getElementById('EnviarPedido');
-		
-		function btnAgregar_Click(event) {
-		 	var	eleSurvey;
-			/*$.ajax({url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey"
-				}).then(function(elementosSurvey){
-					//eleSurvey = elementosSurvey[0];
-					
-				});*/
-				/*eleSurvey.survey_date = "2012-12-12";
-				eleSurvey.client_id = "1";
-				eleSurvey.user_id = "1";
-				eleSurvey.prod_id = "4"
-				eleSurvey.stock = "8";
-				eleSurvey.order = "10";*/
-				var response = [];
-				var item = {
-			        survey_date: '2015/12/26',
-			        client_id: 1,
-			        user_id: 1,
-			        prod_id: 4,
-			        stock: 8,
-			        order: 10
-			    };
-			    response.push(item);
-				
-				var date = new Date();
-				var json = JSON.stringify(date);
-				var f = JSON.stringify({"survey_date": json, "client_id": "1", "user_id": "1", "prod_id": "4", "stock": "8", "order": "10"});
-				
-			
 
-				console.log(f);
-			
-			$.ajax({
-                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
-                type: 'POST',
-                data: $(f).serialize(),
-                
-                success: function(result) {
-                    alert("EXITO");
-                },
-                error: function (request, status, error) {
-		        alert(request.responseText);
-		    	}
-            });
-            console.log("entro");
-		}
 		
-		btnAgregar.addEventListener('click', btnAgregar_Click);
-		
-		function btnMas_Click(event) {
-			   //console.log(this.stockLinea);
-			   this.td3.textContent = this.stockLinea + 1;
-			   this.stockLinea = this.stockLinea + 1;
-			
+		function muestraMensaje() {
+				console.log("hago click2");
+				var fechaCompleta = new Date();
+				var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
+				var	idCliente = document.getElementById('selectCliente').value;
+				
+				for (var p in productos){
+                    	
+                    	$.ajax({
+			                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
+			                type: 'POST',
+			                dataType: 'json',
+			                data: {
+			                	survey_date: fecha,
+			                	client_id: idCliente,
+			                	user_id: 1,  //harcodeado
+			                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
+			                	stock: (document.getElementById("stock"+productos[p]).value),
+			                	order: (document.getElementById("order"+productos[p]).value)
+			                }
+			               
+                    	}); //ajax
+
+				}; // for  
 			}
-			
-		function btnMenos_Click(event) {
-			   //console.log(this.stockLinea);
-			   this.td3.textContent = this.stockLinea - 1;
-			   this.stockLinea = this.stockLinea - 1;
-			
-			}
-			
-		function btnMasStock_Click(event) {
-			   //console.log(this.stockLinea);
-			   this.td6.textContent = this.stockReal + 1;
-			   this.stockReal = this.stockReal + 1;
-			
-			}
-			
-		function btnMenosStock_Click(event) {
-			   //console.log(this.stockLinea);
-			   this.td6.textContent = this.stockReal - 1;
-			   this.stockReal = this.stockReal - 1;
-			
-			}
-		
-		$.ajax({url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product"
-				}).then(function(productos){
-					var tablaElementos = document.getElementById('tabla-elementos');
-					var p;
-					for (p in productos) {
-				        var elemento = productos[p];
-				        var stockLinea = 0 ;
-				        var stockReal = 0;
-				        var tr = document.createElement('tr');
-				        var td1 = document.createElement('td');
-				        var td2 = document.createElement('td');
-				        var td3 = document.createElement('td');
-				        var td4 = document.createElement('td');
-				        var td5 = document.createElement('td');
-				        var td6 = document.createElement('td');
-				        var td7 = document.createElement('td');
-				        var td8 = document.createElement('td');
-				           
-				      
-				        tr.appendChild(td1);
-				        tr.appendChild(td2);
-				        tr.appendChild(td3);
-				        tr.appendChild(td4);
-				        tr.appendChild(td5);
-				        tr.appendChild(td6);
-				        tr.appendChild(td7);
-				        tr.appendChild(td8);
-				        
-				        td1.textContent = elemento.prod_name;
-				        td2.textContent = elemento.prod_id;
-				        td3.textContent = stockLinea;
-				        tablaElementos.appendChild(tr);
-				       
-				        var nuevoBotonMas = document.createElement('button');
-				        nuevoBotonMas.type = 'Boton';
-				        nuevoBotonMas.textContent = '+';
-				        
-				        nuevoBotonMas.addEventListener('click', btnMas_Click);
-				        nuevoBotonMas.elemento = elemento;
-				        nuevoBotonMas.stockLinea = stockLinea;
-				        nuevoBotonMas.td3 = td3;
-				        td4.appendChild(nuevoBotonMas);
-				        
-				        var nuevoBotonMenos = document.createElement('button');
-				        nuevoBotonMenos.type = 'Boton';
-				        nuevoBotonMenos.textContent = '-';
-				        
-				        nuevoBotonMenos.addEventListener('click', btnMenos_Click);
-				        nuevoBotonMenos.elemento = elemento;
-				        nuevoBotonMenos.stockLinea = stockLinea;
-				        nuevoBotonMenos.td3 = td3;
-				        td5.appendChild(nuevoBotonMenos);
-				       
-				       	td6.textContent = stockReal;
-				       
-				        var nuevoBotonMasStock = document.createElement('button');
-				        nuevoBotonMasStock.type = 'Boton';
-				        nuevoBotonMasStock.textContent = '+';
-				        
-				        nuevoBotonMasStock.addEventListener('click', btnMasStock_Click);
-				        nuevoBotonMasStock.elemento = elemento;
-				        nuevoBotonMasStock.stockReal = stockReal;
-				        nuevoBotonMasStock.td6 = td6;
-				        td7.appendChild(nuevoBotonMasStock);
-				        
-				        var nuevoBotonMenosStock = document.createElement('button');
-				        nuevoBotonMenosStock.type = 'Boton';
-				        nuevoBotonMenosStock.textContent = '-';
-				        
-				        nuevoBotonMenosStock.addEventListener('click', btnMenosStock_Click);
-				        nuevoBotonMenosStock.elemento = elemento;
-				        nuevoBotonMenosStock.stockReal = stockReal;
-				        nuevoBotonMenosStock.td6 = td6;
-				        td8.appendChild(nuevoBotonMenosStock);
-				        
-				        
-				    }
-			});		
 	});
 	
 		$(document).ready(function() {
@@ -517,13 +341,67 @@
 		       // Esta función calcula la ruta con el API de Google Maps  
 			    
 		       //cargar porcentaje de relevados
+		           var $catProd = productos.length;
 				   var $relHoy = relevadoosHoy[0].cantidad;
 				   var $bar = $('.progress-bar');
-				   $bar.width($relHoy * 1000 / route.length);
-				   //console.log($bar.width());
-				   $bar.text( Math.round($relHoy * 100 / route.length) + "%");
+				   $bar.width($relHoy / $catProd * 1000 / route.length);
+				   console.log("relevados hoy " + $relHoy + "cantidad de productos " + $catProd + "cantidad de clientes" + route.length);
+				   $bar.text( Math.round($relHoy / $catProd * 100 / route.length) + "%");
 	    		});
 		    });
+		    
+		    // cargar productos y enviar pedidos
+		    
+		    productos=[];
+			
+			$.ajax({
+				url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes",
+				type: 'GET',
+
+				success: function(result) {
+
+					var combo = document.getElementById('selectCliente'),
+						temp = '';
+						
+					for (var c in result){
+						temp += "<option value='"+result[c].client_id+"'>"+result[c].client_name+"</option>";	
+					}
+					combo.innerHTML += temp;
+					
+				 },
+
+				error: function (request, status, error) {
+					alert("No se puede conectar con el servidor...");
+				}
+			});
+
+            $.ajax({
+                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json",
+                type: 'GET',
+                
+                success: function(result) {
+                    
+                    
+                    var divTabla= document.getElementById('tablaPedidos'),
+                    	temp = '',
+                    	dataTemp;
+
+                    temp +="<thead><tr><th>ID</th><th>Producto</th><th>Stock</th><th>Pedir</th></tr></thead><tbody>";
+                    
+                    for (var i=0, tam=result.data.length; i< tam; i++){
+                    	dataTemp = result.data[i];
+                    	productos.push(dataTemp[0]);
+                    	temp += "<tr><td id='id"+dataTemp[0]+"'>"+dataTemp[0]+"</td><td>"+dataTemp[1]+"</td><td><input value=0 id='stock"+dataTemp[0]+"'></td><td><input value=0 id='order"+dataTemp[0]+"'></td></tr>";	
+                    }
+                    temp += "</tbody></form>";
+                    divTabla.innerHTML = temp;
+                }, 
+                error: function (request, status, error) {
+		        alert("No se puede conectar con el servidor...");
+		    	}
+            });
+			
+		    
 		});
 	  // In the following example, markers appear when the user clicks on the map.
 	  // The markers are stored in an array.

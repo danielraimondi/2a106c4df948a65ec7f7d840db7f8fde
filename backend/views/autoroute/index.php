@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <html>
     <head>
-        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap&libraries=places,drawing,geometry"></script>
         <script type="text/javascript" >
         
         //Inicializo los valores
@@ -56,6 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 if (parseInt(distancia) < parseInt(RadioRelevador) ){ //si la distancia es menor al radio del Relevador PUSH
                    
                     cli_encontrado.push(cli[n]);
+                    
                 }
             }
             return cli_encontrado;
@@ -73,11 +74,11 @@ $this->params['breadcrumbs'][] = $this->title;
             clientes_relevadores = buscarClientes(LatRelevador,LngRelevador, RadioRelevador ); 
            
            //***TODOS los clientes PRESENTES EN LA RUTA OPTIMA  -<<<<<<<<<<-----<<<<<<<<<<<-----<<<<<<<<<<<<<<<
-           ruta_encontrada = ruta_optima(LatRelevador, LngRelevador, RadioRelevador, clientes_relevadores); 
+           ruta_encontrada = ruta_optima(rel[0]['user_lat'], rel[0]['user_lng'], RadioRelevador, clientes_relevadores); 
            
            //CARGAR LA TABLA
             document.getElementById("myTable").innerHTML = "";//limpia el contenido
-            
+            var orden = 1;
             for (var item in ruta_encontrada) { //carga el contenido
                 var table = document.getElementById("myTable");
                  console.log(table);
@@ -85,8 +86,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 var row = table.insertRow(-1);
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
-                cell1.innerHTML = ruta_encontrada[item]['client_name'];
-                cell2.innerHTML = ruta_encontrada[item]['priority'];
+                var cell3 = row.insertCell(2);
+                
+                cell1.innerHTML = orden;
+                cell2.innerHTML = ruta_encontrada[item]['client_name'];
+                cell3.innerHTML = ruta_encontrada[item]['priority'];
+                
+                
+                orden ++;
             };
            
            //CARGA EL MAPA
@@ -99,7 +106,11 @@ $this->params['breadcrumbs'][] = $this->title;
         var markers = [];
         var labels = '123456789';
         
+        
         function initMap() {
+            
+            var ruta = [];
+            
             var labelIndex = 0;
             var center = {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)}; //CENTRO MAPA EN EL RELEVADOR
           
@@ -111,33 +122,7 @@ $this->params['breadcrumbs'][] = $this->title;
             
             prev_infowindow = false;
             
-            
-            // MARKERS COMERCIOS
-            for (c in ruta_encontrada){
-                
-                var markerIcon = {
-                            url: "../images/shop2.ico",
-                            size: new google.maps.Size(32, 32),
-                            anchor: new google.maps.Point(15, 25),
-                            scaledSize: new google.maps.Size(32, 32)
-                        };
-                
-                
-                var marker = new google.maps.Marker({
-                    position: {lat: parseFloat(ruta_encontrada[c].client_lat), lng: parseFloat(ruta_encontrada[c].client_long)},
-                    label: labels[labelIndex++ % labels.length],
-                    map: map,
-                    icon: markerIcon
-                });
-                markers.push(marker);
-                
-                var content = 'ID: '+ruta_encontrada[c].client_id+'<br>Name: '+ruta_encontrada[c].client_name;     
-        
-            var infowindow = new google.maps.InfoWindow();
-    
-        }//for
-        
-        // MARKER RELEVADOR
+            // MARKER RELEVADOR
           
                 var markerIcon = {
                         url: "../images/streetview.ico",
@@ -148,13 +133,61 @@ $this->params['breadcrumbs'][] = $this->title;
                 
                 var marker = new google.maps.Marker({
                     position: {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)},
+                    animation:google.maps.Animation.BOUNCE,
                     map: map,
                     icon: markerIcon
                 });
             
                 markers.push(marker);
                 
+                ruta.push(new google.maps.LatLng(rel[0].user_lat, rel[0].user_lng ) );
+            
+            // MARKERS COMERCIOS
+            if (ruta_encontrada[0] != undefined){ // SI tiene datos
                 
+                for (c in ruta_encontrada){
+                    
+                    var markerIcon = {
+                                url: "../images/shop2.ico",
+                                size: new google.maps.Size(32, 32),
+                                anchor: new google.maps.Point(15, 25),
+                                scaledSize: new google.maps.Size(32, 32)
+                            };
+                    
+                    
+                    var marker = new google.maps.Marker({
+                        position: {lat: parseFloat(ruta_encontrada[c].client_lat), lng: parseFloat(ruta_encontrada[c].client_long)},
+                        label: labels[labelIndex++ % labels.length ], //NUMERO las casitas :3
+                        map: map,
+                        icon: markerIcon
+                    });
+                    markers.push(marker);
+                    
+                    var content = 'ID: '+ruta_encontrada[c].client_id+'<br>Name: '+ruta_encontrada[c].client_name; 
+                    
+                    ruta.push(new google.maps.LatLng(ruta_encontrada[c].client_lat, ruta_encontrada[c].client_long));
+            
+                var infowindow = new google.maps.InfoWindow();
+        
+                 }//for
+            }
+        
+                
+        //PATH
+        
+        if (ruta_encontrada[0] != undefined){
+            var lineas = new google.maps.Polyline({
+            path: ruta,
+             map: map,
+             strokeColor: '#0066CC',
+             strokeWeight: 3,
+             strokeOpacity: 0.6,
+             clickable: false
+            });
+           
+        }
+                
+        //CIRULOS DEL RADIO        
                 var cityCircle = new google.maps.Circle({
                     strokeColor: '#0000FF',
                       strokeOpacity: 0.5,
@@ -173,50 +206,47 @@ $this->params['breadcrumbs'][] = $this->title;
         }
 
             
-            
-        
+       
         //BUSCA ruta más OPTIMA
         function ruta_optima (latRelevador, LngRelevador, radio_relevador, tot_clientes){
             
-            console.log("entre a ruta_optima");
-            
-            var latInicial = latRelevador;
-            var lngInicial = LngRelevador;
-            
-            distancia =  0.0000000000000000000;
+            var latInicial =latRelevador;
+            var lngInicial =LngRelevador;
+           
+            distancia =  0;
             var resultado = [];
-            var dist= [];
-            
-            console.log("TOTAL INICIAL: "+tot_clientes.length);
-            
-            
-            
+           
             while ( (resultado.length < 5) && (tot_clientes.length > 0) ) // Si no llegué a mi tope de 5 clientes O el total de clientes es vacio
             {
-                
-                var dist_minima = radio_relevador;
+                var dist_minima = radio_relevador*2;
+               
                 for (key in tot_clientes){
                     
-                    var LatCliente = (tot_clientes[key]['client_lat'] * Math.PI) / 180  //se pasa a radianes
-                    var LngCliente = (tot_clientes[key]['client_long'] * Math.PI) / 180  //se pasa a radianes
                     
-                    //Calculo de la distancia geografica en Km, entre dos puntos.
-                    distancia = 6378.137 * Math.acos( Math.cos( latInicial ) * Math.cos( LatCliente ) * Math.cos( LngCliente - lngInicial ) + Math.sin( latInicial ) * Math.sin( LatCliente ) ); //en KM
-                 
-                    if( distancia < dist_minima){
-                       
+                    console.log("CHEQUEO EL CLIENTE : "+tot_clientes[key]);
+                    
+                  
+                    var LatCliente = tot_clientes[key]['client_lat'] ;  
+                    var LngCliente = tot_clientes[key]['client_long'] ; 
+                    
+                    var x1=new google.maps.LatLng(latInicial,lngInicial);
+                    var x2=new google.maps.LatLng(LatCliente,LngCliente);
+                    
+                    distancia = (google.maps.geometry.spherical.computeDistanceBetween(x1, x2) ) / 1000;
+                  
+                    if( distancia < dist_minima  ){ 
                         dist_minima = distancia; //Actualizo
-                        puntero_unset = key;
+                        var puntero_unset = key;
                     }
+                    
                 }//for
                 
                 resultado.push(tot_clientes[puntero_unset]);//GUARDO Cliente en Resultado
                 
+                latInicial = tot_clientes[puntero_unset]['client_lat']; //Actualizo el nuevo punto inicial (El cliente seleccionado)
+                lngInicial = tot_clientes[puntero_unset]['client_long']; //Actualizo el nuevo punto inicial (El cliente seleccionado)
+                
                 tot_clientes.splice(puntero_unset, 1); //ELIMINO el cliente que me sirvió de tot_clientes
-                
-                latInicial = LatCliente; //Actualizo el nuevo punto inicial (El cliente seleccionado)
-                lngInicial = LngCliente; //Actualizo el nuevo punto inicial (El cliente seleccionado)
-                
                 
             }//while
             console.log("****pasé el WHILE******");
@@ -235,8 +265,7 @@ $this->params['breadcrumbs'][] = $this->title;
      
         
    </script>
-       <script async defer
-  src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
+      <!-- <script async defer  src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>-->
     </head>
 
     <body>
@@ -268,7 +297,8 @@ $this->params['breadcrumbs'][] = $this->title;
                   <table class="table table-striped" id="Table">
                     <thead>
                       <tr class="success" >
-                        <th class="col-md-6">Client Name</th>
+                        <th class="col-md-2">#</th>
+                        <th class="col-md-4">Client Name</th>
                         <th class="col-md-2">Prioridad</th>
                       </tr>
                     </thead>

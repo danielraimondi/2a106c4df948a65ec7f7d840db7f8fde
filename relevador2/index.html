@@ -47,6 +47,89 @@
 	$(document).ready(function(e) {
 		
 		
+		
+		var productos=[];
+			
+			$.ajax({
+				url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes",
+				type: 'GET',
+
+				success: function(result) {
+					
+
+					var combo = document.getElementById('selectCliente'),
+						temp = '',
+						dataTemp;
+
+					for (c in result){
+						temp += "<option value='"+result[c].client_id+"'>"+result[c].client_name+"</option>";	
+					}
+					combo.innerHTML += temp;
+					
+				 },
+
+				error: function (request, status, error) {
+					alert("No se puede conectar con el servidor...");
+				}
+			});
+
+            $.ajax({
+                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json",
+                type: 'GET',
+                
+                success: function(result) {
+                    
+                    
+                    var divTabla= document.getElementById('tablaPedidos'),
+                    	temp = '',
+                    	dataTemp;
+
+                    temp +="<thead><tr><th>ID</th><th>Producto</th><th>Stock</th><th>Pedir</th></tr></thead><tbody>";
+                    
+                    for (var i=0, tam=result.data.length; i< tam; i++){
+                    	dataTemp = result.data[i];
+                    	productos.push(dataTemp[0]);
+                    	temp += "<tr><td id='id"+dataTemp[0]+"'>"+dataTemp[0]+"</td><td>"+dataTemp[1]+"</td><td><input value=0 id='stock"+dataTemp[0]+"'></td><td><input value=0 id='order"+dataTemp[0]+"'></td></tr>";	
+                    }
+                    temp += "</tbody></form>";
+                    divTabla.innerHTML = temp;
+                }, 
+                error: function (request, status, error) {
+		        alert("No se puede conectar con el servidor...");
+		    	}
+            });
+
+			$(formulario).on('submit', function(e) {
+					
+				var fechaCompleta = new Date();
+				var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
+				var	idCliente = document.getElementById('selectCliente').value;
+				
+				console.log(productos);
+				
+				for (p in productos){
+                    	
+                    	$.ajax({
+			                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
+			                type: 'POST',
+			                dataType: 'json',
+			                data: {
+			                	survey_date: fecha,
+			                	client_id: idCliente,
+			                	user_id: 1,  //harcodeado
+			                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
+			                	stock: (document.getElementById("stock"+productos[p]).value),
+			                	order: (document.getElementById("order"+productos[p]).value)
+			                }
+			               
+                    	}); //ajax
+
+				}; // for
+			
+			});
+
+
+		
 		$(".fancybox").fancybox({
 			padding: 10,
 			helpers: {
@@ -214,6 +297,15 @@
 				
 				<div class="panel panel-default">
 					<h2 class="form-signin-heading">Pedidos</h2><br><br>
+					
+					<div id='tabla'>
+						<form id='formulario'>
+							<label for='selectCliente'>Cliente:</label>
+							<select id="selectCliente"></select>
+							<table id='tablaPedidos' class='' cellspacing='0' width='50%'></table>
+							<input type="submit" name="submit"/>
+						</form>
+					</div>
 				 <!--	<form class="form-signin" id="surveyForm">-->
 					<!--  <h2 class="form-signin-heading">Realizar Pedido</h2>-->
 					<!--  <input class="form-control" type="text" required name="survey_date" placeholder="survey_date" />-->
@@ -225,7 +317,7 @@
 					<!--  <input name="submit" type="submit" />-->
 					<!--</form>-->
 					
-					<button type="button" class="btn btn-lg btn-primary btn-block" onclick="window.open('index2.html', 'ventana nueva', 'height=442, width=231 left=100, top=100')">Ingrese Pedidos</button>
+					<!--<button type="button" class="btn btn-lg btn-primary btn-block" onclick="window.open('index2.html', 'ventana nueva', 'height=442, width=231 left=100, top=100')">Ingrese Pedidos</button>-->
 					
 				</div>
 			

@@ -11,22 +11,19 @@
 <script>
 
 $(document).ready(function() {
+
+			var productos=[];
 			
-
-
-
 			$.ajax({
 				url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes",
 				type: 'GET',
 
 				success: function(result) {
-					
 
 					var combo = document.getElementById('selectCliente'),
-						temp = '',
-						dataTemp;
-
-					for (c in result){
+						temp = '';
+						
+					for (var c in result){
 						temp += "<option value='"+result[c].client_id+"'>"+result[c].client_name+"</option>";	
 					}
 					combo.innerHTML += temp;
@@ -37,11 +34,6 @@ $(document).ready(function() {
 					alert("No se puede conectar con el servidor...");
 				}
 			});
-
-
-			
-
-
 
             $.ajax({
                 url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json",
@@ -58,7 +50,8 @@ $(document).ready(function() {
                     
                     for (var i=0, tam=result.data.length; i< tam; i++){
                     	dataTemp = result.data[i];
-                    	temp += "<tr><td id='id"+dataTemp[0]+"'>"+dataTemp[0]+"</td><td>"+dataTemp[1]+"</td><td><input value=0 id='stock"+dataTemp[0]+"'></td><td><input value=0 id='pedido"+dataTemp[0]+"'></td></tr>";	
+                    	productos.push(dataTemp[0]);
+                    	temp += "<tr><td id='id"+dataTemp[0]+"'>"+dataTemp[0]+"</td><td>"+dataTemp[1]+"</td><td><input value=0 id='stock"+dataTemp[0]+"'></td><td><input value=0 id='order"+dataTemp[0]+"'></td></tr>";	
                     }
                     temp += "</tbody></form>";
                     divTabla.innerHTML = temp;
@@ -66,58 +59,37 @@ $(document).ready(function() {
                 error: function (request, status, error) {
 		        alert("No se puede conectar con el servidor...");
 		    	}
-            })
+            });
 
 			$(formulario).on('submit', function(e) {
-
-				var tabla = document.getElementById("tablaPedidos");
 				
-				var fechaCompleta = new Date(),
-					fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate(),
-					idCliente = document.getElementById('selectCliente').value;
-					
-					
-				$.ajax({
-                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/product/ver?_format=json",
-                type: 'GET',
-                
-                success: function(result) {
-                    
-                    for (var i=0, tam=result.data.length; i< tam; i++){
+				var fechaCompleta = new Date();
+				var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
+				var	idCliente = document.getElementById('selectCliente').value;
+				
+				for (var p in productos){
                     	
-                    	dataTemp = result.data[i];
                     	$.ajax({
 			                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
 			                type: 'POST',
+			                dataType: 'json',
 			                data: {
 			                	survey_date: fecha,
 			                	client_id: idCliente,
 			                	user_id: 1,  //harcodeado
-			                	prod_id: document.getElementById("id"+dataTemp[0]).innerHTML,
-			                	stock: document.getElementById("stock"+dataTemp[0]).value,
-			                	oder: document.getElementById("pedido"+dataTemp[0]).value,
-			                },
-			             	success: function(result) {
-			                    console.log("EXITO");
-			                },
-			                error: function (request, status, error) {
-						        console.log(request);
-						        console.log("Datos duplicados o inconsistentes");
-					    	},
+			                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
+			                	stock: (document.getElementById("stock"+productos[p]).value),
+			                	order: (document.getElementById("order"+productos[p]).value)
+			                }
+			               
                     	}); //ajax
-                    	
-                    } // for
-                   
-                } // success
 
-			}); //ajax
+				}; // for
 			
 			});
 
 
 });
-
-
 
 </script>
 
@@ -134,8 +106,6 @@ $(document).ready(function() {
 		<table id='tablaPedidos' class='' cellspacing='0' width='50%'></table>
 		<input type="submit" name="submit"/>
 	</form>
-	
-
 </div>
 
 
