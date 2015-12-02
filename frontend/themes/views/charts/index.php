@@ -10,7 +10,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
 $id = Yii::$app->user->identity->id;
 
-echo ($tot_rutas_asignadas);
 
 
 ?>
@@ -73,6 +72,9 @@ echo ($tot_rutas_asignadas);
          var tot_cli_para_visitar=<?php echo json_encode($tot_cli_para_visitar) ?> ; //pendientes
          var tot_cli_ya_visitaron=<?php echo json_encode($tot_cli_ya_visitaron) ?> ; //realizados
         
+        console.log(tot_cli_para_visitar);
+        console.log(tot_cli_ya_visitaron);
+        
         
          var realizado = null;
          var pendiente = null;
@@ -104,7 +106,7 @@ echo ($tot_rutas_asignadas);
                 
                 //Realizó algun relevo?
                 if (relevador[0] != undefined){ //SI TIENE clientes para ser asignados (clientes_relevadores no es vacio)
-                    realizado = (relevador[0]['COUNT(client_id)'] * 100) / relevador[1]['COUNT(client_id)'];
+                    realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['COUNT(client_id)'];
                 }else{
                     realizado=0;
                 }

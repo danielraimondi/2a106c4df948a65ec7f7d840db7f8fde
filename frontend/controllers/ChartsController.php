@@ -2,6 +2,8 @@
 
 namespace frontend\controllers;
 
+use Yii;
+
 class ChartsController extends \yii\web\Controller
 {
     public function actionIndex()
@@ -19,11 +21,14 @@ class ChartsController extends \yii\web\Controller
         ->all();
         
         //TOTAL clientes que VISITARON los relevadores
-         $tot_cli_ya_visitaron = (new \yii\db\Query())
-        ->select('user_id, COUNT(client_id)')
-        ->from('survey ')
-        ->groupBy('user_id')
-        ->all();
+        //  $tot_cli_ya_visitaron = (new \yii\db\Query())
+        // ->select('user_id, COUNT(client_id)')
+        // ->from('survey ')
+        // ->groupBy('user_id')
+        // ->all();
+        
+        $tot_cli_ya_visitaron = Yii::$app->db->createCommand('SELECT user_id, count(distinct client_id, survey_date) as cantidad 
+                                                              FROM survey group by user_id')->queryAll();
         
         //TOTAL de rutas asignadas
         $tot_rutas_asignadas = (new \yii\db\Query())
