@@ -18,9 +18,12 @@ class UserController extends ActiveController
 
     public function actionLogin(){
         
-        $user = User::find(['username'=>$_POST['username']])->one();
+        //$user = User::find(['username'=>$_POST['username']])->one();
+        
+        $user = User::find()->where(['username' => ['username'=>$_POST['username']]])->one();
 
         $loginOk = Password::validate($_POST['password'], $user->password_hash);
+        
         
         if($loginOk)
             return $user->id;

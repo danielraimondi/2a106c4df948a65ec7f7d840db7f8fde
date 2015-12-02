@@ -15,10 +15,11 @@ class RouteController extends ActiveController
     
     public function actionClientes(){
 	    
+	    $user_id = $_GET["user_id"];
 	    $clientes = (new \yii\db\Query())
 	        ->select('*')
             ->from('route r, client c, routeclient rc ')
-            ->where('r.route_id=rc.route_id and c.client_id=rc.client_id and route_date=curdate() and r.user_id=15')    //  Hardcodeado en el usuario 1 hasta poder obtener el usuario de la app movil
+            ->where('r.route_id=rc.route_id and c.client_id=rc.client_id and route_date=curdate() and r.user_id='.$user_id)    //  Hardcodeado en el usuario 1 hasta poder obtener el usuario de la app movil
             ->all();
         
         return $clientes;

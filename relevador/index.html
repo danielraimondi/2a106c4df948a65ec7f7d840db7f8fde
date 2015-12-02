@@ -63,7 +63,7 @@
 	                data: {
 	                	survey_date: fecha,
 	                	client_id: idCliente,
-	                	user_id: 15,  //harcodeado
+	                	user_id: user_id,  
 	                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
 	                	stock: (document.getElementById("stock"+productos[p]).value),
 	                	order: (document.getElementById("order"+productos[p]).value)
@@ -125,7 +125,7 @@
 			<div id="home-row-1" class="row clearfix">
 				<div class="col-12">
 					<h1 class="font-semibold">Relevando.com </h1>
-					<h4 class="font-thin">Bienvenido a nuestra aplicación RELEVANDO.COM.UY  </h4>
+					<h4 class="font-thin">Bienvenido a nuestra aplicación RELEVANDO.COM  </h4>
 					<h4> <a class="font-semibold" href="#">acceso a usuarios</a> </h4>
 				
 				</div><!-- /col-12 -->
@@ -295,15 +295,14 @@
 	
 		$(document).ready(function() {
 			
-			//	'login-form[login]': 'daniel',
-            //    	'login-form[password]': 'daniel',
+			
 			// $.ajax({
    //             url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/user/login",
    //             type: 'POST',
    //             dataType: 'json',
    //             data: {
-   //             	'username': 'admin',
-   //             	'password': '123123',
+   //             	'username': 'daniel',
+   //             	'password': '123123'
    //             }
                
    //     	}).then(function(result) {
@@ -311,11 +310,13 @@
    //     			console.log(result);
    //     	});
    			
-   			if (localStorage.getItem("id")==null)
-   				window.location.replace("login.html");
+   			
+   			
+   			if (sessionStorage.id > 0)
+   				user_id = sessionStorage.id;
    			else
-		    	user_id=localStorage.getItem("id");
-		    	
+   				window.location.replace("login.html");
+			
 			waypoints=[];
 			
 			var origen;
@@ -331,7 +332,8 @@
 		        			lng: parseFloat(data.user_lng)});
 		        			
 		        		$.ajax({
-					        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes"
+					        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes",
+					        data: {user_id: user_id}
 						    }).then(function(data) {
 						    	
 						    	route = data;
@@ -383,10 +385,12 @@
 		    
 		    
 		    $.ajax({
-		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes"
+		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes",
+		        data: {user_id: user_id}
 		    }).then(function(route) {
 		    	$.ajax({
-		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey/cumplidas_hoy"
+		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey/cumplidas_hoy",
+		        data: {user_id: user_id}
 		    		}).then(function(relevadoosHoy) {
 		      // console.log(JSON.stringify(route));
 		       
@@ -443,6 +447,7 @@
 			$.ajax({
 				url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes",
 				type: 'GET',
+				data: {user_id: user_id},
 
 				success: function(result) {
 

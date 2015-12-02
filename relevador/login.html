@@ -10,13 +10,12 @@
 
 $(document).ready(function() {
     $("#form").on('submit', function(e) {
-                // Prevent form submission
-                e.preventDefault();
-        
+                
+        e.preventDefault();
         var user = document.getElementById("username").value;
         var pass = document.getElementById("password").value;
-        console.log(user);
-        console.log(pass);
+        sessionStorage.clear();
+       
     			
     			$.ajax({
                     url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/user/login",
@@ -29,7 +28,7 @@ $(document).ready(function() {
                    
             	}).then(function(result) {
             	        if (result){
-            	            localStorage.setItem("id", result);
+            	            sessionStorage.setItem("id", result);
             	            window.location.replace("index.html");
             	        }
             	        else

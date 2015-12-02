@@ -20,9 +20,10 @@ class SurveyController extends ActiveController
     //       ->all();
            
         
+         $user_id = $_GET["user_id"];
          $rutasCumplidas = Yii::$app->db->createCommand('SELECT count(distinct client_id) as cantidad 
                                                         FROM survey 
-                                                        where survey_date = curdate() and user_id = 15')->queryAll();
+                                                        where survey_date = curdate() and user_id = '.$user_id)->queryAll();
         
         return $rutasCumplidas;
     

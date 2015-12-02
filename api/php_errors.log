@@ -470,3 +470,93 @@
 [01-Dec-2015 00:30:35 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
 [01-Dec-2015 00:30:35 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
 [01-Dec-2015 00:30:35 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:38:33 UTC] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 23
+[02-Dec-2015 05:38:33 UTC] PHP Stack trace:
+[02-Dec-2015 05:38:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 05:38:33 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 05:38:33 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 05:38:33 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 05:38:33 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 05:38:33 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 05:38:33 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:38:33 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:38:41 UTC] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 23
+[02-Dec-2015 05:38:41 UTC] PHP Stack trace:
+[02-Dec-2015 05:38:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 05:38:41 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 05:38:41 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 05:38:41 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 05:38:41 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 05:38:41 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 05:38:41 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:38:41 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:39:40 UTC] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 23
+[02-Dec-2015 05:39:40 UTC] PHP Stack trace:
+[02-Dec-2015 05:39:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 05:39:40 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 05:39:40 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 05:39:40 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 05:39:40 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 05:39:40 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 05:39:40 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:39:40 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:39:57 UTC] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 23
+[02-Dec-2015 05:39:57 UTC] PHP Stack trace:
+[02-Dec-2015 05:39:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 05:39:57 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 05:39:57 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 05:39:57 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 05:39:57 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 05:39:57 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 05:39:57 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:39:57 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:40:05 UTC] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 23
+[02-Dec-2015 05:40:05 UTC] PHP Stack trace:
+[02-Dec-2015 05:40:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 05:40:05 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 05:40:05 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 05:40:05 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 05:40:05 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 05:40:05 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 05:40:05 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:40:05 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:40:10 UTC] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 23
+[02-Dec-2015 05:40:10 UTC] PHP Stack trace:
+[02-Dec-2015 05:40:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 05:40:10 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 05:40:10 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 05:40:10 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 05:40:10 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 05:40:10 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 05:40:10 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:40:10 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:40:23 UTC] PHP Fatal error:  Array callback has to contain indices 0 and 1 in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 23
+[02-Dec-2015 05:40:23 UTC] PHP Stack trace:
+[02-Dec-2015 05:40:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 05:40:23 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 05:40:23 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 05:40:23 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 05:40:23 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 05:40:23 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 05:40:23 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 05:40:23 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 11:33:07 UTC] PHP Fatal error:  Call to undefined function api\modules\v1\controllers\one() in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 21
+[02-Dec-2015 11:33:07 UTC] PHP Stack trace:
+[02-Dec-2015 11:33:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 11:33:07 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 11:33:07 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 11:33:07 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 11:33:07 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 11:33:07 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 11:33:07 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 11:33:07 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 11:33:24 UTC] PHP Fatal error:  Call to undefined function api\modules\v1\controllers\one() in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 21
+[02-Dec-2015 11:33:24 UTC] PHP Stack trace:
+[02-Dec-2015 11:33:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[02-Dec-2015 11:33:24 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[02-Dec-2015 11:33:24 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[02-Dec-2015 11:33:24 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[02-Dec-2015 11:33:24 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[02-Dec-2015 11:33:24 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[02-Dec-2015 11:33:24 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[02-Dec-2015 11:33:24 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
