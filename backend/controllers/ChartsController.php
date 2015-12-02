@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+
 class ChartsController extends Controller
 {
     public function actionIndex()
@@ -40,7 +41,7 @@ class ChartsController extends Controller
          $cantPedidos = (new \yii\db\Query())
         ->select('s.client_id, COUNT(s.client_id), c.client_name')
         ->from('survey s, client c')
-        ->where('s.survey_date > DATE_SUB(CURDATE(), INTERVAL 20 DAY) AND c.client_id = s.client_id')  //SELECIONA cuantos días atrás se ve !! --<<<--<-<---<<<
+        ->where('s.survey_date > DATE_SUB(CURDATE(), INTERVAL 20 DAY) AND c.client_id = s.client_id and s.order > 0')  //SELECIONA cuantos días atrás se ve !! --<<<--<-<---<<<
         ->groupBy('s.client_id')
         ->orderBy(['s.order' => SORT_DESC,])
         ->all();
@@ -69,12 +70,18 @@ class ChartsController extends Controller
         ->groupBy('user_id')
         ->all();
         
-        //TOTAL clientes que VISITARON los relevadores
-         $tot_cli_ya_visitaron = (new \yii\db\Query())
-        ->select('user_id, COUNT(client_id)')
-        ->from('survey ')
-        ->groupBy('user_id')
-        ->all();
+        // //TOTAL clientes que VISITARON los relevadores
+        //  $tot_cli_ya_visitaron = (new \yii\db\Query())
+        // ->select('user_id, COUNT(client_id)')
+        // ->from('survey ')
+        // ->groupBy('user_id')
+        // ->all();
+        
+        
+        $tot_cli_ya_visitaron = Yii::$app->db->createCommand('SELECT user_id, count(distinct client_id, survey_date) as cantidad 
+                                                              FROM survey group by user_id')->queryAll();
+                                                              
+                                                              
         
   
        //ENVIANDOUUUU...

@@ -42,6 +42,15 @@
  
 	<script>
 	
+	function sleep(milliseconds) {
+	  var start = new Date().getTime();
+	  for (var i = 0; i < 1e7; i++) {
+	    if ((new Date().getTime() - start) > milliseconds){
+	      break;
+	    }
+	  }
+	}
+	
 	var map;
 
 	$(document).ready(function(e) {
@@ -100,29 +109,34 @@
             });
 
 			$(formulario).on('submit', function(e) {
-					
+				
 				var fechaCompleta = new Date();
 				var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
 				var	idCliente = document.getElementById('selectCliente').value;
-				
 				console.log(productos);
 				
-				for (p in productos){
+				for (var p in productos){
                     	
-                    	$.ajax({
+            	       	$.ajax({
 			                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
 			                type: 'POST',
 			                dataType: 'json',
 			                data: {
 			                	survey_date: fecha,
 			                	client_id: idCliente,
-			                	user_id: 1,  //harcodeado
+			                	user_id: 15,  //harcodeado
 			                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
 			                	stock: (document.getElementById("stock"+productos[p]).value),
 			                	order: (document.getElementById("order"+productos[p]).value)
+			                },
+			                
+			                success: function(result) {
+			                	console.log("OK");
 			                }
-			               
+			                
                     	}); //ajax
+            	
+                    	sleep(200);
 
 				}; // for
 			

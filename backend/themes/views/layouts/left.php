@@ -54,7 +54,7 @@ if (isset(Yii::$app->user->identity)) :
                     ['label' => '<i class="fa fa-road"></i><span>Routes</span>', 'url' => ['/route']],
                     ['label' => '<i class="fa fa-road"></i><span>Route-Clients</span>', 'url' => ['/routeclient']],
                     ['label' => '<i class="fa fa-refresh"></i><span>Auto-Route-Clients</span>', 'url' => ['/autoroute/index']],
-                    ['label' => '<i class="fa fa-file-code-o"></i><span>Gii</span>', 'url' => ['/gii']],
+                    //['label' => '<i class="fa fa-file-code-o"></i><span>Gii</span>', 'url' => ['/gii']],
                     //['label' => '<i class="fa fa-dashboard"></i><span>Debug</span>', 'url' => ['/debug']],
                     [
                         'label' => '<i class="glyphicon glyphicon-lock"></i><span>Sing in</span>', //for basic

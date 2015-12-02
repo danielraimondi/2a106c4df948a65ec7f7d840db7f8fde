@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<script src="js/jquery-1.10.2.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+    $("#form").on('submit', function(e) {
+                // Prevent form submission
+                e.preventDefault();
+        
+        var user = document.getElementById("username").value;
+        var pass = document.getElementById("password").value;
+        console.log(user);
+        console.log(pass);
+    			
+    			$.ajax({
+                    url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/user/login",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                    	'username': user,
+                    	'password': pass,
+                    }
+                   
+            	}).then(function(result) {
+            	        if (result){
+            	            localStorage.setItem("id", result);
+            	            window.location.replace("index.html");
+            	        }
+            	        else
+            	            alert ("wrong username / password");
+            	    });
+    });
+});
+
+</script>
+
+
+    
+</head>
+
+<body>
+    
+</body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center login-title">Sign in to Relevando.com</h1>
+            <div class="account-wall">
+                <br><br>
+                <form id="form" class="form-signin">
+                <input id="username" type="text" class="form-control" placeholder="Username" required autofocus>
+                <input id="password" type="password" class="form-control" placeholder="Password" required>
+                <input class="btn btn-lg btn-primary btn-block" type="submit" name="submit"/>
+                 
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>

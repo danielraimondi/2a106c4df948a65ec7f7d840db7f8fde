@@ -8,11 +8,14 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('app', 'Automatic Route');
 $this->params['breadcrumbs'][] = $this->title;
 
+
+//ruta_encontrada  es la matriz donde se encuentra el resultado de la busqueda llamada tras seleccionar el select y llamar a la funcion relevadorSelec()
+
 ?>
 
 <html>
     <head>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap&libraries=places,drawing,geometry"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap&libraries=places,drawing,geometry,directions"></script>
         <script type="text/javascript" >
         
         //Inicializo los valores
@@ -27,6 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
         var clientes_relevadores = null;
         var ruta_encontrada = [];
         var rel = [];
+        var map;
+        var directionDisplay = new google.maps.DirectionsRenderer;
         
         
         //BUSCA el relevador seleccionado del dropdown 
@@ -76,6 +81,8 @@ $this->params['breadcrumbs'][] = $this->title;
            //***TODOS los clientes PRESENTES EN LA RUTA OPTIMA  -<<<<<<<<<<-----<<<<<<<<<<<-----<<<<<<<<<<<<<<<
            ruta_encontrada = ruta_optima(rel[0]['user_lat'], rel[0]['user_lng'], RadioRelevador, clientes_relevadores); 
            
+           ruta_encontrada2 = ruta_optima_dibujada(rel[0]['user_lat'], rel[0]['user_lng'], RadioRelevador, clientes_relevadores); 
+           
            //CARGAR LA TABLA
             document.getElementById("myTable").innerHTML = "";//limpia el contenido
             var orden = 1;
@@ -102,13 +109,9 @@ $this->params['breadcrumbs'][] = $this->title;
         }
         
         //MAPA
-        var map;
-        var markers = [];
-        var labels = '123456789';
-        
-        
         function initMap() {
-            
+            var markers = [];
+            var labels = '123456789';
             var ruta = [];
             
             var labelIndex = 0;
@@ -119,6 +122,8 @@ $this->params['breadcrumbs'][] = $this->title;
             center: center,
             mapTypeId: google.maps.MapTypeId.TERRAIN
             });
+            
+            directionDisplay.setMap(map);
             
             prev_infowindow = false;
             
@@ -204,6 +209,83 @@ $this->params['breadcrumbs'][] = $this->title;
                 var infowindow = new google.maps.InfoWindow();
             
         }
+        
+         //BUSCA ruta más OPTIMA
+        function ruta_optima_dibujada (latRelevador, LngRelevador, radio_relevador, tot_clientes){
+            var latInicial =latRelevador;
+            var lngInicial =LngRelevador;
+            
+            var origen =new google.maps.LatLng(latInicial,lngInicial);
+            
+            
+            var waypoints = [];
+           
+            distancia =  0;
+            var resultado = [];
+           
+            while ( (waypoints.length < 5) && (tot_clientes.length > 0) ) // Si no llegué a mi tope de 5 clientes O el total de clientes es vacio
+            {
+                //var dist_minima = radio_relevador*2;
+               
+                for (key in tot_clientes){
+                    
+                    //console.log("CHEQUEO EL CLIENTE : "+tot_clientes[key]);
+                    
+                  
+                    var LatCliente = tot_clientes[key]['client_lat'] ;  
+                    var LngCliente = tot_clientes[key]['client_long'] ; 
+                    
+                    var location =new google.maps.LatLng(LatCliente,LngCliente);
+                    
+                   
+                    // distancia = (google.maps.geometry.spherical.computeDistanceBetween(origen, waypoint) ) / 1000;
+                    // console.log ("distancia:"+distancia);
+                  
+                    // if( distancia < dist_minima  ){ 
+                    //     dist_minima = distancia; //Actualizo
+                    //     var puntero_unset = key;
+                        
+                       console.log("location: "+location);
+                        
+                        waypoints.push({
+                            location: location,
+                            stopover: true            
+                        });
+                    //}
+                    
+                }//for
+                
+                resultado.push(tot_clientes[puntero_unset]);//GUARDO Cliente en Resultado
+                
+                // latInicial = tot_clientes[puntero_unset]['client_lat']; //Actualizo el nuevo punto inicial (El cliente seleccionado)
+                // lngInicial = tot_clientes[puntero_unset]['client_long']; //Actualizo el nuevo punto inicial (El cliente seleccionado)
+                
+                tot_clientes.splice(puntero_unset, 1); //ELIMINO el cliente que me sirvió de tot_clientes
+                
+            }//while
+            
+            var service = new google.maps.DirectionsService();
+            
+            service.route({
+               origin: origen,
+               destination: origen,
+               waypoints: waypoints,
+               travelMode: google.maps.DirectionsTravelMode.WALKING,
+               optimizeWaypoints: true
+               
+            }, function(result,status){
+                 directionDisplay.setDirections(result);
+                  console.log(status);
+                  console.log(result);
+            });
+            
+            console.log("****pasé el WHILE******");
+            console.log("TOTAL FINAL: "+tot_clientes.length);
+            
+           
+            return result;
+            
+        }//ruta_optima
 
             
        

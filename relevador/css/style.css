@@ -136,7 +136,7 @@ body {
 #special-active-menu-5 {
 	background-color: #e67e22 !important;
 }
-
+/*
 @media (min-width: 768px) and (max-width: 991px) {
 	#slide-4 .content-row h2 {
 		min-height: 6em;
@@ -203,7 +203,7 @@ body {
 		text-align: left;
 	}
 }
-
+*/
 :focus {outline:none;}
 ::-moz-focus-inner {border:0;}
 
@@ -228,11 +228,11 @@ body {
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
-	background-attachment: relative;
+	background-attachment: center center;
 	background-position: center center;
 }
 
-#slide-1 h1 {
+/*#slide-1 h1 {
 	padding-top: 130px;
 }
 
@@ -299,7 +299,7 @@ body {
 	#home-row-2 {
 		font-size: 16px;
 	}
-}
+}*/
 
 #slide-2 {
 	background-color: #1abc9c;

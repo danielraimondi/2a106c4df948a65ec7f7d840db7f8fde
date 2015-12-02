@@ -5,9 +5,9 @@
 <html>
 <head lang="en">
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=scale">-->
 	
-	<title>Relevando.com.uy</title> 
+	<title>Relevando.com</title> 
 	<meta name="description" content="BlackTie.co - Free Handsome Bootstrap Themes" />	    
 	<meta name="keywords" content="themes, bootstrap, free, templates, bootstrap 3, freebie,">
 	<meta property="og:title" content="">
@@ -18,12 +18,12 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">	
 	
-
+	
 	
     
 	<link rel="prefetch" href="images/zoom.png">
 	
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
  
     <!-- Bootstrap core CSS -->
     <!--<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet" media="screen">-->
@@ -39,8 +39,17 @@
 	</script>
 	
 	<script>
+	    function sleep(milliseconds) {
+		  var start = new Date().getTime();
+		  for (var i = 0; i < 1e7; i++) {
+		    if ((new Date().getTime() - start) > milliseconds){
+		      break;
+		    }
+		  }
+		}
+	    
 	    function muestraMensaje() {
-		console.log("hago click2");
+		
 		var fechaCompleta = new Date();
 		var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
 		var	idCliente = document.getElementById('selectCliente').value;
@@ -54,13 +63,14 @@
 	                data: {
 	                	survey_date: fecha,
 	                	client_id: idCliente,
-	                	user_id: 1,  //harcodeado
+	                	user_id: 15,  //harcodeado
 	                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
 	                	stock: (document.getElementById("stock"+productos[p]).value),
 	                	order: (document.getElementById("order"+productos[p]).value)
 	                }
 	               
             	}); //ajax
+            	sleep(200);
 
 		}; // for
 		alert("Pedido enviado Correctamente");
@@ -102,10 +112,10 @@
 	
 	<!-- === Arrows === -->
 	<div id="arrows">
-		<div id="arrow-up" class="disabled"></div>
-		<div id="arrow-down"></div>
-		<div id="arrow-left" class="disabled visible-lg"></div>
-		<div id="arrow-right" class="disabled visible-lg"></div>
+		<!--<div id="arrow-up" class="disabled"></div>-->
+		<!--<div id="arrow-down"></div>-->
+		<!--<div id="arrow-left" class="disabled visible-lg"></div>-->
+		<!--<div id="arrow-right" class="disabled visible-lg"></div>-->
 	</div><!-- /.arrows -->
 	
 	
@@ -114,11 +124,10 @@
 		<div class="container">
 			<div id="home-row-1" class="row clearfix">
 				<div class="col-12">
-					<h1 class="font-semibold">Relevando.com.uy </h1>
+					<h1 class="font-semibold">Relevando.com </h1>
 					<h4 class="font-thin">Bienvenido a nuestra aplicación RELEVANDO.COM.UY  </h4>
 					<h4> <a class="font-semibold" href="#">acceso a usuarios</a> </h4>
-					<br>
-					<br>
+				
 				</div><!-- /col-12 -->
 			</div><!-- /row -->
 			<div id="home-row-2" class="row clearfix">
@@ -161,20 +170,15 @@
 				<div class="col-12 ">Realizar pedido</div>
 			</div><!-- /row -->
 			
-					<div id='tabla'>
+					<div id='tabla' class="table-responsive" style="width:100%;">
 						<form id='formulario'>
 							<label for='selectCliente'>Cliente:</label>
 							<select id="selectCliente"></select>
-							<table id='tablaPedidos' class='' cellspacing='0' width='50%' align='center'></table>
+							<table id='tablaPedidos' class='table' cellspacing='0' width='50%' align='center'></table>
 						</form>
 					</div>
-			     	
-			     	
-			     	<button type="button" id="EnviarPedido" onclick="muestraMensaje()">Envia Pedido</button>
-			     	
-				</div>
-			</div><!-- /row -->
-		<!--</div><!-- /container -->
+		   	<button type="button" id="EnviarPedido" onclick="muestraMensaje()">Envia Pedido</button>
+		</div><!-- /container -->
 	</div><!-- /slide4 -->
 	
 	<!-- === Slide 5 / ESTADO === -->
@@ -182,21 +186,15 @@
 		<div class="container">
 			<div class="row title-row">
 				<div class="col-12 font-light">Estado de cumplimiento</div>
-			
-			<div class="row content-row">
-				<div class="row subtitle-row">
-					<div class="col-12 font-light">Total cumplido del <span class="font-semibold">día</span></div>
-				</div>
-				<div class="progress">	
-					<div class="progress progress-success">
-						<div class="progress-bar" style="float: left; width: 0%; " data-percentage="60" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</div>
 			</div>
-			
-			
-				
-
+			<div class="row subtitle-row">
+				<div class="col-12 font-light">Total cumplido del <span class="font-semibold">día</span></div>
+			</div>
+			<div class="progress">
+			  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+			  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+			   </div>
+			</div>
 		</div><!-- /container -->
 	</div><!-- /Slide 5 -->
 	
@@ -265,37 +263,125 @@
 					
 
 	<script>
-	$(document).ready(function(e) {
+	// $(document).ready(function(e) {
 
 		
-		function muestraMensaje() {
-				console.log("hago click2");
-				var fechaCompleta = new Date();
-				var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
-				var	idCliente = document.getElementById('selectCliente').value;
+	// 	function muestraMensaje() {
+	// 			console.log("hago click2");
+	// 			var fechaCompleta = new Date();
+	// 			var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
+	// 			var	idCliente = document.getElementById('selectCliente').value;
 				
-				for (var p in productos){
+	// 			for (var p in productos){
                     	
-                    	$.ajax({
-			                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
-			                type: 'POST',
-			                dataType: 'json',
-			                data: {
-			                	survey_date: fecha,
-			                	client_id: idCliente,
-			                	user_id: 1,  //harcodeado
-			                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
-			                	stock: (document.getElementById("stock"+productos[p]).value),
-			                	order: (document.getElementById("order"+productos[p]).value)
-			                }
+ //                   	$.ajax({
+	// 		                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/survey",
+	// 		                type: 'POST',
+	// 		                dataType: 'json',
+	// 		                data: {
+	// 		                	survey_date: fecha,
+	// 		                	client_id: idCliente,
+	// 		                	user_id: 1,  //harcodeado
+	// 		                	prod_id: (document.getElementById("id"+productos[p]).innerHTML),
+	// 		                	stock: (document.getElementById("stock"+productos[p]).value),
+	// 		                	order: (document.getElementById("order"+productos[p]).value)
+	// 		                }
 			               
-                    	}); //ajax
+ //                   	}); //ajax
 
-				}; // for  
-			}
-	});
+	// 			}; // for  
+	// 		}
+	// });
 	
 		$(document).ready(function() {
+			
+			//	'login-form[login]': 'daniel',
+            //    	'login-form[password]': 'daniel',
+			// $.ajax({
+   //             url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/user/login",
+   //             type: 'POST',
+   //             dataType: 'json',
+   //             data: {
+   //             	'username': 'admin',
+   //             	'password': '123123',
+   //             }
+               
+   //     	}).then(function(result) {
+   //     			alert(result);
+   //     			console.log(result);
+   //     	});
+   			
+   			if (localStorage.getItem("id")==null)
+   				window.location.replace("login.html");
+   			else
+		    	user_id=localStorage.getItem("id");
+		    	
+			waypoints=[];
+			
+			var origen;
+			
+			initMap();
+			var directionDisplay = new google.maps.DirectionsRenderer;
+			
+			$.ajax({
+			        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/user/"+user_id
+				    }).then(function(data) {
+		        
+		        		origen = new google.maps.LatLng ({lat: parseFloat(data.user_lat), 
+		        			lng: parseFloat(data.user_lng)});
+		        			
+		        		$.ajax({
+					        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes"
+						    }).then(function(data) {
+						    	
+						    	route = data;
+						    	for (c in data){  
+					        
+					        
+								        var loc = new google.maps.LatLng({lat: parseFloat(data[c].client_lat), lng: parseFloat(data[c].client_long)});
+								        
+								        // var marker = new google.maps.Marker({
+								        //     position: loc,
+								        //     map: map
+			
+								        // });
+								        	
+								        waypoints.push({
+				                            location: loc,
+				                            stopover: true            
+				                        });
+							        
+						    		};  //for  
+						    		
+						    		var service = new google.maps.DirectionsService();
+						    		directionDisplay.setMap(map);
+		            
+						            console.log(waypoints);
+						            console.log(waypoints[0].location.lat());
+						            
+						            console.log(service);
+						            service.route({
+						              origin: origen,
+						              destination: origen,
+						              waypoints: waypoints,
+						              travelMode: google.maps.DirectionsTravelMode.WALKING,
+						              optimizeWaypoints: true
+							            }, function(result,status){
+							                 directionDisplay.setDirections(result);
+							                  console.log(status);
+							                  console.log(result);
+						            });
+						            
+						       
+						           
+		
+			   		}); // callback    		
+		
+	   }); // callback  
+		    
+		    
+		    
+		    
 		    $.ajax({
 		        url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes"
 		    }).then(function(route) {
@@ -305,48 +391,48 @@
 		      // console.log(JSON.stringify(route));
 		       
 		       //cargar puntos de los locales a relevar en el mapa
-		       var p;
-		       var rutaCliente = [];
-		        var flightPlanCoordinates = [];
-		       for (p in route){
-		       	rutaCliente.push(route[p]);
-		            var markerIcon = {
-			                    url: "images/shop2.ico",
-			                    size: new google.maps.Size(32, 32),
-			                    //origin: new google.maps.Point(0, 0),
-			                    anchor: new google.maps.Point(15, 25),
-			                    scaledSize: new google.maps.Size(32, 32)
-			                };
+		       //var p;
+		       //var rutaCliente = [];
+		       // var flightPlanCoordinates = [];
+		       //for (p in route){
+		       //	rutaCliente.push(route[p]);
+		         //   var markerIcon = {
+			        //             url: "images/shop2.ico",
+			        //             size: new google.maps.Size(32, 32),
+			        //             //origin: new google.maps.Point(0, 0),
+			        //             anchor: new google.maps.Point(15, 25),
+			        //             scaledSize: new google.maps.Size(32, 32)
+			        //         };
 			        
-			        var marker = new google.maps.Marker({
-			            position: {lat: parseFloat(rutaCliente[p].client_lat), lng: parseFloat(rutaCliente[p].client_long)},
-			            map: map,
-			            icon: markerIcon
+			        // var marker = new google.maps.Marker({
+			        //     position: {lat: parseFloat(rutaCliente[p].client_lat), lng: parseFloat(rutaCliente[p].client_long)},
+			        //     map: map,
+			        //     icon: markerIcon
 			            
-			        });
-			        flightPlanCoordinates.push(new google.maps.LatLng(parseFloat(rutaCliente[p].client_lat),parseFloat(rutaCliente[p].client_long)));
+			        // });
+			        // flightPlanCoordinates.push(new google.maps.LatLng(parseFloat(rutaCliente[p].client_lat),parseFloat(rutaCliente[p].client_long)));
       
 			 
-		       }
+		       //}
 		       
-		    var flightPath = new google.maps.Polyline({
-		    path: flightPlanCoordinates,
-		    strokeColor: "#FF0000",
-		    strokeOpacity: 1.0,
-		    strokeWeight: 2
-		  });
+		  //  var flightPath = new google.maps.Polyline({
+		  //  path: flightPlanCoordinates,
+		  //  strokeColor: "#FF0000",
+		  //  strokeOpacity: 1.0,
+		  //  strokeWeight: 2
+		  //});
 		
-		  flightPath.setMap(map);
+		  //flightPath.setMap(map);
 		  
 		       // Esta función calcula la ruta con el API de Google Maps  
 			    
 		       //cargar porcentaje de relevados
-		           var $catProd = productos.length;
+		           //var $catProd = productos.length;
 				   var $relHoy = relevadoosHoy[0].cantidad;
 				   var $bar = $('.progress-bar');
-				   $bar.width($relHoy / $catProd * 1000 / route.length);
-				   console.log("relevados hoy " + $relHoy + "cantidad de productos " + $catProd + "cantidad de clientes" + route.length);
-				   $bar.text( Math.round($relHoy / $catProd * 100 / route.length) + "%");
+				   $bar.width($relHoy  * 1000 / route.length);
+				   console.log("relevados hoy " + $relHoy  + "cantidad de clientes" + route.length);
+				   $bar.text( Math.round($relHoy * 100 / route.length) + "%");
 	    		});
 		    });
 		    
@@ -431,8 +517,11 @@
 
 	
 	</script>
-	<script async defer
-	  src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap">
-	</script>
+	
+	
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places,drawing,geometry,directions"></script>
+	<!--<script async defer-->
+	<!--  src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap">-->
+	<!--</script>-->
 
 </html>

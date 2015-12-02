@@ -90,13 +90,21 @@ $this->params['breadcrumbs'][] = $this->title;
                  var id_selec_relevador = <?php echo $tot_usu[0]['user_id'] ?>; 
                  //console.log(id_selec_relevador);
                  var relevador = buscarRelevador(id_selec_relevador);
-                 //console.log(relevador[0]);console.log(relevador[1]);
-                var realizado = (relevador[0]['COUNT(client_id)'] * 100) / relevador[1]['COUNT(client_id)'];
+                 
+                 console.log(relevador[0]);console.log(relevador[1]);
+                var realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['COUNT(client_id)'];
+                
+                console.log("0: " + relevador[0]['COUNT(client_id)'] );
+                console.log("1: " + relevador[1]['COUNT(client_id)']);
+                
                 var pendiente = 100 - realizado;
+                
+                console.log("pendiente: " + pendiente);
+                console.log("realizado: " + realizado);
                 
            function mostrarResultadosRel(idrelevador){
                 relevador = buscarRelevador(idrelevador);
-                realizado = (relevador[0]['COUNT(client_id)'] * 100) / relevador[1]['COUNT(client_id)'];
+                realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['COUNT(client_id)'];
                 pendiente = 100 - realizado;
                 
                 drawChart()

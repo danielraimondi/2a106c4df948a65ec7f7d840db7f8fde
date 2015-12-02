@@ -3,6 +3,7 @@
 namespace api\modules\v1\controllers;
 
 use yii\rest\ActiveController;
+use Yii;
 
 
 class SurveyController extends ActiveController
@@ -12,25 +13,23 @@ class SurveyController extends ActiveController
 	
 	public function actionCumplidas_hoy(){
 	
-    	 $rutasCumplidas = (new \yii\db\Query())
-          ->select(['COUNT(*) AS cantidad'])
-          ->from('survey')
-          ->where('survey_date = curdate() and user_id = 1')
-          ->all();
+    // 	 $rutasCumplidas = (new \yii\db\Query())
+    //       ->select(['COUNT(*) AS cantidad'])
+    //       ->from('survey')
+    //       ->where('survey_date = curdate() and user_id = 15')
+    //       ->all();
            
+        
+         $rutasCumplidas = Yii::$app->db->createCommand('SELECT count(distinct client_id) as cantidad 
+                                                        FROM survey 
+                                                        where survey_date = curdate() and user_id = 15')->queryAll();
+        
         return $rutasCumplidas;
-    
-    // $tot_cli_ya_visitaron = (new \yii\db\Query())
-    //     ->select('user_id, COUNT(client_id)')
-    //     ->from('survey ')
-    //     ->groupBy('user_id')
-    //     ->all();
-    
-    // return $tot_cli_ya_visitaron;
-    
     
         
 	}
+	
+	
 	
 	
 	

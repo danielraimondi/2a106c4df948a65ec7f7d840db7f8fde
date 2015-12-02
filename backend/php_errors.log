@@ -13835,3 +13835,213 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1448727856.551000118255615234375,
     'REQUEST_TIME' => 1448727856,
 ]
+[30-Nov-2015 15:03:24 UTC] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php on line 80
+[30-Nov-2015 15:03:24 UTC] PHP Stack trace:
+[30-Nov-2015 15:03:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[30-Nov-2015 15:03:24 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[30-Nov-2015 15:03:24 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 15:03:24 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 15:03:24 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 15:03:24 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 15:03:24 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:03:24 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:04:18 UTC] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php on line 81
+[30-Nov-2015 15:04:18 UTC] PHP Stack trace:
+[30-Nov-2015 15:04:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[30-Nov-2015 15:04:18 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[30-Nov-2015 15:04:18 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 15:04:18 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 15:04:18 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 15:04:18 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 15:04:18 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:04:18 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:04:24 UTC] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php on line 81
+[30-Nov-2015 15:04:24 UTC] PHP Stack trace:
+[30-Nov-2015 15:04:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[30-Nov-2015 15:04:24 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[30-Nov-2015 15:04:24 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 15:04:24 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 15:04:24 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 15:04:24 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 15:04:24 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:04:24 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:06:50 UTC] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php on line 82
+[30-Nov-2015 15:06:50 UTC] PHP Stack trace:
+[30-Nov-2015 15:06:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[30-Nov-2015 15:06:50 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[30-Nov-2015 15:06:50 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 15:06:50 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 15:06:50 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 15:06:50 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 15:06:50 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:06:50 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:11:27 UTC] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php on line 88
+[30-Nov-2015 15:11:27 UTC] PHP Stack trace:
+[30-Nov-2015 15:11:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[30-Nov-2015 15:11:27 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[30-Nov-2015 15:11:27 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 15:11:27 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 15:11:27 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 15:11:27 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 15:11:27 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:11:27 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:43:00 UTC] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php on line 82
+[30-Nov-2015 15:43:00 UTC] PHP Stack trace:
+[30-Nov-2015 15:43:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[30-Nov-2015 15:43:00 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[30-Nov-2015 15:43:00 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 15:43:00 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 15:43:00 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 15:43:00 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 15:43:00 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:43:00 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:44:23 UTC] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/ubuntu/workspace/relevando/backend/controllers/ChartsController.php on line 82
+[30-Nov-2015 15:44:23 UTC] PHP Stack trace:
+[30-Nov-2015 15:44:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/backend/web/index.php:0
+[30-Nov-2015 15:44:23 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/backend/web/index.php:19
+[30-Nov-2015 15:44:23 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 15:44:23 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 15:44:23 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 15:44:23 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 15:44:23 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 15:44:23 UTC] PHP   8. backend\controllers\ChartsController->actionIndex() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 14:45:32 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: autoroute/prueba.php' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('prueba.php', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('autoroute/prueb...', Array)
+#2 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'optimizelyEndUserId=oeu1439992210038r0.8551462469622493; ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; optimizelySegments=%7B%22593260949%22%3A%22false%22%2C%22596500441%22%3A%22referral%22%2C%22596500442%22%3A%22gc%22%7D; optimizelyBuckets=%7B%7D; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsIm9wdE91dCI6ZmFsc2V9; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=bc2e38ffcc8db19c3fc363cc6c53579a92c336697a56f010c5ee868386c16ca3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FxU7a3sSSDbDhfS2SYWh-KYhU6z5_FaC%22%3B%7D; PHPSESSID=ph6dta6qmvdr8hgvmsh4jojed2; XDEBUG_SESSION=cloud9ide; _identity=001b9737cc0c499b6bec7e42bb0aef0830f49450a567d00725ad16f152aa287da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22tga7nOXS_7Q7fqPS9G3tuz7hoKChZ6yu%22%2C1209600%5D%22%3B%7D',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '190.0.137.69',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.0.46',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.49',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '49069',
+    'REDIRECT_URL' => '/relevando/backend/web/autoroute/prueba.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/autoroute/prueba.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1448981132.2320001125335693359375,
+    'REQUEST_TIME' => 1448981132,
+]
+[01-Dec-2015 16:33:01 UTC] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php(149): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#8 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#9 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: autoroute/prueba.php' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('prueba.php', Array)
+#1 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('autoroute/prueb...', Array)
+#2 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/ubuntu/workspace/relevando/backend/web/index.php(19): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'REDIRECT_STATUS' => '200',
+    'HTTP_HOST' => 'test-danielraimondi.c9.io',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8',
+    'HTTP_COOKIE' => 'optimizelyEndUserId=oeu1439992210038r0.8551462469622493; ajs_anonymous_id=%22da96fbb6-8f36-4467-b149-91add30312a8%22; __cfduid=d98cde3f80d7e3776e551f3e605e004661442427152; optimizelySegments=%7B%22593260949%22%3A%22false%22%2C%22596500441%22%3A%22referral%22%2C%22596500442%22%3A%22gc%22%7D; optimizelyBuckets=%7B%7D; amplitude_idc9.io=eyJkZXZpY2VJZCI6IjM1NWZhOThhLTRkZTUtNGI5Ni05OWUzLWE5MTM4Zjg1NjIyYSIsInVzZXJJZCI6Ijc3MzY1MSIsIm9wdE91dCI6ZmFsc2V9; c9.live.proxy=ao3twkQ6eRvU1rVdiZEJCHJbAbCPSTmts0fN%2B9tZToc.wHAmQGs%2FGqn6xVpJ7IAZkj1Okr4O%2F%2FWDohI5Jxr2sME; _td=c9e4c47b-18fb-4b3c-ce6f-7bdcabe50cc0; ajs_group_id=null; ajs_user_id=773651; mp_b3c9c8a69380fc42c4c8bcf3755f4878_mixpanel=%7B%22distinct_id%22%3A%20773651%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com.uy%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com.uy%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpap%22%3A%20%5B%5D%2C%22mp_name_tag%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22uid%22%3A%20773651%2C%22email%22%3A%20%22%22%2C%22active%22%3A%20true%2C%22alpha%22%3A%20false%2C%22beta%22%3A%20false%2C%22c9version%22%3A%20%22v2%22%2C%22no_newsletter%22%3A%20false%2C%22pricingPlan%22%3A%20%22Free%22%2C%22region%22%3A%20%22usw%22%2C%22id%22%3A%20773651%2C%22%24created%22%3A%20%222015-08-19T13%3A51%3A34.969Z%22%2C%22%24first_name%22%3A%20%22danielraimondi%22%2C%22%24last_name%22%3A%20%22%22%2C%22%24name%22%3A%20%22danielraimondi%22%2C%22%24username%22%3A%20%22danielraimondi%22%2C%22Experiment%3A%20EID_15_Swap_Space%22%3A%20%22Disabled%22%2C%22subscription_on_signup%22%3A%20%22%22%2C%22%24email%22%3A%20%22daniel.raimondi%40gmail.com%22%2C%22lastWorkspaceTypeUsed%22%3A%20%22php%22%7D; _csrf=bc2e38ffcc8db19c3fc363cc6c53579a92c336697a56f010c5ee868386c16ca3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FxU7a3sSSDbDhfS2SYWh-KYhU6z5_FaC%22%3B%7D; PHPSESSID=ph6dta6qmvdr8hgvmsh4jojed2; _identity=001b9737cc0c499b6bec7e42bb0aef0830f49450a567d00725ad16f152aa287da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22tga7nOXS_7Q7fqPS9G3tuz7hoKChZ6yu%22%2C1209600%5D%22%3B%7D',
+    'HTTP_ORIGIN' => 'http://evil.com/',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_REGION' => 'usw',
+    'HTTP_X_FORWARDED_FOR' => '201.221.12.163',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/v0.10.35/bin:/usr/local/rvm/gems/ruby-2.2.1/bin:/usr/local/rvm/gems/ruby-2.2.1@global/bin:/usr/local/rvm/rubies/ruby-2.2.1/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'LD_LIBRARY_PATH' => '~/.c9/local/lib',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test-danielraimondi.c9.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'test-danielraimondi.c9.io',
+    'SERVER_ADDR' => '172.17.0.46',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.40',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/relevando/backend/web/index.php',
+    'REMOTE_PORT' => '40608',
+    'REDIRECT_URL' => '/relevando/backend/web/autoroute/prueba.php',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/relevando/backend/web/autoroute/prueba.php',
+    'SCRIPT_NAME' => '/relevando/backend/web/index.php',
+    'PHP_SELF' => '/relevando/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1448987580.927999973297119140625,
+    'REQUEST_TIME' => 1448987580,
+]

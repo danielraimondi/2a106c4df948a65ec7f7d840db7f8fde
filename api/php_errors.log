@@ -130,3 +130,343 @@
 [25-Nov-2015 16:12:16 UTC] PHP   8. class_exists() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
 [25-Nov-2015 16:12:16 UTC] PHP   9. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
 [25-Nov-2015 16:12:16 UTC] PHP  10. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[30-Nov-2015 16:38:22 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 15
+[30-Nov-2015 16:38:22 UTC] PHP Stack trace:
+[30-Nov-2015 16:38:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 16:38:22 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 16:38:22 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 16:38:22 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 16:38:22 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 16:38:22 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 16:38:22 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 16:38:22 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 16:38:35 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 15
+[30-Nov-2015 16:38:35 UTC] PHP Stack trace:
+[30-Nov-2015 16:38:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 16:38:35 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 16:38:35 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 16:38:35 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 16:38:35 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 16:38:35 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 16:38:35 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 16:38:35 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 16:39:06 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 15
+[30-Nov-2015 16:39:06 UTC] PHP Stack trace:
+[30-Nov-2015 16:39:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 16:39:06 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 16:39:06 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 16:39:06 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 16:39:06 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 16:39:06 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 16:39:06 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 16:39:06 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 16:42:07 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 16:42:07 UTC] PHP Stack trace:
+[30-Nov-2015 16:42:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 16:42:07 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 16:42:07 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 16:42:07 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 16:42:07 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 16:42:07 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 16:42:07 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 16:42:07 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:08:48 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:08:48 UTC] PHP Stack trace:
+[30-Nov-2015 17:08:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:08:48 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:08:48 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:08:48 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:08:48 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:08:48 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:08:48 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:08:48 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:08:55 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:08:55 UTC] PHP Stack trace:
+[30-Nov-2015 17:08:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:08:55 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:08:55 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:08:55 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:08:55 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:08:55 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:08:55 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:08:55 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:29:47 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:29:47 UTC] PHP Stack trace:
+[30-Nov-2015 17:29:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:29:47 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:29:47 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:29:47 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:29:47 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:29:47 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:29:47 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:29:47 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:30:06 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:30:06 UTC] PHP Stack trace:
+[30-Nov-2015 17:30:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:30:06 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:30:06 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:30:06 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:30:06 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:30:06 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:30:06 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:30:06 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:44:45 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:44:45 UTC] PHP Stack trace:
+[30-Nov-2015 17:44:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:44:45 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:44:45 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:44:45 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:44:45 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:44:45 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:44:45 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:44:45 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:45:24 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:45:24 UTC] PHP Stack trace:
+[30-Nov-2015 17:45:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:45:24 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:45:24 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:45:24 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:45:24 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:45:24 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:45:24 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:45:24 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:48:00 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:48:00 UTC] PHP Stack trace:
+[30-Nov-2015 17:48:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:48:00 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:48:00 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:48:00 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:48:00 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:48:00 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:48:00 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:48:00 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:50:40 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:50:40 UTC] PHP Stack trace:
+[30-Nov-2015 17:50:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:50:40 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:50:40 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:50:40 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:50:40 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:50:40 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:50:40 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:50:40 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:52:01 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:52:01 UTC] PHP Stack trace:
+[30-Nov-2015 17:52:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:52:01 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:52:01 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:52:01 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:52:01 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:52:01 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:52:01 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:52:01 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:52:03 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/SurveyController.php on line 22
+[30-Nov-2015 17:52:03 UTC] PHP Stack trace:
+[30-Nov-2015 17:52:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 17:52:03 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 17:52:03 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 17:52:03 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 17:52:03 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 17:52:03 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 17:52:03 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 17:52:03 UTC] PHP   8. api\modules\v1\controllers\SurveyController->actionCumplidas_hoy() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 23:56:15 UTC] PHP Fatal error:  Class 'api\modules\v1\controllers\Yii' not found in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 26
+[30-Nov-2015 23:56:15 UTC] PHP Stack trace:
+[30-Nov-2015 23:56:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 23:56:15 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 23:56:15 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 23:56:15 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 23:56:15 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 23:56:15 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 23:56:15 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 23:56:15 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 23:56:40 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 156
+[30-Nov-2015 23:56:40 UTC] PHP Stack trace:
+[30-Nov-2015 23:56:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 23:56:40 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 23:56:40 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 23:56:40 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 23:56:40 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 23:56:40 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 23:56:40 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 23:56:40 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 23:56:40 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:32
+[30-Nov-2015 23:56:40 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[30-Nov-2015 23:56:40 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[30-Nov-2015 23:56:40 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[30-Nov-2015 23:56:40 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:144
+[30-Nov-2015 23:56:40 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[30-Nov-2015 23:59:48 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 156
+[30-Nov-2015 23:59:48 UTC] PHP Stack trace:
+[30-Nov-2015 23:59:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[30-Nov-2015 23:59:48 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[30-Nov-2015 23:59:48 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[30-Nov-2015 23:59:48 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[30-Nov-2015 23:59:48 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[30-Nov-2015 23:59:48 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[30-Nov-2015 23:59:48 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 23:59:48 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[30-Nov-2015 23:59:48 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:33
+[30-Nov-2015 23:59:48 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[30-Nov-2015 23:59:48 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[30-Nov-2015 23:59:48 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[30-Nov-2015 23:59:48 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:144
+[30-Nov-2015 23:59:48 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:03:03 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 156
+[01-Dec-2015 00:03:03 UTC] PHP Stack trace:
+[01-Dec-2015 00:03:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:03:03 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:03:03 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:03:03 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:03:03 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:03:03 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:03:03 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:03:03 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:03:03 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:37
+[01-Dec-2015 00:03:03 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[01-Dec-2015 00:03:03 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[01-Dec-2015 00:03:03 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[01-Dec-2015 00:03:03 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:144
+[01-Dec-2015 00:03:03 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:07:09 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 45
+[01-Dec-2015 00:07:09 UTC] PHP Stack trace:
+[01-Dec-2015 00:07:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:07:09 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:07:09 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:07:09 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:07:09 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:449
+[01-Dec-2015 00:07:09 UTC] PHP   6. yii\base\Module->createController() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:513
+[01-Dec-2015 00:07:09 UTC] PHP   7. yii\base\Module->createControllerByID() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:521
+[01-Dec-2015 00:07:09 UTC] PHP   8. class_exists() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[01-Dec-2015 00:07:09 UTC] PHP   9. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[01-Dec-2015 00:07:09 UTC] PHP  10. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[01-Dec-2015 00:07:31 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 156
+[01-Dec-2015 00:07:31 UTC] PHP Stack trace:
+[01-Dec-2015 00:07:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:07:31 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:07:31 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:07:31 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:07:31 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:07:31 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:07:31 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:07:31 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:07:31 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:37
+[01-Dec-2015 00:07:31 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[01-Dec-2015 00:07:31 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[01-Dec-2015 00:07:31 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[01-Dec-2015 00:07:31 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:144
+[01-Dec-2015 00:07:31 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:09:24 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 35
+[01-Dec-2015 00:09:24 UTC] PHP Stack trace:
+[01-Dec-2015 00:09:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:09:24 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:09:24 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:09:24 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:09:24 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:449
+[01-Dec-2015 00:09:24 UTC] PHP   6. yii\base\Module->createController() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:513
+[01-Dec-2015 00:09:24 UTC] PHP   7. yii\base\Module->createControllerByID() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:521
+[01-Dec-2015 00:09:24 UTC] PHP   8. class_exists() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[01-Dec-2015 00:09:24 UTC] PHP   9. spl_autoload_call() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[01-Dec-2015 00:09:24 UTC] PHP  10. yii\BaseYii::autoload() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:563
+[01-Dec-2015 00:12:31 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 156
+[01-Dec-2015 00:12:31 UTC] PHP Stack trace:
+[01-Dec-2015 00:12:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:12:31 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:12:31 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:12:31 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:12:31 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:12:31 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:12:31 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:12:31 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:12:31 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:38
+[01-Dec-2015 00:12:31 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[01-Dec-2015 00:12:31 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[01-Dec-2015 00:12:31 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[01-Dec-2015 00:12:31 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:144
+[01-Dec-2015 00:12:31 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:15:07 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 156
+[01-Dec-2015 00:15:07 UTC] PHP Stack trace:
+[01-Dec-2015 00:15:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:15:07 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:15:07 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:15:07 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:15:07 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:15:07 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:15:07 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:15:07 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:15:07 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:39
+[01-Dec-2015 00:15:07 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[01-Dec-2015 00:15:07 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[01-Dec-2015 00:15:07 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[01-Dec-2015 00:15:07 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:144
+[01-Dec-2015 00:15:07 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:16:23 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 157
+[01-Dec-2015 00:16:23 UTC] PHP Stack trace:
+[01-Dec-2015 00:16:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:16:23 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:16:23 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:16:23 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:16:23 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:16:23 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:16:23 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:16:23 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:16:23 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:39
+[01-Dec-2015 00:16:23 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[01-Dec-2015 00:16:23 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[01-Dec-2015 00:16:23 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[01-Dec-2015 00:16:23 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:145
+[01-Dec-2015 00:16:23 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:21:13 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 157
+[01-Dec-2015 00:21:13 UTC] PHP Stack trace:
+[01-Dec-2015 00:21:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:21:13 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:21:13 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:21:13 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:21:13 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:21:13 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:21:13 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:21:13 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:21:13 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:41
+[01-Dec-2015 00:21:13 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[01-Dec-2015 00:21:13 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[01-Dec-2015 00:21:13 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[01-Dec-2015 00:21:13 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:145
+[01-Dec-2015 00:21:13 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:24:17 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 157
+[01-Dec-2015 00:24:17 UTC] PHP Stack trace:
+[01-Dec-2015 00:24:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:24:17 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:24:17 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:24:17 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:24:17 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:24:17 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:24:17 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:24:17 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:24:17 UTC] PHP   9. dektrium\user\models\LoginForm->login() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:58
+[01-Dec-2015 00:24:17 UTC] PHP  10. yii\base\Model->validate() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:105
+[01-Dec-2015 00:24:17 UTC] PHP  11. dektrium\user\models\LoginForm->beforeValidate() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Model.php:337
+[01-Dec-2015 00:24:17 UTC] PHP  12. dektrium\user\Finder->findUserByUsernameOrEmail() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/models/LoginForm.php:122
+[01-Dec-2015 00:24:17 UTC] PHP  13. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:145
+[01-Dec-2015 00:24:17 UTC] PHP  14. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:25:36 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php on line 157
+[01-Dec-2015 00:25:36 UTC] PHP Stack trace:
+[01-Dec-2015 00:25:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:25:36 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:25:36 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:25:36 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:25:36 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:25:36 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:25:36 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:25:36 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:25:36 UTC] PHP   9. dektrium\user\Finder->findUserByUsername() /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php:52
+[01-Dec-2015 00:25:36 UTC] PHP  10. dektrium\user\Finder->findUser() /home/ubuntu/workspace/relevando/vendor/dektrium/yii2-user/Finder.php:116
+[01-Dec-2015 00:30:35 UTC] PHP Fatal error:  Call to undefined method api\modules\v1\models\User::model() in /home/ubuntu/workspace/relevando/api/modules/v1/controllers/UserController.php on line 21
+[01-Dec-2015 00:30:35 UTC] PHP Stack trace:
+[01-Dec-2015 00:30:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/relevando/api/web/index.php:0
+[01-Dec-2015 00:30:35 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/relevando/api/web/index.php:17
+[01-Dec-2015 00:30:35 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Application.php:375
+[01-Dec-2015 00:30:35 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/web/Application.php:84
+[01-Dec-2015 00:30:35 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Module.php:455
+[01-Dec-2015 00:30:35 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/Controller.php:151
+[01-Dec-2015 00:30:35 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
+[01-Dec-2015 00:30:35 UTC] PHP   8. api\modules\v1\controllers\UserController->actionLogin() /home/ubuntu/workspace/relevando/vendor/yiisoft/yii2/base/InlineAction.php:55
