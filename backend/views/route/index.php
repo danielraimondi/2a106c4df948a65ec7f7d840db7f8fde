@@ -27,13 +27,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],
     
-                'route_id',
+                
                 'route_date',
                 //'user_id',
-                 [
+                [
                         'attribute'=>'user_id', 
                         'value'=>'relevator.username',
-                    ],
+                ],
+                
+                [
+                        'attribute'=>'client_id', 
+                        'value'=>'client.client_name',
+                ],
     
                 ['class' => 'yii\grid\ActionColumn'],
             ],

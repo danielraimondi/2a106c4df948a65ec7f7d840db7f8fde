@@ -7,9 +7,9 @@ use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'Update {modelClass}: ', [
     'modelClass' => 'Route',
-]) . ' ' . $model->route_id;
+]) . ' ' . $model->route_date;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Routes'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->route_id, 'url' => ['view', 'id' => $model->route_id]];
+$this->params['breadcrumbs'][] = ['label' => $model->route_date, 'url' => ['view', 'route_date' => $model->route_date, 'client_id' => $model->client_id, 'user_id' => $model->user_id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <div class="route-update">

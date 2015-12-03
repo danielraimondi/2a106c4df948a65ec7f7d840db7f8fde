@@ -106,7 +106,7 @@ $id = Yii::$app->user->identity->id;
                 
                 //Realizó algun relevo?
                 if (relevador[0] != undefined){ //SI TIENE clientes para ser asignados (clientes_relevadores no es vacio)
-                    realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['COUNT(client_id)'];
+                    realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['cantidad'];
                 }else{
                     realizado=0;
                 }

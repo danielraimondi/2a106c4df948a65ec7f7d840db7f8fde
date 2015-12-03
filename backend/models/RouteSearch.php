@@ -18,8 +18,9 @@ class RouteSearch extends Route
     public function rules()
     {
         return [
-            [['route_id'], 'integer'],
-            [['route_date', 'user_id'], 'safe'],
+            
+            [['route_date', 'user_id', 'client_id'], 'safe'],
+            
         ];
     }
 
@@ -56,13 +57,15 @@ class RouteSearch extends Route
         }
 
         $query->andFilterWhere([
-            'route_id' => $this->route_id,
+            
             'route_date' => $this->route_date,
             //'user_id' => $this->user_id,
         ]);
         
         $query->joinWith('relevator');
+        $query->joinWith('client');
         $query->andFilterWhere(['like', 'user.username', $this->user_id]);
+        $query->andFilterWhere(['like', 'client.client_name', $this->client_id]);
 
         return $dataProvider;
     }

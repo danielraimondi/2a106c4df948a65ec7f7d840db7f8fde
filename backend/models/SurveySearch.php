@@ -18,8 +18,8 @@ class SurveySearch extends Survey
     public function rules()
     {
         return [
-            [['survey_date'], 'safe'],
-            [['client_id', 'user_id', 'prod_id', 'stock', 'order'], 'integer'],
+            [['survey_date','client_id', 'user_id', 'prod_id'], 'safe'],
+            [['stock', 'order'], 'integer'],
         ];
     }
 
@@ -54,15 +54,23 @@ class SurveySearch extends Survey
             // $query->where('0=1');
             return $dataProvider;
         }
+        
+        $query->joinWith('user');
+        $query->joinWith('prod');
+        $query->joinWith('client');
 
         $query->andFilterWhere([
             'survey_date' => $this->survey_date,
-            'client_id' => $this->client_id,
-            'user_id' => $this->user_id,
-            'prod_id' => $this->prod_id,
+            // 'client_id' => $this->client_id,
+            // 'user_id' => $this->user_id,
+            // 'prod_id' => $this->prod_id,
             'stock' => $this->stock,
             'order' => $this->order,
         ]);
+        
+        $query->andFilterWhere(['like', 'user.username', $this->user_id]);
+        $query->andFilterWhere(['like', 'client.client_name', $this->client_id]);
+        $query->andFilterWhere(['like', 'product.prod_name', $this->prod_id]);
 
         return $dataProvider;
     }

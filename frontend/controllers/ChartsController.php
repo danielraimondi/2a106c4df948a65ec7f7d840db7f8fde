@@ -13,12 +13,15 @@ class ChartsController extends \yii\web\Controller
         
       
         //TOTAL clientes que deberían visitar los relevadores
-        $tot_cli_para_visitar = (new \yii\db\Query())
-        ->select('user_id, COUNT(client_id)')
-        ->from('route r, routeclient rc')
-        ->where('r.route_id = rc.route_id') 
-        ->groupBy('user_id')
-        ->all();
+        // $tot_cli_para_visitar = (new \yii\db\Query())
+        // ->select('user_id, COUNT(client_id)')
+        // ->from('route r, routeclient rc')
+        // ->where('r.route_id = rc.route_id') 
+        // ->groupBy('user_id')
+        // ->all();
+        
+        $tot_cli_para_visitar = Yii::$app->db->createCommand('SELECT user_id, count(distinct client_id, route_date) as cantidad 
+                                                              FROM route group by user_id')->queryAll();
         
         //TOTAL clientes que VISITARON los relevadores
         //  $tot_cli_ya_visitaron = (new \yii\db\Query())

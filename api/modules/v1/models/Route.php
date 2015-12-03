@@ -30,9 +30,9 @@ class Route extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['route_date', 'user_id'], 'required'],
+            [['route_date', 'user_id', 'client_id'], 'required'],
             [['route_date'], 'safe'],
-            [['user_id'], 'integer']
+            [['user_id', 'client_id'], 'integer']
         ];
     }
 
@@ -42,25 +42,27 @@ class Route extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'route_id' => Yii::t('app', 'Route ID'),
+            
             'route_date' => Yii::t('app', 'Route Date'),
             'user_id' => Yii::t('app', 'User ID'),
+            'client_id' => Yii::t('app', 'Client ID'),
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getRouteclients()
-    {
-        return $this->hasMany(Route-client::className(), ['route_id' => 'route_id']);
-    }
+    // public function getRouteclients()
+    // {
+    //     return $this->hasMany(Route-client::className(), ['route_id' => 'route_id']);
+    // }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getClients()
+    public function getClient()
     {
-        return $this->hasMany(Client::className(), ['client_id' => 'client_id'])->viaTable('route-client', ['route_id' => 'route_id']);
+        //return $this->hasMany(Client::className(), ['client_id' => 'client_id'])->viaTable('route-client', ['route_id' => 'route_id']);
+        return $this->hasOne(Client::className(), ['client_id' => 'client_id']);
     }
 }

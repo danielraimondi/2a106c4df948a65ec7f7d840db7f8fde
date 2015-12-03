@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'route_id') ?>
+    <?= $form->field($model, 'client_id') ?>
 
     <?= $form->field($model, 'route_date') ?>
 

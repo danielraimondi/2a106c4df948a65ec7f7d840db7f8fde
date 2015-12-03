@@ -26,9 +26,22 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'survey_date',
-            'client_id',
-            'user_id',
-            'prod_id',
+            
+            [
+                'attribute'=>'user_id', 
+                'value'=>'user.username',
+            ],
+            
+            [
+                'attribute'=>'client_id', 
+                'value'=>'client.client_name',
+            ],
+            
+            [
+                'attribute'=>'prod_id', 
+                'value'=>'prod.prod_name',
+            ],
+           
             'stock',
             'order',
 

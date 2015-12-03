@@ -92,10 +92,10 @@ $this->params['breadcrumbs'][] = $this->title;
                  var relevador = buscarRelevador(id_selec_relevador);
                  
                  console.log(relevador[0]);console.log(relevador[1]);
-                var realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['COUNT(client_id)'];
+                var realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['cantidad'];
                 
-                console.log("0: " + relevador[0]['COUNT(client_id)'] );
-                console.log("1: " + relevador[1]['COUNT(client_id)']);
+                console.log("0: " + relevador[0]['cantidad'] );
+                console.log("1: " + relevador[1]['cantidad']);
                 
                 var pendiente = 100 - realizado;
                 
@@ -104,7 +104,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 
            function mostrarResultadosRel(idrelevador){
                 relevador = buscarRelevador(idrelevador);
-                realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['COUNT(client_id)'];
+                realizado = (relevador[0]['cantidad'] * 100) / relevador[1]['cantidad'];
                 pendiente = 100 - realizado;
                 
                 drawChart()

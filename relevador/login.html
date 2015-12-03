@@ -3,17 +3,24 @@
 <head>
     
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styleLogin.css">
 
 <script src="js/jquery-1.10.2.min.js"></script>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round">
+
+
 
 <script>
 
-$(document).ready(function() {
-    $("#form").on('submit', function(e) {
+function Loguear() {
+    console.log("entro funcion");
+   
                 
-        e.preventDefault();
+        //e.preventDefault();
         var user = document.getElementById("username").value;
         var pass = document.getElementById("password").value;
+        
+        console.log("Usuario " + user + "Clave " + pass);
         sessionStorage.clear();
        
     			
@@ -27,6 +34,7 @@ $(document).ready(function() {
                     }
                    
             	}).then(function(result) {
+            	    console.log("Resultado " + result);
             	        if (result){
             	            sessionStorage.setItem("id", result);
             	            window.location.replace("index.html");
@@ -34,12 +42,10 @@ $(document).ready(function() {
             	        else
             	            alert ("wrong username / password");
             	    });
-    });
-});
+   
+};
 
 </script>
-
-
     
 </head>
 
@@ -47,7 +53,7 @@ $(document).ready(function() {
     
 </body>
 
-<div class="container">
+<!--<div class="container">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
             <h1 class="text-center login-title">Sign in to Relevando.com</h1>
@@ -65,6 +71,33 @@ $(document).ready(function() {
             </div>
         </div>
     </div>
-</div>
+</div>-->
+    <div class="container">
+
+      <div id="login">
+
+        <h2><span class="fontawesome-lock"></span>Sign In</h2>
+
+       
+
+          <fieldset>
+
+            <p><label for="name">Nombre de Usuario</label></p>
+            <p><input type="email" id="username" placeholder="usaurio" required autofocus></p>
+
+            <p><label for="password">Password</label></p>
+            <p><input type="password" id="password" placeholder="password" required></p>
+
+            <p><button type="button" value="Entrar" onclick="Loguear()">Entrar</button></p>
+
+          </fieldset>
+
+       
+
+      </div> <!-- end login -->
+
+    </div>
+
+
 
 </body>

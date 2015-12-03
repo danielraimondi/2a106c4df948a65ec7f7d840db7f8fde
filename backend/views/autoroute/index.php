@@ -81,7 +81,9 @@ $this->params['breadcrumbs'][] = $this->title;
            //***TODOS los clientes PRESENTES EN LA RUTA OPTIMA  -<<<<<<<<<<-----<<<<<<<<<<<-----<<<<<<<<<<<<<<<
            ruta_encontrada = ruta_optima(rel[0]['user_lat'], rel[0]['user_lng'], RadioRelevador, clientes_relevadores); 
            
-           ruta_encontrada2 = ruta_optima_dibujada(rel[0]['user_lat'], rel[0]['user_lng'], RadioRelevador, clientes_relevadores); 
+        //   ruta_encontrada2 = ruta_optima_dibujada(rel[0]['user_lat'], rel[0]['user_lng'], RadioRelevador, clientes_relevadores); 
+           
+           
            
            //CARGAR LA TABLA
             document.getElementById("myTable").innerHTML = "";//limpia el contenido
@@ -108,6 +110,7 @@ $this->params['breadcrumbs'][] = $this->title;
            
         }
         
+      
         //MAPA
         function initMap() {
             var markers = [];
@@ -124,6 +127,9 @@ $this->params['breadcrumbs'][] = $this->title;
             });
             
             directionDisplay.setMap(map);
+         
+            
+            
             
             prev_infowindow = false;
             
@@ -175,12 +181,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 var infowindow = new google.maps.InfoWindow();
         
                  }//for
+
+                     
             }
         
                 
         //PATH
-        
         if (ruta_encontrada[0] != undefined){
+            
             var lineas = new google.maps.Polyline({
             path: ruta,
              map: map,
@@ -206,9 +214,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     
                 var content = 'ID: '+rel[0].id+'<br>Name: '+rel[0].username;     
             
-                var infowindow = new google.maps.InfoWindow();
+         var infowindow = new google.maps.InfoWindow();
+                
+        
             
-        }
+        }//initmap
         
          //BUSCA ruta más OPTIMA
         function ruta_optima_dibujada (latRelevador, LngRelevador, radio_relevador, tot_clientes){

@@ -46,10 +46,10 @@ class RouteController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($route_date, $user_id, $client_id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($route_date, $user_id, $client_id),
         ]);
     }
 
@@ -63,7 +63,7 @@ class RouteController extends Controller
         $model = new Route();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->route_id]);
+            return $this->redirect(['view', 'route_date' => $model->route_date, 'user_id' => $model->user_id, 'client_id' => $model->client_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -77,12 +77,12 @@ class RouteController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($route_date, $user_id, $client_id)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($route_date, $user_id, $client_id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->route_id]);
+            return $this->redirect(['view', 'route_date' => $model->route_date, 'user_id' => $model->user_id, 'client_id' => $model->client_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -96,9 +96,9 @@ class RouteController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($route_date, $user_id, $client_id)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($route_date, $user_id, $client_id )->delete();
 
         return $this->redirect(['index']);
     }
@@ -110,9 +110,9 @@ class RouteController extends Controller
      * @return Route the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($route_date, $user_id, $client_id)
     {
-        if (($model = Route::findOne($id)) !== null) {
+        if (($model = Route::findOne(['route_date' => $route_date, 'user_id' => $user_id, 'client_id' => $client_id])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

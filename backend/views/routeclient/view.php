@@ -29,7 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'route_id',
-            'client_id',
+            'route.route_date',
+            'route.relevator.username',
+            'client.client_name',
         ],
     ]) ?>
 
