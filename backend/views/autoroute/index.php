@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <html>
     <head>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap&libraries=places,drawing,geometry,directions"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&callback=initMap&libraries=places,drawing,geometry,directions"></script>
         <script type="text/javascript" >
         
         //Inicializo los valores
@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
         var rel = [];
         var map;
         var directionDisplay = new google.maps.DirectionsRenderer;
+        var directionsService = new google.maps.DirectionsService;
         
         
         //BUSCA el relevador seleccionado del dropdown 
@@ -80,11 +81,8 @@ $this->params['breadcrumbs'][] = $this->title;
            
            //***TODOS los clientes PRESENTES EN LA RUTA OPTIMA  -<<<<<<<<<<-----<<<<<<<<<<<-----<<<<<<<<<<<<<<<
            ruta_encontrada = ruta_optima(rel[0]['user_lat'], rel[0]['user_lng'], RadioRelevador, clientes_relevadores); 
-           
-        //   ruta_encontrada2 = ruta_optima_dibujada(rel[0]['user_lat'], rel[0]['user_lng'], RadioRelevador, clientes_relevadores); 
-           
-           
-           
+          
+      
            //CARGAR LA TABLA
             document.getElementById("myTable").innerHTML = "";//limpia el contenido
             var orden = 1;
@@ -128,9 +126,6 @@ $this->params['breadcrumbs'][] = $this->title;
             
             directionDisplay.setMap(map);
          
-            
-            
-            
             prev_infowindow = false;
             
             // MARKER RELEVADOR
@@ -185,7 +180,7 @@ $this->params['breadcrumbs'][] = $this->title;
                      
             }
         
-                
+       /*         
         //PATH
         if (ruta_encontrada[0] != undefined){
             
@@ -198,7 +193,7 @@ $this->params['breadcrumbs'][] = $this->title;
              clickable: false
             });
            
-        }
+        }*/
                 
         //CIRULOS DEL RADIO        
                 var cityCircle = new google.maps.Circle({
@@ -216,88 +211,50 @@ $this->params['breadcrumbs'][] = $this->title;
             
          var infowindow = new google.maps.InfoWindow();
                 
+                
+                
+                calculateAndDisplayRoute(directionsService, directionDisplay); //CARGO LAS DIRECCIONES
         
             
         }//initmap
         
-         //BUSCA ruta más OPTIMA
-        function ruta_optima_dibujada (latRelevador, LngRelevador, radio_relevador, tot_clientes){
-            var latInicial =latRelevador;
-            var lngInicial =LngRelevador;
+        
+        function calculateAndDisplayRoute(directionsService, directionsDisplay) {
             
-            var origen =new google.maps.LatLng(latInicial,lngInicial);
+              var waypts = [];
+              var checkboxArray = ruta_encontrada;  //CARGO los datos de la ruta encontrada
+              
+              for (var i = 0; i < (checkboxArray.length - 1); i++) {
+                    waypts.push({
+                    location: {lat: parseFloat(checkboxArray[i].client_lat), lng: parseFloat(checkboxArray[i].client_long)},
+                    stopover: true
+                  });
+              }
             
-            
-            var waypoints = [];
-           
-            distancia =  0;
-            var resultado = [];
-           
-            while ( (waypoints.length < 5) && (tot_clientes.length > 0) ) // Si no llegué a mi tope de 5 clientes O el total de clientes es vacio
-            {
-                //var dist_minima = radio_relevador*2;
-               
-                for (key in tot_clientes){
-                    
-                    //console.log("CHEQUEO EL CLIENTE : "+tot_clientes[key]);
-                    
+              directionsService.route({
                   
-                    var LatCliente = tot_clientes[key]['client_lat'] ;  
-                    var LngCliente = tot_clientes[key]['client_long'] ; 
+                origin: {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)}, //punto de ORIGEN
+                destination: {                      //punto de FINAL
+                    lat: parseFloat(ruta_encontrada[(ruta_encontrada.length - 1)].client_lat),   
+                    lng: parseFloat(ruta_encontrada[(ruta_encontrada.length - 1)].client_long)    },
+                
+                waypoints: waypts,
+                optimizeWaypoints: true,
+                travelMode: google.maps.TravelMode.DRIVING
+              }, 
+                function(response, status) {
                     
-                    var location =new google.maps.LatLng(LatCliente,LngCliente);
+                if (status === google.maps.DirectionsStatus.OK) {
                     
-                   
-                    // distancia = (google.maps.geometry.spherical.computeDistanceBetween(origen, waypoint) ) / 1000;
-                    // console.log ("distancia:"+distancia);
-                  
-                    // if( distancia < dist_minima  ){ 
-                    //     dist_minima = distancia; //Actualizo
-                    //     var puntero_unset = key;
-                        
-                       console.log("location: "+location);
-                        
-                        waypoints.push({
-                            location: location,
-                            stopover: true            
-                        });
-                    //}
-                    
-                }//for
-                
-                resultado.push(tot_clientes[puntero_unset]);//GUARDO Cliente en Resultado
-                
-                // latInicial = tot_clientes[puntero_unset]['client_lat']; //Actualizo el nuevo punto inicial (El cliente seleccionado)
-                // lngInicial = tot_clientes[puntero_unset]['client_long']; //Actualizo el nuevo punto inicial (El cliente seleccionado)
-                
-                tot_clientes.splice(puntero_unset, 1); //ELIMINO el cliente que me sirvió de tot_clientes
-                
-            }//while
-            
-            var service = new google.maps.DirectionsService();
-            
-            service.route({
-               origin: origen,
-               destination: origen,
-               waypoints: waypoints,
-               travelMode: google.maps.DirectionsTravelMode.WALKING,
-               optimizeWaypoints: true
+                  directionsDisplay.setDirections(response);
                
-            }, function(result,status){
-                 directionDisplay.setDirections(result);
-                  console.log(status);
-                  console.log(result);
-            });
-            
-            console.log("****pasé el WHILE******");
-            console.log("TOTAL FINAL: "+tot_clientes.length);
-            
-           
-            return result;
-            
-        }//ruta_optima
-
-            
+                } else {
+                  window.alert('Directions request failed due to ' + status);
+                }
+              });
+        }
+        
+        
        
         //BUSCA ruta más OPTIMA
         function ruta_optima (latRelevador, LngRelevador, radio_relevador, tot_clientes){
@@ -357,7 +314,7 @@ $this->params['breadcrumbs'][] = $this->title;
      
         
    </script>
-      <!-- <script async defer  src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>-->
+     
     </head>
 
     <body>

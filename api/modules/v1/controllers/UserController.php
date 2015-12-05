@@ -20,15 +20,17 @@ class UserController extends ActiveController
         
         //$user = User::find(['username'=>$_POST['username']])->one();
         
+        
+        
         $user = User::find()->where(['username' => ['username'=>$_POST['username']]])->one();
 
-        $loginOk = Password::validate($_POST['password'], $user->password_hash);
+        if ($user){
+            $loginOk = Password::validate($_POST['password'], $user->password_hash);
+            if($loginOk)
+                return $user->id;
+        }
         
+        return false;
         
-        if($loginOk)
-            return $user->id;
-        else
-            return false;
-            
     }	
 }

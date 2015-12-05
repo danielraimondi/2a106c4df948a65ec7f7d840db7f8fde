@@ -39,7 +39,6 @@ $this->title = 'Backend';
             <dd>- En <kbd>Maps</kbd> verás facilmente la ubicación de los clientes, relevadores y radios de cobertura.</dd>
             <br><dt class="bg-info">Rutas</dt>
             <dd>- En <kbd>Routes</kbd> administraras las rutas con el Relevador correspondiente</dd>
-            <dd>- En <kbd>Routes-Clients</kbd> administraras las rutas con los clientes</dd>
             <dd>- En <kbd>Auto-Routes-Clients</kbd> administraras las rutas con los clientes de forma automática.</dd>
             
         <dl></center>   

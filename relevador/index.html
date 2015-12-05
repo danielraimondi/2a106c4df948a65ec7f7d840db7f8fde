@@ -50,6 +50,7 @@
 	    
 	    function muestraMensaje() {
 		
+		
 		var fechaCompleta = new Date();
 		var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
 		var	idCliente = document.getElementById('selectCliente').value;
@@ -73,8 +74,9 @@
             	sleep(200);
 
 		}; // for
-		alert("Pedido enviado Correctamente");
-
+		
+				alert("Pedido enviado Correctamente");
+		
 		}
 	</script>
 			     	
@@ -178,7 +180,7 @@
 							<table id='tablaPedidos' class='table' cellspacing='0' width='50%' align='center'></table>
 						</form>
 					</div>
-		   	<button type="button" id="EnviarPedido" onclick="muestraMensaje()">Envia Pedido</button>
+		   	<button type="button" id="EnviarPedido" onclick="muestraMensaje()" class="loadButton">Envia Pedido</button>
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
 	
