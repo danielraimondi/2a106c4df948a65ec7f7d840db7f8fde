@@ -119,8 +119,10 @@ $this->params['breadcrumbs'][] = $this->title;
             var center = {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)}; //CENTRO MAPA EN EL RELEVADOR
           
             map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
+            zoom: 10,
             center: center,
+            strokeOpacity: 0,
+            strokeColor: "#7d7d7d",
             mapTypeId: google.maps.MapTypeId.TERRAIN
             });
             
@@ -129,7 +131,6 @@ $this->params['breadcrumbs'][] = $this->title;
             prev_infowindow = false;
             
             // MARKER RELEVADOR
-          
                 var markerIcon = {
                         url: "../images/streetview.ico",
                         size: new google.maps.Size(32, 32),
@@ -179,21 +180,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                      
             }
-        
-       /*         
-        //PATH
-        if (ruta_encontrada[0] != undefined){
-            
-            var lineas = new google.maps.Polyline({
-            path: ruta,
-             map: map,
-             strokeColor: '#0066CC',
-             strokeWeight: 3,
-             strokeOpacity: 0.6,
-             clickable: false
-            });
-           
-        }*/
+   
                 
         //CIRULOS DEL RADIO        
                 var cityCircle = new google.maps.Circle({
@@ -212,8 +199,8 @@ $this->params['breadcrumbs'][] = $this->title;
          var infowindow = new google.maps.InfoWindow();
                 
                 
-                
-                calculateAndDisplayRoute(directionsService, directionDisplay); //CARGO LAS DIRECCIONES
+        //RUTA a seguir por Relevador        
+        calculateAndDisplayRoute(directionsService, directionDisplay); //CARGO LAS DIRECCIONES
         
             
         }//initmap
@@ -227,6 +214,7 @@ $this->params['breadcrumbs'][] = $this->title;
               for (var i = 0; i < (checkboxArray.length - 1); i++) {
                     waypts.push({
                     location: {lat: parseFloat(checkboxArray[i].client_lat), lng: parseFloat(checkboxArray[i].client_long)},
+                     
                     stopover: true
                   });
               }
@@ -240,17 +228,24 @@ $this->params['breadcrumbs'][] = $this->title;
                 
                 waypoints: waypts,
                 optimizeWaypoints: true,
-                travelMode: google.maps.TravelMode.DRIVING
+                travelMode: google.maps.TravelMode.DRIVING // WALKING  / BICYCLING 
               }, 
                 function(response, status) {
                     
+                        
+                   
                 if (status === google.maps.DirectionsStatus.OK) {
                     
                   directionsDisplay.setDirections(response);
+                  
                
                 } else {
                   window.alert('Directions request failed due to ' + status);
                 }
+                
+                
+                
+                
               });
         }
         
@@ -304,11 +299,43 @@ $this->params['breadcrumbs'][] = $this->title;
             
         }//ruta_optima
         
-        function crearRuta(){
-            if (clientes_relevadores[0] != undefined){ //SI TIENE clientes para ser asignados (clientes_relevadores no es vacio)
-                console.log("no esta vacio");
+        
+        function sleep(milliseconds) {
+          var start = new Date().getTime();
+          for (var i = 0; i < 1e7; i++) {
+            if ((new Date().getTime() - start) > milliseconds){
+              break;
             }
+          }
+        }
+        
+        function crearRuta(){
             
+            var fechaCompleta = new Date();
+			var	fecha = fechaCompleta.getFullYear()+'-'+(fechaCompleta.getMonth()+1)+'-'+fechaCompleta.getDate();
+            
+            for (r in ruta_encontrada){
+                
+                $.ajax({
+			                url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route",
+			                type: 'POST',
+			                dataType: 'json',
+			                data: {
+			                	route_date: fecha,
+			                	user_id: document.getElementById("relev").value,
+			                	client_id: ruta_encontrada[r].client_id
+			                },
+			                
+			                success: function(result) {
+			                	console.log("OK");
+			                }
+			                
+                    	}); //ajax
+                    	
+                    	sleep(200);
+                    	
+            }
+            alert("Ruta Asignada");
         }
        
      
@@ -335,7 +362,7 @@ $this->params['breadcrumbs'][] = $this->title;
              </div>
              <div class="col-md-4">
                        
-                   <br> <button type="button" class="btn btn-success glyphicon glyphicon-floppy-saved" onclick ="crearRuta();">   Assign</button>
+                   <br> <button type="button" class="btn btn-success glyphicon glyphicon-floppy-saved" onclick ="crearRuta()">   Assign</button>
              </div>
                            
         </div> <!--finDropDown -->

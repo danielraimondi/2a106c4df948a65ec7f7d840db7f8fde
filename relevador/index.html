@@ -75,7 +75,9 @@
 
 		}; // for
 		
-				alert("Pedido enviado Correctamente");
+		alert("Pedido enviado Correctamente");
+		var x = document.getElementById('selectCliente');
+		x.remove(x.selectedIndex);		
 		
 		}
 	</script>
@@ -447,7 +449,7 @@
 		    productos=[];
 			
 			$.ajax({
-				url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/clientes",
+				url: "https://test-danielraimondi.c9.io/relevando/api/web/v1/route/pendientes",
 				type: 'GET',
 				data: {user_id: user_id},
 
