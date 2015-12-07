@@ -175,7 +175,7 @@
 				<div class="col-12 ">Realizar pedido</div>
 			</div><!-- /row -->
 			
-					<div id='tabla' class="table-responsive" style="width:100%;">
+					<div id='tabla' class="table-responsive" style="width:100%;" align='center'>
 						<form id='formulario'>
 							<label for='selectCliente'>Cliente:</label>
 							<select id="selectCliente"></select>
@@ -370,7 +370,7 @@
 						              origin: origen,
 						              destination: origen,
 						              waypoints: waypoints,
-						              travelMode: google.maps.DirectionsTravelMode.WALKING,
+						              travelMode: google.maps.DirectionsTravelMode.DRIVING,
 						              optimizeWaypoints: true
 							            }, function(result,status){
 							                 directionDisplay.setDirections(result);

@@ -37,7 +37,7 @@ function Loguear() {
             	            window.location.replace("index.html");
             	        }
             	        else
-            	            alert ("wrong username / password");
+            	            alert ("Invalid username / password");
             	    });
    
 };
@@ -70,7 +70,7 @@ function Loguear() {
 <!--    </div>-->
 <!--</div>-->
 
-    <div class="container">
+    <div class="container" onsubmit="Loguear();">
 
       <div id="login">
 
@@ -78,15 +78,16 @@ function Loguear() {
 
        
 
-          <fieldset>
-
-            <p><label for="name">Nombre de Usuario</label></p>
-            <p><input type="email" id="username" placeholder="usaurio" required autofocus></p>
-            <p><label for="password">Password</label></p>
-            <p><input type="password" id="password" placeholder="password" required></p>
-
-            <p><button type="button" value="Entrar" onclick="Loguear()">Sign In</button></p>
-
+          <fieldset >
+            <form action="#" id="form1" onsubmit="return Loguear();">
+              <p><label for="name">Nombre de Usuario</label></p>
+              <p><input type="text" id="username" placeholder="usaurio" required autofocus></p>
+              <p><label for="password">Password</label></p>
+              <p><input type="password" id="password" placeholder="password" required></p>
+  
+              <!--<p><button type="submit" value="Entrar" onclick="Loguear()">Sign In</button></p>-->
+              <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In" onclick="Loguear();"/>
+            </form>
           </fieldset>
 
        

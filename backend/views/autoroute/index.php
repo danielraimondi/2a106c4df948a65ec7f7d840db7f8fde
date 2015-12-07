@@ -131,21 +131,21 @@ $this->params['breadcrumbs'][] = $this->title;
             prev_infowindow = false;
             
             // MARKER RELEVADOR
-                var markerIcon = {
-                        url: "../images/streetview.ico",
-                        size: new google.maps.Size(32, 32),
-                        anchor: new google.maps.Point(16, 24),
-                        scaledSize: new google.maps.Size(32, 32)
-                    };
+                // var markerIcon = {
+                //         url: "../images/streetview.ico",
+                //         size: new google.maps.Size(32, 32),
+                //         anchor: new google.maps.Point(16, 24),
+                //         scaledSize: new google.maps.Size(32, 32)
+                //     };
                 
-                var marker = new google.maps.Marker({
-                    position: {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)},
-                    animation:google.maps.Animation.BOUNCE,
-                    map: map,
-                    icon: markerIcon
-                });
+                // var marker = new google.maps.Marker({
+                //     position: {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)},
+                //     animation:google.maps.Animation.BOUNCE,
+                //     map: map,
+                //     icon: markerIcon
+                // });
             
-                markers.push(marker);
+                // markers.push(marker);
                 
                 ruta.push(new google.maps.LatLng(rel[0].user_lat, rel[0].user_lng ) );
             
@@ -154,21 +154,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 
                 for (c in ruta_encontrada){
                     
-                    var markerIcon = {
-                                url: "../images/shop2.ico",
-                                size: new google.maps.Size(32, 32),
-                                anchor: new google.maps.Point(15, 25),
-                                scaledSize: new google.maps.Size(32, 32)
-                            };
+                    // var markerIcon = {
+                    //             url: "../images/shop2.ico",
+                    //             size: new google.maps.Size(32, 32),
+                    //             anchor: new google.maps.Point(15, 25),
+                    //             scaledSize: new google.maps.Size(32, 32)
+                    //         };
                     
                     
-                    var marker = new google.maps.Marker({
-                        position: {lat: parseFloat(ruta_encontrada[c].client_lat), lng: parseFloat(ruta_encontrada[c].client_long)},
-                        label: labels[labelIndex++ % labels.length ], //NUMERO las casitas :3
-                        map: map,
-                        icon: markerIcon
-                    });
-                    markers.push(marker);
+                    // var marker = new google.maps.Marker({
+                    //     position: {lat: parseFloat(ruta_encontrada[c].client_lat), lng: parseFloat(ruta_encontrada[c].client_long)},
+                    //     label: labels[labelIndex++ % labels.length ], //NUMERO las casitas :3
+                    //     map: map,
+                    //     icon: markerIcon
+                    // });
+                    // markers.push(marker);
                     
                     var content = 'ID: '+ruta_encontrada[c].client_id+'<br>Name: '+ruta_encontrada[c].client_name; 
                     
@@ -211,7 +211,7 @@ $this->params['breadcrumbs'][] = $this->title;
               var waypts = [];
               var checkboxArray = ruta_encontrada;  //CARGO los datos de la ruta encontrada
               
-              for (var i = 0; i < (checkboxArray.length - 1); i++) {
+              for (var i = 0; i < (checkboxArray.length ); i++) {
                     waypts.push({
                     location: {lat: parseFloat(checkboxArray[i].client_lat), lng: parseFloat(checkboxArray[i].client_long)},
                      
@@ -223,8 +223,11 @@ $this->params['breadcrumbs'][] = $this->title;
                   
                 origin: {lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)}, //punto de ORIGEN
                 destination: {                      //punto de FINAL
-                    lat: parseFloat(ruta_encontrada[(ruta_encontrada.length - 1)].client_lat),   
-                    lng: parseFloat(ruta_encontrada[(ruta_encontrada.length - 1)].client_long)    },
+                    // lat: parseFloat(ruta_encontrada[(ruta_encontrada.length - 1)].client_lat),   
+                    // lng: parseFloat(ruta_encontrada[(ruta_encontrada.length - 1)].client_long)
+                    lat: parseFloat(rel[0].user_lat), lng: parseFloat(rel[0].user_lng)  // Se cambia de acuerdo a lo hablado con el profesor
+                    
+                },
                 
                 waypoints: waypts,
                 optimizeWaypoints: true,
@@ -351,11 +354,12 @@ $this->params['breadcrumbs'][] = $this->title;
              <div class="col-md-8">
                  <i><b>...Por favor, selecciona un Relevador. </b></i>
                             <select class="form-control" id="relev" name="relev" onChange="relevadorSelec(this.value);" >
+                                <option selected="true" style="display:none;">Relevador...</option>
                                 <?php
                                     foreach($tot_rel as $key) {
-                                        if($key['id'] != 2){ //SACO EL ID 2 PORQUE ES EL ADMIN
+                                        
                                         echo '<option value="'.$key['id'].'">'.$key['username'].'</option>';
-                                        }
+                                        
                                     }
                                 ?>
                             </select>
